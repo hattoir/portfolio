@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動実績 - SYS.RBT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body>
+    <div class="grid-background"></div>
+    
+    <!-- Side labels for premium vibe -->
+    <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
+    <div class="side-label-right">0x8F9B // OPERATOR: ENG</div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SYS.RBT_</span><span class="cursor"></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="works.html">作品</a></li>
+                <li><a href="activities.html" class="active">活動実績</a></li>
+                <li><a href="learning.html">学習</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main container">
+        <div class="activities-hero">
+            <div class="activities-hero-content">
+                <section class="page-header fade-in">
+                    <h1 class="page-title">03. 活動実績</h1>
+                    <p class="page-subtitle">イベント、展示会、ハッカソンのタイムライン。</p>
+                    <div class="title-line"></div>
+                </section>
+            </div>
+            
+            <div class="hero-visual activities-visual fade-in">
+                <!-- Space objects -->
+                <div class="space-objects">
+                    <div class="shooting-star ss-1"></div>
+                    <div class="shooting-star ss-2"></div>
+                </div>
+                
+                <!-- Floating Black Hole Scene -->
+                <div class="blackhole-scene">
+                    <!-- Gravity lensing / glow -->
+                    <div class="blackhole-lensing"></div>
+                    <!-- Accretion disk back layer (behind singularity) -->
+                    <div class="blackhole-ring-back"></div>
+                    <!-- Central black singularity -->
+                    <div class="blackhole-singularity"></div>
+                    <!-- Accretion disk front layer (crossing in front) -->
+                    <div class="blackhole-ring-front"></div>
+                    <!-- Miller's planet orbiting/drifting -->
+                    <div class="millers-planet"></div>
+                    
+                    <!-- Floating Spacecraft -->
+                    <div class="spacecraft-wrapper">
+                        <svg class="spacecraft-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="blue-glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                                <filter id="thruster-glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+
+                            <!-- Outer Structural Ring (connecting the modules) -->
+                            <circle cx="60" cy="60" r="38" fill="none" stroke="#4a4d5c" stroke-width="1.5" opacity="0.6" />
+                            <circle cx="60" cy="60" r="37.2" fill="none" stroke="#1c1d24" stroke-width="0.8" opacity="0.8" />
+
+                            <!-- Inner Spokes (4 main spokes connecting center to modules) -->
+                            <line x1="60" y1="22" x2="60" y2="98" stroke="#5a5d6c" stroke-width="1.2" opacity="0.8" />
+                            <line x1="22" y1="60" x2="98" y2="60" stroke="#5a5d6c" stroke-width="1.2" opacity="0.8" />
+
+                            <!-- Central Module / Hub -->
+                            <rect x="54" y="44" width="12" height="32" rx="1.5" fill="#2d303d" stroke="#5a5d6c" stroke-width="0.8" />
+                            <rect x="44" y="54" width="32" height="12" rx="1.5" fill="#2d303d" stroke="#5a5d6c" stroke-width="0.8" />
+                            
+                            <!-- Central command core -->
+                            <circle cx="60" cy="60" r="10" fill="#1b1c24" stroke="#7e849c" stroke-width="1.5" />
+                            <circle cx="60" cy="60" r="6" fill="#3a3d4c" stroke="#5a5d6c" stroke-width="0.8" />
+                            <circle cx="60" cy="60" r="2.5" fill="#fff" />
+
+                            <!-- The 12 Dodecagonal Modules -->
+                            <!-- angle = 0 -->
+                            <g transform="rotate(0 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                            </g>
+                            <!-- angle = 30 -->
+                            <g transform="rotate(30 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="-6.5" r="2.5" fill="#00d2ff" filter="url(#thruster-glow)" />
+                                <circle cx="0" cy="-6.5" r="1" fill="#ffffff" />
+                            </g>
+                            <!-- angle = 60 -->
+                            <g transform="rotate(60 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="0" r="1.5" fill="#00a2ff" filter="url(#blue-glow)" />
+                            </g>
+                            <!-- angle = 90 -->
+                            <g transform="rotate(90 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                            </g>
+                            <!-- angle = 120 -->
+                            <g transform="rotate(120 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="0" r="1.5" fill="#00a2ff" filter="url(#blue-glow)" />
+                            </g>
+                            <!-- angle = 150 -->
+                            <g transform="rotate(150 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="-6.5" r="2.5" fill="#00d2ff" filter="url(#thruster-glow)" />
+                                <circle cx="0" cy="-6.5" r="1" fill="#ffffff" />
+                            </g>
+                            <!-- angle = 180 -->
+                            <g transform="rotate(180 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                            </g>
+                            <!-- angle = 210 -->
+                            <g transform="rotate(210 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="-6.5" r="2.5" fill="#00d2ff" filter="url(#thruster-glow)" />
+                                <circle cx="0" cy="-6.5" r="1" fill="#ffffff" />
+                            </g>
+                            <!-- angle = 240 -->
+                            <g transform="rotate(240 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="0" r="1.5" fill="#00a2ff" filter="url(#blue-glow)" />
+                            </g>
+                            <!-- angle = 270 -->
+                            <g transform="rotate(270 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                            </g>
+                            <!-- angle = 300 -->
+                            <g transform="rotate(300 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="0" r="1.5" fill="#00a2ff" filter="url(#blue-glow)" />
+                            </g>
+                            <!-- angle = 330 -->
+                            <g transform="rotate(330 60 60) translate(60 22)">
+                                <rect x="-4.5" y="-6.5" width="9" height="13" rx="1" fill="#c0c4d0" stroke="#2a2c36" stroke-width="0.8" />
+                                <rect x="-2.5" y="-4.5" width="5" height="9" fill="#141418" rx="0.5" />
+                                <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#2a2c36" stroke-width="0.5" />
+                                <circle cx="0" cy="-6.5" r="2.5" fill="#00d2ff" filter="url(#thruster-glow)" />
+                                <circle cx="0" cy="-6.5" r="1" fill="#ffffff" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Data readouts -->
+                <div class="engine-data data-left">
+                    <span class="data-label">TELEMETRY</span>
+                    <span class="data-value status-val"></span>
+                </div>
+                <div class="engine-data data-right">
+                    <span class="data-label">GRAVITY // T-DIL</span>
+                    <span class="data-value alt-val"></span>
+                </div>
+            </div>
+        </div>
+
+        <section class="timeline-container fade-in">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item" data-modal="modal-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2026.02</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">＋E展</h3>
+                    <p class="timeline-desc">ECCコンピュータ専門学校のコンセプト作品展示会。メカニカル賞を受賞。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-modal="modal-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025.12</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">国際ロボット展</h3>
+                    <p class="timeline-desc">ハードウェアの進化とAIオープン化の波を体感し、次期アーム開発の構想を得ました。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-modal="modal-3">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025.11</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">実装・組立プロセス技術展2025</h3>
+                    <p class="timeline-desc">基板の実装プロセスや最新鋭の設備を学び、ハードウェアの量産性について知見を深めました。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-modal="modal-4">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025.07</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">テックシーカー</h3>
+                    <p class="timeline-desc">ハッカソンで「魔法の道具」を制作し、エックスサーバー賞を受賞しました！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-1">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">＋E展</h2>
+                <div class="modal-date">2026.02</div>
+            </div>
+            <div class="modal-body">
+                <!-- メイン画像 (＋E展バナー) -->
+                <div class="modal-image-placeholder" style="background: url('assets/images/plus_e_exhibition.png') center/cover no-repeat; border: none; height: 350px;">
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">受賞</h3>
+                    <p style="color: var(--ember); font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; font-family: var(--font-mono);">🏆 メカニカル賞</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">イベント概要</h3>
+                    <p style="color: var(--steel-dim); line-height: 1.8;">
+                        私が通っているECCコンピュータ専門学校の「世の中にあったらいいこと」をコンセプトとした作品展示会。
+                    </p>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">制作物</h3>
+                    <div style="margin-bottom: 1.5rem; border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden; max-width: 600px;">
+                        <img src="assets/images/3_robot_arm%20_main.jpg" alt="ミーミルの手" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <a href="works.html#modal-mimir" class="resource-link hover-glow" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.2rem;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        作品ページ（ミーミルの手）を見る
+                    </a>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">学んだこと</h3>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">【技術発信と外部フィードバックによる成長】</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">初めての展示会において、少数精鋭の来場者や企業エンジニアに向けて自作アームロボットのプレゼンテーションを行いました。この経験自体が大きな自信となっただけでなく、第一線で活躍するプロの方々から作品の構造やプレゼン手法について多角的なフィードバックをいただき、今後のモノづくりや技術発表における具体的な改善へのヒントを得ることができました。</p>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">【実機トラブルから学んだ「機械設計・制御」の本質】</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">展示会当日、歯車の摩耗によるスリップが発生し、アームが対象物を把持（グリップ）できなくなる実機トラブルに見舞われました。設計・シミュレーション上では見えなかったこの物理的な課題を通じ、以下の重要性を身に染みて実感しました。</p>
+                    
+                    <ul style="padding-left: 0; list-style: none; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.8rem; position: relative; padding-left: 1.2rem; line-height: 1.7; font-size: 0.95rem; color: var(--steel-dim);">
+                            <span style="position: absolute; left: 0; color: var(--accent); opacity: 0.7;">・</span>
+                            <strong>適切な素材・機構選定:</strong> ロボットの用途や稼働頻度、負荷に応じた強度計算と、それに見合う材質（樹脂、金属等）や機構を選択すること。
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative; padding-left: 1.2rem; line-height: 1.7; font-size: 0.95rem; color: var(--steel-dim);">
+                            <span style="position: absolute; left: 0; color: var(--accent); opacity: 0.7;">・</span>
+                            <strong>筐体に負荷をかけない制御:</strong> 物理的なハードウェアを労り、メカの寿命を延ばすための滑らかな加減速制御（軌道計画やフィルター処理）を実装すること。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-2">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">国際ロボット展</h2>
+                <div class="modal-date">2025.12</div>
+            </div>
+            <div class="modal-body">
+                <!-- メイン画像 -->
+                <div class="modal-image-placeholder" style="background: url('assets/images/internatinal_robot_2025_main.jpg') center/cover no-repeat; border: none; height: 350px;">
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">イベントURL</h3>
+                    <a href="https://irex.nikkan.co.jp/" target="_blank" class="resource-link" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        国際ロボット展サイト
+                    </a>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">現場の様子（サブ写真）</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                        <div style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden;">
+                            <img src="assets/images/internatinal_robot_2025_sub1.jpg" alt="iREX photo 1" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <div style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden;">
+                            <img src="assets/images/internatinal_robot_2025_sub2.jpg" alt="iREX photo 2" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <div style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden;">
+                            <img src="assets/images/internatinal_robot_2025_sub3.jpg" alt="iREX photo 3" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <div style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden;">
+                            <img src="assets/images/internatinal_robot_2025_sub4.jpg" alt="iREX photo 4" style="width: 100%; height: auto; display: block;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">学んだこと</h3>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">1. ハードウェアの極致と、オープン化による「フィジカルAI」の幕開け</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">会場全体を通して、ヒューマノイドを筆頭とした新しい形状のロボットの台頭と、既存の産業用ロボットの劇的な進化の対比が印象に残りました。特に日本のメーカーは、目には見えにくい「極限のサイクルタイム短縮」や「精密制御」という非常に難易度の高いハードウェア技術を追求しており、深く感銘を受けました。<br>一方で、制御システムにおける「オープン化」の波も確信しました。これまでクローズドな環境が主流だったファナックがNVIDIAのJetsonを接続してAIエッジ処理を取り入れていた点や、川崎重工業が産業用多関節ロボットとヒューマノイドを、AIやデジタルツインを想定した一つの共通プラットフォームで開発していた点は非常に衝撃的でした。これからの時代は、高度なハードウェアにAIを掛け合わせた「フィジカルAI」が主戦場になることを肌で感じました。</p>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">2. センサフュージョンによる協働作業の実現と、開発へのインスピレーション</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">安全技術の進化も大きな学びでした。NACHIのブースでは、トルク、レーザー、距離という3種類の異なるセンサーを組み合わせることで、安全柵を持たないアームロボットを実現していました。この「センサフュージョンによる人間との協働」というアプローチを目の当たりにしたことが、現在の自身のロボットアーム開発プロジェクトを立ち上げる最大のきっかけとなりました。</p>
+ 
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">3. 高速ビジョンピッキングと総合的な自動化ソリューション</h4>
+                    <p style="margin-bottom: 2rem; line-height: 1.8; color: var(--steel-dim);">また、ヤマハのブースで展示されていた、SCARAロボットを用いてバラバラに置かれた部品を瞬時に表裏・向きを判定して運搬するデモンストレーションは、画像認識と高速な軌道計算の融合として非常に興味深いものでした。基板実装装置など、周辺領域も含めた包括的なシステム構築の重要性を学びました。</p>
+
+                    <h3 class="modal-subtitle">展示会に影響を受けた開発プロジェクト</h3>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">エッジAIと視覚・音声認識を統合した6軸ロボットアームの開発</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">ファナックのJetsonを用いたオープン化の取り組みや、川崎重工業のAIを見据えたプラットフォーム思想に強く感銘を受け、現在、卓上サイズの6軸ロボットアームの開発に取り組んでいます。室内に配置した複数台のカメラによる空間認識と音声コマンドを活用し、リアルタイムのエッジ処理でアームを制御するシステムを構築中です。また、将来的なデジタルツインでのシミュレーションも視野に入れ、用途に応じてエンドエフェクタを柔軟に変更できる拡張性の高いプラットフォームを目指しています。</p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">SCARAロボットを用いたFA現場レベルのビジョンシステムの追究</h4>
+                    <p style="line-height: 1.8; color: var(--steel-dim);">ヤマハのブースで目の当たりにした、SCARAロボットによる「ばら積み部品の表裏・向きの瞬時判定と高速ピッキング」は、画像認識と軌道制御の完璧な融合でした。この展示から強いインスピレーションを受け、現在所有している学習用SCARAロボットにおいても、単なるティーチングによる動作確認だけでなく、カメラを用いたビジョンセンサと連携させる計画を進めています。実際のFA現場で求められるような、コンマ数秒を争う実践的なサイクルタイムの短縮と高精度なタスクの実装に挑戦していきます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-3">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">実装・組立プロセス技術展2025</h2>
+                <div class="modal-date">2025.11</div>
+            </div>
+            <div class="modal-body">
+                <!-- メイン画像 -->
+                <div class="modal-image-placeholder" style="background: url('assets/images/assembly_process_2025_main.jpg') center/contain no-repeat; border: none; height: 350px;">
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">イベントURL</h3>
+                    <a href="https://musubi-japan.org/2025/10/09/2025hyogo/" target="_blank" class="resource-link" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        イベント詳細ページへ
+                    </a>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">現場の様子（サブ写真・動画）</h3>
+                    
+                    <!-- サブ画像 -->
+                    <div style="margin-bottom: 1.5rem; border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden;">
+                        <img src="assets/images/assembly_process_2025_sub.jpg" alt="Assembly Process Equipment" style="width: 100%; height: auto; display: block;">
+                    </div>
+
+                    <!-- 動画 -->
+                    <div style="margin-bottom: 1.5rem; border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden; background: #000; text-align: center;">
+                        <video controls style="max-height: 400px; max-width: 100%; display: inline-block;">
+                            <source src="assets/videos/assembly_process_2025.mp4" type="video/mp4">
+                            お使いのブラウザは動画の再生に対応していません。
+                        </video>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">学んだこと</h3>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">1. プリント基板の実装プロセスと最新鋭のマウンター設備</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">単なる「基板」というデータ上の概念から一歩踏み込み、実際の製造現場で基板がどのように物理的プロセスを経て実装されているかを具体的に学ぶことができました。特に、微小な電子部品を正確かつ高速に配置していくマウンター（表面実装機）の動的なメカニズムや、はんだ印刷から実装不良を防ぐ自動検査までの連携について知見を深めました。この経験から、ESP32などを用いた自分自身のカスタム基板設計においても、単に動くだけでなく「製造のしやすさ（DFM: Design for Manufacturing）」を意識した設計思想を持つことの重要性を痛感しています。</p>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">2. 特殊センサーの実装技術と高精度化へのアプローチ</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">ロボット開発においても要となる、ひずみゲージやトルクセンサーといった各種センサーの具体的な実装手法について学べたことは大きな収穫でした。単にセンサーを配置して結線するだけでなく、測定誤差を極限まで減らし、より高精度なデータを取得するための配線引き回しのノウハウやノイズ対策、実装時にかかる応力への配慮など、現場ならではの緻密な工夫やハードウェア的なアプローチを知ることができました。</p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">3. 品質を担保する多様な周辺設備（X線検査装置・加熱炉など）</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">部品をマウントする工程だけでなく、実装後の品質と信頼性を担保するための様々な機械設備についても見識を広げることができました。例えば、BGAなどの目視できないはんだ付け状態を透視して確認できるX線検査スキャナーや、適切な温度プロファイル（熱の加え方）で基板を温めてはんだを定着させるリフロー炉（加熱装置）などです。後工程を支えるこれらの設備の仕組みを間近で見たことで、ハードウェアがひとつの製品として完成するまでの、厳格な品質管理の裏側を実感しました。</p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">【総括】</h4>
+                    <p style="line-height: 1.8; color: var(--steel-dim);">本展示会を通じてハードウェアの「物理的な実装・組立プロセス」の解像度が格段に上がりました。設計したものがどのように形になり、どのような機械を経て精度と信頼性を獲得していくのかを体系的に学べたことで、今後のロボット開発において、より実用性や量産性を視野に入れた高度なモノづくりができると確信しています。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-4">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">テックシーカー</h2>
+                <div class="modal-date">2025.07</div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-placeholder" style="background: url('assets/images/techseeker_main.jpg') center/cover no-repeat; border: none; height: 350px;">
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">受賞</h3>
+                    <p style="color: var(--ember); font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; font-family: var(--font-mono);">🏆 エックスサーバー賞</p>
+
+                    <h3 class="modal-subtitle">イベント概要（ハッカソン）</h3>
+                    <p style="color: var(--steel-dim);">電子工作を用いてお題にそった作品を作るイベントです。<br>この時のお題は、<strong>「魔法の道具を作ろう」</strong>でした。</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">制作物</h3>
+                    <div style="margin-bottom: 1.5rem; border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden;">
+                        <img src="assets/images/techseeker_sub.png" alt="Tech Seeker Prototype" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <a href="https://protopedia.net/prototype/7077" target="_blank" class="resource-link" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        作品ページ（ProtoPedia）を見る
+                    </a>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-subtitle">学んだこと</h3>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">【直面した課題と今後の課題】</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim);">開発過程で最も苦戦したのは、初期段階での「設計思想のすり合わせ不足」によるスケジュールの遅延です。作り方の方向性を明確に共有しないまま開発を進めてしまったため、完成に向けた統合段階でズレが生じてしまいました。この経験から、手を動かす前の「要件定義」や「全体のアーキテクチャ of the 共通認識」を持つことの重要性を痛感しました。今後のプロジェクトでは、まず初期の全体設計の話し合いにしっかりと時間を割き、手戻りの少ない開発を徹底したいと考えています。</p>
+                    
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em;">【チーム開発の醍醐味】</h4>
+                    <p style="line-height: 1.8; color: var(--steel-dim);">一方で、チームでのモノづくりの楽しさを深く味わうことができたのは大きな収穫でした。スケジュールの遅れを取り戻すため、発表前日にはメンバー全員でホテルに泊まり込みました。一緒に夕食を作って息抜きをしつつ、夜遅くまで切磋琢磨して作業に没頭しました。技術的な反省点は多々ありますが、仲間と同じ目標に向かって熱中し、ひとつのモノを作り上げたこの経験は、私にとって大きな財産です。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> SYS.RBT. All rights reserved.</p>
+            <div class="system-id">SYS.ID: 0x8F9B</div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Modal Logic for Activities Page
+        document.addEventListener('DOMContentLoaded', () => {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const modals = document.querySelectorAll('.modal-overlay');
+            const closeBtns = document.querySelectorAll('.modal-close');
+
+            timelineItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const modalId = item.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                        setTimeout(() => {
+                            modal.querySelector('.modal-container').classList.add('appear');
+                        }, 50);
+                    }
+                });
+            });
+
+            const closeModal = (modal) => {
+                modal.querySelector('.modal-container').classList.remove('appear');
+                setTimeout(() => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            };
+
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    closeModal(e.target.closest('.modal-overlay'));
+                });
+            });
+
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+

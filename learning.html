@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習 - SYS.RBT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=9">
+</head>
+
+<body>
+    <div class="grid-background"></div>
+
+    <!-- Side labels for premium vibe -->
+    <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
+    <div class="side-label-right">0x8F9B // OPERATOR: ENG</div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SYS.RBT_</span><span class="cursor"></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="works.html">作品</a></li>
+                <li><a href="activities.html">活動実績</a></li>
+                <li><a href="learning.html" class="active">学習</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main container">
+        <div class="learning-hero">
+            <div class="learning-hero-content">
+                <section class="page-header fade-in">
+                    <h1 class="page-title">04. 学習</h1>
+                    <p class="page-subtitle">私のエンジニアリングの基礎を築いた技術書、Webサイト、PDF資料。</p>
+                    <div class="title-line"></div>
+                </section>
+            </div>
+
+            <div class="hero-visual learning-visual fade-in">
+                <!-- Space objects -->
+                <div class="space-objects">
+                    <div class="shooting-star ss-1"></div>
+                    <div class="shooting-star ss-2"></div>
+                </div>
+
+                <!-- Mars Rover Scene -->
+                <div class="mars-scene">
+                    <!-- Dusty red Mars surface landscape -->
+                    <div class="mars-terrain">
+                        <svg class="mars-terrain-svg" viewBox="0 0 320 120" preserveAspectRatio="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="sky-glow" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="0%" stop-color="rgba(200, 90, 50, 0.18)" />
+                                    <stop offset="100%" stop-color="transparent" />
+                                </linearGradient>
+                                <linearGradient id="dune-back" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#8f3d24" />
+                                    <stop offset="100%" stop-color="#4e1c10" />
+                                </linearGradient>
+                                <linearGradient id="dune-front" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#b85230" />
+                                    <stop offset="100%" stop-color="#6a2512" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Sky glow -->
+                            <rect x="0" y="0" width="320" height="120" fill="url(#sky-glow)" />
+
+                            <!-- Background dunes -->
+                            <path d="M0,75 Q80,55 160,80 T320,65 L320,120 L0,120 Z" fill="url(#dune-back)"
+                                opacity="0.8" />
+
+                            <!-- Foreground ground -->
+                            <path d="M0,90 Q90,75 180,95 T320,85 L320,120 L0,120 Z" fill="url(#dune-front)" />
+
+                            <!-- A few rocks on the ground -->
+                            <polygon points="35,92 41,88 47,93 43,97" fill="#4e1c10" stroke="#38120a"
+                                stroke-width="0.5" />
+                            <polygon points="120,96 125,93 130,97 127,100" fill="#6a2512" />
+                            <polygon points="210,100 218,96 224,101 216,105" fill="#4e1c10" stroke="#38120a"
+                                stroke-width="0.5" />
+                            <polygon points="280,91 285,88 292,92 288,96" fill="#3c140b" />
+                        </svg>
+                    </div>
+
+                    <!-- Scrolling dust storm elements -->
+                    <div class="mars-dust-storm">
+                        <div class="dust-particle dp-1"></div>
+                        <div class="dust-particle dp-2"></div>
+                        <div class="dust-particle dp-3"></div>
+                        <div class="dust-particle dp-4"></div>
+                    </div>
+
+                    <!-- Floating/bobbing Rover Container -->
+                    <div class="rover-wrapper">
+                        <svg class="rover-svg" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gold-chassis" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#dfb86c" />
+                                    <stop offset="50%" stop-color="#c59943" />
+                                    <stop offset="100%" stop-color="#8a6723" />
+                                </linearGradient>
+                                <linearGradient id="solar-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#1b2030" />
+                                    <stop offset="50%" stop-color="#101320" />
+                                    <stop offset="100%" stop-color="#07090e" />
+                                </linearGradient>
+                                <filter id="red-glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="2" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+
+                            <!-- Background Wheels (darker and translated behind chassis) -->
+                            <g opacity="0.45">
+                                <!-- Rear Background Wheel -->
+                                <g transform="translate(26 63)">
+                                    <g class="wheel-spin-group">
+                                        <circle cx="0" cy="0" r="9" fill="#181a22" stroke="#4a4d5c"
+                                            stroke-width="1.2" />
+                                        <line x1="-9" y1="0" x2="9" y2="0" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="0" y1="-9" x2="0" y2="9" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="-6.3" y1="-6.3" x2="6.3" y2="6.3" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="-6.3" y1="6.3" x2="6.3" y2="-6.3" stroke="#4a4d5c" stroke-width="1" />
+                                    </g>
+                                </g>
+                                <!-- Middle Background Wheel -->
+                                <g transform="translate(50 63)">
+                                    <g class="wheel-spin-group">
+                                        <circle cx="0" cy="0" r="9" fill="#181a22" stroke="#4a4d5c"
+                                            stroke-width="1.2" />
+                                        <line x1="-9" y1="0" x2="9" y2="0" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="0" y1="-9" x2="0" y2="9" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="-6.3" y1="-6.3" x2="6.3" y2="6.3" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="-6.3" y1="6.3" x2="6.3" y2="-6.3" stroke="#4a4d5c" stroke-width="1" />
+                                    </g>
+                                </g>
+                                <!-- Front Background Wheel -->
+                                <g transform="translate(76 63)">
+                                    <g class="wheel-spin-group">
+                                        <circle cx="0" cy="0" r="9" fill="#181a22" stroke="#4a4d5c"
+                                            stroke-width="1.2" />
+                                        <line x1="-9" y1="0" x2="9" y2="0" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="0" y1="-9" x2="0" y2="9" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="-6.3" y1="-6.3" x2="6.3" y2="6.3" stroke="#4a4d5c" stroke-width="1" />
+                                        <line x1="-6.3" y1="6.3" x2="6.3" y2="-6.3" stroke="#4a4d5c" stroke-width="1" />
+                                    </g>
+                                </g>
+                            </g>
+
+                            <!-- Whiplash Whip Antenna -->
+                            <line x1="40" y1="32" x2="35" y2="6" stroke="#8a8e9e" stroke-width="1" />
+                            <circle cx="35" cy="6" r="1.2" fill="#c0c4d0" />
+
+                            <!-- Golden WEB Chassis (Warm Electronics Box) -->
+                            <polygon points="30,42 80,39 76,55 36,57" fill="url(#gold-chassis)" stroke="#7c5c20"
+                                stroke-width="0.8" />
+                            <rect x="42" y="44" width="26" height="8" rx="0.5" fill="#573e13" opacity="0.4" />
+
+                            <!-- Camera Mast (Pancam/Navcam head) -->
+                            <line x1="72" y1="34" x2="72" y2="12" stroke="#8a8e9e" stroke-width="1.8" />
+                            <!-- Mast details/wires -->
+                            <line x1="74" y1="34" x2="74" y2="20" stroke="#5a5d6c" stroke-width="0.8" />
+                            <rect x="67" y="6" width="10" height="7" rx="1.2" fill="#30323a" stroke="#8a8e9e"
+                                stroke-width="0.8" />
+                            <!-- Lens glowing red/blue -->
+                            <circle cx="70" cy="9" r="1.5" fill="#ff4d4d" filter="url(#red-glow)" />
+                            <circle cx="74" cy="9" r="1" fill="#00d2ff" />
+
+                            <!-- Flat Solar Panel Deck on Top -->
+                            <polygon points="23,32 83,28 93,37 33,41" fill="url(#solar-panel)" stroke="#60647c"
+                                stroke-width="1" />
+                            <!-- Solar cell subdivision lines -->
+                            <line x1="38" y1="31" x2="48" y2="40" stroke="#45495c" stroke-width="0.6" />
+                            <line x1="53" y1="30" x2="63" y2="39" stroke="#45495c" stroke-width="0.6" />
+                            <line x1="68" y1="29" x2="78" y2="38" stroke="#45495c" stroke-width="0.6" />
+                            <line x1="28" y1="34" x2="88" y2="30" stroke="#45495c" stroke-width="0.6" />
+
+                            <!-- Rocker-Bogie Suspension Struts (Foreground) -->
+                            <!-- Primary Rocker Pivot -->
+                            <circle cx="55" cy="48" r="2.2" fill="#30323a" stroke="#8a8e9e" stroke-width="0.8" />
+                            <!-- Strut lines connecting pivot to wheels -->
+                            <path d="M 55 48 L 72 54 L 81 67" fill="none" stroke="#6f7285" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M 55 48 L 45 53" fill="none" stroke="#6f7285" stroke-width="2"
+                                stroke-linecap="round" />
+                            <!-- Bogie arm (pivot at 45, 53) -->
+                            <circle cx="45" cy="53" r="1.5" fill="#30323a" stroke="#8a8e9e" stroke-width="0.5" />
+                            <path d="M 45 53 L 31 67" fill="none" stroke="#6f7285" stroke-width="1.8"
+                                stroke-linecap="round" />
+                            <path d="M 45 53 L 55 67" fill="none" stroke="#6f7285" stroke-width="1.8"
+                                stroke-linecap="round" />
+
+                            <!-- Foreground Wheels (spinning) -->
+                            <!-- Rear Wheel -->
+                            <g transform="translate(31 67)">
+                                <g class="wheel-spin-group">
+                                    <circle cx="0" cy="0" r="9" fill="#242630" stroke="#8a8e9e" stroke-width="1.2" />
+                                    <!-- treads -->
+                                    <line x1="-9" y1="0" x2="9" y2="0" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="0" y1="-9" x2="0" y2="9" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="-6.3" y1="-6.3" x2="6.3" y2="6.3" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="-6.3" y1="6.3" x2="6.3" y2="-6.3" stroke="#8a8e9e" stroke-width="1" />
+                                    <circle cx="0" cy="0" r="3.5" fill="#4e5163" stroke="#222" stroke-width="0.6" />
+                                </g>
+                            </g>
+                            <!-- Middle Wheel -->
+                            <g transform="translate(55 67)">
+                                <g class="wheel-spin-group">
+                                    <circle cx="0" cy="0" r="9" fill="#242630" stroke="#8a8e9e" stroke-width="1.2" />
+                                    <!-- treads -->
+                                    <line x1="-9" y1="0" x2="9" y2="0" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="0" y1="-9" x2="0" y2="9" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="-6.3" y1="-6.3" x2="6.3" y2="6.3" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="-6.3" y1="6.3" x2="6.3" y2="-6.3" stroke="#8a8e9e" stroke-width="1" />
+                                    <circle cx="0" cy="0" r="3.5" fill="#4e5163" stroke="#222" stroke-width="0.6" />
+                                </g>
+                            </g>
+                            <!-- Front Wheel -->
+                            <g transform="translate(81 67)">
+                                <g class="wheel-spin-group">
+                                    <circle cx="0" cy="0" r="9" fill="#242630" stroke="#8a8e9e" stroke-width="1.2" />
+                                    <!-- treads -->
+                                    <line x1="-9" y1="0" x2="9" y2="0" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="0" y1="-9" x2="0" y2="9" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="-6.3" y1="-6.3" x2="6.3" y2="6.3" stroke="#8a8e9e" stroke-width="1" />
+                                    <line x1="-6.3" y1="6.3" x2="6.3" y2="-6.3" stroke="#8a8e9e" stroke-width="1" />
+                                    <circle cx="0" cy="0" r="3.5" fill="#4e5163" stroke="#222" stroke-width="0.6" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Data readouts -->
+                <div class="engine-data data-left">
+                    <span class="data-label">ROVER ID</span>
+                    <span class="data-value status-val"></span>
+                </div>
+                <div class="engine-data data-right">
+                    <span class="data-label">LOC // SPEED</span>
+                    <span class="data-value alt-val"></span>
+                </div>
+            </div>
+        </div>
+
+        <section class="learning-grid">
+            <!-- Site Example 1 -->
+            <div class="card learning-card fade-in">
+                <div class="learning-type type-site">サイト</div>
+                <div class="card-content">
+                    <h3 class="card-title">ROS 2 公式ドキュメント</h3>
+                    <a href="https://docs.ros.org/" target="_blank" class="resource-link" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        資料にアクセス
+                    </a>
+
+                    <div class="learning-details">
+                        <h4 class="detail-title">学んだ内容:</h4>
+                        <p class="content-text">ノード、トピック、サービス、およびROS 2エコシステム全体のアーキテクチャ。</p>
+
+                        <h4 class="detail-title">感想:</h4>
+                        <p class="impression-text">ハンズオンをやりながらドキュメントの内容を学べたのでROS2というものの形をつかめた気がします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Site Example 2 (Mitsubishi FA) -->
+            <div class="card learning-card fade-in">
+                <div class="learning-type type-site">サイト</div>
+                <div class="card-content">
+                    <h3 class="card-title">三菱電機 e-ラーニング</h3>
+                    <a href="https://www.mitsubishielectric.co.jp/fa/assist/e-learning/" target="_blank"
+                        class="resource-link" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        学習サイトへアクセス
+                    </a>
+
+                    <div class="learning-details">
+                        <h4 class="detail-title">学んだ内容:</h4>
+                        <p class="content-text">FAの基本概念と全体像の理解 産業用ロボット、PLC、表示機、サーボ・インバータ等の役割と基本操作</p>
+
+                        <h4 class="detail-title">感想:</h4>
+                        <p class="impression-text">
+                            産業用ロボット、表示機、PLCなどがどのように通信・連携し、一つの生産ラインとして機能しているか、というシステム全体の構造を体系的に理解することができてよかったです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> SYS.RBT. All rights reserved.</p>
+            <div class="system-id">SYS.ID: 0x8F9B</div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
