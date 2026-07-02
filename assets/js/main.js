@@ -1,181 +1,82 @@
+/* ==========================================================================
+   MAIN — nav, scroll animations, HUD telemetry
+   ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-    // Current Year Update
+    // Current Year
     const yearEl = document.getElementById('year');
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Responsive Navigation
-    const navSlide = () => {
-        const burger = document.querySelector('.hamburger');
-        const nav = document.querySelector('.nav-links');
-        const navLinks = document.querySelectorAll('.nav-links li');
-
-        if (burger && nav) {
-            burger.addEventListener('click', () => {
-                // Toggle Nav
-                nav.classList.toggle('nav-active');
-
-                // Animate Links
-                navLinks.forEach((link, index) => {
-                    if (link.style.animation) {
-                        link.style.animation = '';
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                    }
-                });
-
-                // Burger Animation
-                burger.classList.toggle('toggle');
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav-links');
+    if (burger && nav) {
+        const navLinks = nav.querySelectorAll('li');
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
             });
-        }
+            burger.classList.toggle('toggle');
+        });
     }
-    navSlide();
 
-    // Navbar Scrolled Effect
+    // Navbar hide/show on scroll
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
-
     if (navbar) {
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 0) {
-                navbar.style.boxShadow = "none";
-            } else {
-                navbar.style.boxShadow = "0 10px 30px -10px rgba(8, 8, 12, 0.7)";
-            }
-
-            // Hide/Show navbar on scroll direction
-            if (currentScroll > lastScroll && currentScroll > 80) {
-                navbar.style.transform = "translateY(-100%)";
-            } else {
-                navbar.style.transform = "translateY(0)";
-            }
-            lastScroll = currentScroll;
-        });
+            const cur = window.pageYOffset;
+            navbar.style.boxShadow = cur <= 0 ? 'none' : '0 10px 30px -10px rgba(0, 10, 20, 0.7)';
+            navbar.style.transform = (cur > lastScroll && cur > 80) ? 'translateY(-100%)' : 'translateY(0)';
+            lastScroll = cur;
+        }, { passive: true });
     }
 
-    // Intersection Observer for scroll animations
-    const appearOptions = {
-        threshold: 0,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(
-        entries,
-        appearOnScroll
-    ) {
+    // Fade-in on scroll
+    const appearOnScroll = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add("appear");
-                appearOnScroll.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('appear');
+            obs.unobserve(entry.target);
         });
-    }, appearOptions);
+    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => appearOnScroll.observe(el));
 
-    const faders = document.querySelectorAll(".fade-in");
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-
-    // =========================================================================
-    // DYNAMIC STAR FIELD — monochrome lunar theme
-    // =========================================================================
-    const createStarField = () => {
-        const body = document.body;
-        const starContainer = document.createElement('div');
-        starContainer.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden;';
-        body.appendChild(starContainer);
-
-        const starCount = 50;
-        for (let i = 0; i < starCount; i++) {
-            const star = document.createElement('div');
-            const size = Math.random() * 1.5 + 0.5;
-            const x = Math.random() * 100;
-            const y = Math.random() * 100;
-            const delay = Math.random() * 6;
-            const duration = Math.random() * 4 + 3;
-            const brightness = Math.floor(Math.random() * 40 + 200);
-            const opacity = (Math.random() * 0.4 + 0.15).toFixed(2);
-
-            star.style.cssText = `
-                position: absolute;
-                left: ${x}%;
-                top: ${y}%;
-                width: ${size}px;
-                height: ${size}px;
-                background: rgba(${brightness},${brightness + 5},${brightness + 15},${opacity});
-                border-radius: 50%;
-                box-shadow: 0 0 ${size * 2}px rgba(${brightness},${brightness + 5},${brightness + 15},0.15);
-                animation: starTwinkle ${duration}s ease-in-out ${delay}s infinite alternate;
-            `;
-            starContainer.appendChild(star);
-        }
-    };
-    createStarField();
-
-    // Typewriter effect for Overview section (if present)
-    const typeWriterText = "ハードウェア仕様を読み込み中...\nロボット制御ユニットを初期化中...\nシステム準備完了。ポートフォリオへようこそ。\n私はハードウェア設計とロボット開発を専門とするエンジニアです。\n物理的なメカニズムと高度なソフトウェアシステムを融合させます。";
-    const element = document.getElementById('typewriter-text');
-    
-    if (element) {
-        let i = 0;
-        function typeWriter() {
-            if (i < typeWriterText.length) {
-                if (typeWriterText.charAt(i) === '\n') {
-                    element.innerHTML += '<br>';
-                } else {
-                    element.innerHTML += typeWriterText.charAt(i);
+    // HUD telemetry (elements with .hud-dyn get animated fake telemetry)
+    const hudEls = document.querySelectorAll('.hud-dyn');
+    if (hudEls.length > 0) {
+        const pad = (n, l) => String(n).padStart(l, '0');
+        setInterval(() => {
+            const d = new Date();
+            hudEls.forEach(el => {
+                const type = el.dataset.hud;
+                if (type === 'clock') {
+                    el.textContent = `${pad(d.getHours(),2)}:${pad(d.getMinutes(),2)}:${pad(d.getSeconds(),2)} JST`;
+                } else if (type === 'alt') {
+                    el.textContent = `ALT ${ (408 + Math.sin(Date.now()/4000)*2).toFixed(1) } km`;
+                } else if (type === 'vel') {
+                    el.textContent = `VEL ${ (7.66 + Math.sin(Date.now()/3000)*0.01).toFixed(2) } km/s`;
+                } else if (type === 'sig') {
+                    el.textContent = `SIG ${ (92 + Math.floor(Math.random()*7)) }%`;
                 }
-                i++;
-                setTimeout(typeWriter, 30);
-            }
-        }
-        
-        const typeObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                typeWriter();
-                typeObserver.disconnect();
-            }
-        });
-        
-        const aboutBrief = document.querySelector('.about-brief');
-        if (aboutBrief) {
-            typeObserver.observe(aboutBrief);
-        } else {
-            typeWriter();
-        }
+            });
+        }, 500);
     }
 });
 
-// Adding extra keyframes dynamically
+// Extra keyframes
 const style = document.createElement('style');
 style.innerHTML = `
     @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
     }
-    @keyframes starTwinkle {
-        0% { opacity: 0.2; transform: scale(0.8); }
-        100% { opacity: 1; transform: scale(1.2); }
-    }
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .toggle .line2 {
-        opacity: 0;
-    }
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle .line2 { opacity: 0; }
+    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
 `;
 document.head.appendChild(style);

@@ -7,15 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=8">
+    <link rel="stylesheet" href="assets/css/style.css?v=10">
     <meta name="description" content="Portfolio of a Hardware and Robotics Engineer. Explore my projects, activities, and specific learnings.">
 </head>
 <body>
     <div class="grid-background"></div>
-    
-    <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
+    <div class="bg-vignette"></div>
+
+    <div class="side-label-left">SYS.RBT_PORTFOLIO // ORBITAL DOCK: ONLINE</div>
     <div class="side-label-right">0x8F9B // OPERATOR: ENG</div>
-    
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -39,87 +40,138 @@
 
     <main class="home-main">
         <section class="hero" id="home">
-            <div class="hero-bg"></div>
-            <div class="hero-grid"></div>
-            <div class="hero-scan"></div>
-            
-            <!-- Stars -->
-            <div class="sparks-container">
-                <div class="spark" style="top: 10%; left: 12%; animation-delay: 0s;"></div>
-                <div class="spark" style="top: 55%; left: 88%; animation-delay: 1.5s;"></div>
-                <div class="spark" style="top: 20%; left: 75%; animation-delay: 3s;"></div>
-                <div class="spark" style="top: 70%; left: 18%; animation-delay: 0.5s;"></div>
-                <div class="spark" style="top: 35%; left: 95%; animation-delay: 4.5s;"></div>
-                <div class="spark" style="top: 8%; left: 55%; animation-delay: 2s;"></div>
-                <div class="spark" style="top: 45%; left: 5%; animation-delay: 2.5s;"></div>
-                <div class="spark" style="top: 15%; left: 40%; animation-delay: 1s;"></div>
+            <!-- 3D view: approaching the Moon -->
+            <div id="dock-canvas"></div>
+
+            <!-- Lock-on HUD labels (positioned by JS over the active panel) -->
+            <div id="target-tag" class="target-tag"><span class="tt-arrow">◀</span><span class="tt-name">--</span></div>
+            <div id="target-dist" class="target-dist">DISTANCE<br><span class="td-val">---.-- m</span></div>
+
+            <!-- Cockpit frame overlay -->
+            <div class="cockpit-overlay" aria-hidden="true">
+                <div class="cp-pillar cp-pillar-l"></div>
+                <div class="cp-pillar cp-pillar-r"></div>
+
+                <div class="cp-monitor cp-mon-tl">
+                    <div class="cp-mon-arm"></div>
+                    <div class="cp-mon-screen">
+                        <div class="cp-scope"></div>
+                    </div>
+                </div>
+                <div class="cp-monitor cp-mon-tr">
+                    <div class="cp-mon-arm"></div>
+                    <div class="cp-mon-screen">
+                        <div class="cp-pie"></div>
+                        <div class="cp-bars"><i></i><i></i><i></i></div>
+                    </div>
+                </div>
+
+                <div class="cp-caution">
+                    <div class="cpc-title">&lt;CAUTION&gt;</div>
+                    <div class="cpc-row">SYS&nbsp;&nbsp;No. 0x8F9B-*****</div>
+                    <div class="cpc-row">DEST&nbsp;: LUNA ORBIT</div>
+                    <div class="cpc-row">FUEL&nbsp;: 100.00 %</div>
+                    <div class="cpc-row">LOCK&nbsp;: <span class="cpc-lock">ENGAGED</span></div>
+                    <div class="cpc-btns"><span>LOG ON</span><span>CANCEL</span></div>
+                </div>
+
+                <div class="cp-console">
+                    <div class="cp-side cp-side-l">
+                        <div class="cp-keys">
+                            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                        </div>
+                        <div class="cp-slider"></div>
+                    </div>
+                    <div class="cp-center">
+                        <div class="cp-touch">
+                            <div class="cp-cross"></div>
+                        </div>
+                    </div>
+                    <div class="cp-side cp-side-r">
+                        <div class="cp-keys cp-keys-num">
+                            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                        </div>
+                        <div class="cp-lever"></div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="hero-content">
+
+            <div class="hud-frame"></div>
+
+            <div class="hud-readout hud-tl">
+                COCKPIT VIEW // LUNAR APPROACH<br>
+                <span class="hud-strong">ENGINE: STANDBY // COURSE: LUNA</span>
+            </div>
+            <div class="hud-readout hud-tr">
+                <span class="hud-dyn hud-strong" data-hud="clock">--:--:-- JST</span><br>
+                <span class="hud-dyn" data-hud="sig">SIG --%</span>
+            </div>
+            <div class="hud-readout hud-bl">
+                <span class="hud-dyn" data-hud="alt">ALT --- km</span><br>
+                <span class="hud-dyn" data-hud="vel">VEL --- km/s</span>
+            </div>
+            <div class="hud-readout hud-br">
+                TARGET SCAN: CYCLING<br>
+                <span class="hud-strong">LOCK-ON: READY</span>
+            </div>
+
+            <div class="hero-ui">
                 <div class="system-status">
-                    <span class="status-dot"></span> システムオンライン
+                    <span class="status-dot"></span> システムオンライン — 月軌道進入シーケンス開始
                 </div>
-                <h1 class="glitch" data-text="服部　将眞">服部　将眞</h1>
-                <p class="hero-subtitle">ECCコンピュータ専門学校<br><span style="font-size: 14px; opacity: 0.85; display: block; margin-top: 0.6rem; letter-spacing: 0.15em; font-family: var(--font-jp-sans); font-weight: 300;">IoT部 副部長</span></p>
+                <h1 class="hero-title glitch" data-text="服部　将眞">服部　将眞</h1>
+                <p class="hero-subtitle">
+                    ECCコンピュータ専門学校 / IoT部 副部長
+                    <span class="hero-sub-en">Hardware &amp; Robotics Engineer</span>
+                </p>
+                <div class="hero-cta">
+                    <a href="works.html" class="btn-holo">作品を見る ▸</a>
+                    <a href="profile.html" class="btn-holo btn-ghost">プロフィール</a>
+                </div>
             </div>
-            
-            <div class="hero-visual">
-                <!-- Space objects -->
-                <div class="space-objects">
-                    <div class="satellite sat-1">🛰️</div>
-                    <div class="satellite sat-2">🛰️</div>
-                    <div class="shooting-star ss-1"></div>
-                    <div class="shooting-star ss-2"></div>
-                </div>
 
-                <!-- Earth in background -->
-                <div class="earth-glow"></div>
-                <div class="earth"></div>
+            <!-- Destination selector: explicit navigation UI synced with the 3D panels -->
+            <div class="dock-nav" id="dock-nav">
+                <div class="dock-nav-label">COCKPIT NAV // 行き先を選んで発進</div>
+                <div class="dock-nav-btns" id="dock-nav-btns"></div>
+            </div>
+            <div class="scroll-indicator"></div>
+        </section>
 
-                <!-- Saturn V Rocket -->
-                <div class="saturn-v">
-                    <div class="les"></div>
-                    <div class="command-module"></div>
-                    <div class="service-module"></div>
-                    <div class="s-ivb"></div>
-                    <div class="interstage"></div>
-                    <div class="s-ii"></div>
-                    <div class="s-ic"></div>
-                    <div class="saturn-fins">
-                        <div class="saturn-fin saturn-fin-l"></div>
-                        <div class="saturn-fin saturn-fin-r"></div>
-                    </div>
-                    <div class="engine-cluster"></div>
-                    <div class="saturn-flame">
-                        <div class="saturn-flame-outer"></div>
-                        <div class="saturn-flame-mid"></div>
-                        <div class="saturn-flame-core"></div>
-                    </div>
-                    <div class="exhaust-trail">
-                        <div class="trail-particle" style="--delay: 0s; --x: -10px; --dur: 0.8s;"></div>
-                        <div class="trail-particle" style="--delay: 0.12s; --x: 8px; --dur: 0.7s;"></div>
-                        <div class="trail-particle" style="--delay: 0.25s; --x: -6px; --dur: 1s;"></div>
-                        <div class="trail-particle" style="--delay: 0.4s; --x: 12px; --dur: 0.9s;"></div>
-                        <div class="trail-particle" style="--delay: 0.55s; --x: -14px; --dur: 0.85s;"></div>
-                        <div class="trail-particle" style="--delay: 0.7s; --x: 4px; --dur: 1.1s;"></div>
-                    </div>
-                </div>
+        <!-- MISSION MODULES -->
+        <section class="section-block">
+            <div class="container">
+                <h2 class="section-heading fade-in"><span class="sec-num">01</span>Mission Modules</h2>
+                <p class="section-sub fade-in">DOCKING PORTS // SELECT A MODULE</p>
 
-                <!-- Lunar surface -->
-                <div class="lunar-surface"></div>
-
-                <!-- Data readouts -->
-                <div class="engine-data data-left">
-                    <span class="data-label">MISSION</span>
-                    <span class="data-value">APOLLO</span>
-                </div>
-                <div class="engine-data data-right">
-                    <span class="data-label">ALT</span>
-                    <span class="data-value">384,400 km</span>
+                <div class="module-grid">
+                    <a href="profile.html" class="module-card fade-in">
+                        <span class="module-num">MOD-01 // ID</span>
+                        <h3 class="module-title">プロフィール</h3>
+                        <p class="module-desc">未来に希望を与えるロボットを作るエンジニアの思想・スタンス・技術スタック。</p>
+                        <span class="view-link">ACCESS <span class="arrow">→</span></span>
+                    </a>
+                    <a href="works.html" class="module-card fade-in">
+                        <span class="module-num">MOD-02 // WORKS</span>
+                        <h3 class="module-title">作品</h3>
+                        <p class="module-desc">3軸ロボットアーム「ミーミルの手」、ROS 2×AIの自動運転ミニカーなどの開発記録。</p>
+                        <span class="view-link">ACCESS <span class="arrow">→</span></span>
+                    </a>
+                    <a href="activities.html" class="module-card fade-in">
+                        <span class="module-num">MOD-03 // LOG</span>
+                        <h3 class="module-title">活動実績</h3>
+                        <p class="module-desc">＋E展メカニカル賞、国際ロボット展、ハッカソン受賞などの活動タイムライン。</p>
+                        <span class="view-link">ACCESS <span class="arrow">→</span></span>
+                    </a>
+                    <a href="learning.html" class="module-card fade-in">
+                        <span class="module-num">MOD-04 // DATA</span>
+                        <h3 class="module-title">学習</h3>
+                        <p class="module-desc">ROS 2やFAシステムなど、エンジニアリングの基礎を築いた学習リソース。</p>
+                        <span class="view-link">ACCESS <span class="arrow">→</span></span>
+                    </a>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -129,6 +181,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/dock-scene.js"></script>
 </body>
 </html>
