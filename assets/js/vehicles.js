@@ -89,7 +89,8 @@
 
     var root = new THREE.Group();
     // composition: vehicle sits centre-right and deep, page text stays readable on the left
-    root.position.set(isMobile ? 0 : 3.4, isMobile ? 1.2 : -0.2, isMobile ? -6 : -3);
+    root.position.set(isMobile ? 0 : 4.6, isMobile ? 1.2 : -0.2, isMobile ? -6 : -3);
+    if (!isMobile) root.scale.setScalar(0.8);   // smaller + further right: stays clear of the page header
     scene.add(root);
 
     var update = function () {};   // per-vehicle per-frame hook
@@ -277,8 +278,8 @@
             var ctx = c.getContext('2d');
             var g = ctx.createRadialGradient(128, 128, 60, 128, 128, 128);
             g.addColorStop(0, 'rgba(0,0,0,0)');
-            g.addColorStop(0.55, 'rgba(255,190,110,0.55)');
-            g.addColorStop(0.75, 'rgba(255,150,70,0.25)');
+            g.addColorStop(0.55, 'rgba(140,236,255,0.42)');
+            g.addColorStop(0.75, 'rgba(99,232,255,0.16)');
             g.addColorStop(1, 'rgba(0,0,0,0)');
             ctx.fillStyle = g;
             ctx.fillRect(0, 0, 256, 256);
@@ -303,8 +304,8 @@
         }
         diskGeo.setAttribute('position', new THREE.BufferAttribute(diskPos, 3));
         var disk = new THREE.Points(diskGeo, new THREE.PointsMaterial({
-            size: 0.09, map: dotTexture('rgba(255,210,150,1)', 'rgba(255,150,60,0.5)'),
-            color: 0xffc080, transparent: true, opacity: 0.95,
+            size: 0.08, map: dotTexture('rgba(230,252,255,1)', 'rgba(99,232,255,0.5)'),
+            color: 0x9ff3ff, transparent: true, opacity: 0.8,
             depthWrite: false, blending: THREE.AdditiveBlending
         }));
         disk.rotation.x = 0.42;
@@ -394,7 +395,7 @@
             c.width = c.height = 256;
             var ctx = c.getContext('2d');
             var g = ctx.createRadialGradient(128, 200, 20, 128, 200, 220);
-            g.addColorStop(0, 'rgba(230,120,60,0.5)');
+            g.addColorStop(0, 'rgba(99,232,255,0.14)');
             g.addColorStop(1, 'rgba(0,0,0,0)');
             ctx.fillStyle = g;
             ctx.fillRect(0, 0, 256, 256);
@@ -490,7 +491,7 @@
         }
         dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
         var dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({
-            size: 0.35, map: dotTexture('rgba(255,170,110,0.8)', 'rgba(200,90,40,0.3)'),
+            size: 0.3, map: dotTexture('rgba(200,248,255,0.8)', 'rgba(99,232,255,0.25)'),
             transparent: true, opacity: 0.4, depthWrite: false
         }));
         scene.add(dust);
@@ -518,6 +519,45 @@
     else if (kind === 'blackhole') buildBlackhole();
     else if (kind === 'rover') buildRover();
     else buildISS();
+
+    /* ====================================================================
+       HOLO PASS — re-skin the vehicle as a projection on the bench:
+       cyan edge lines + faint additive fill; glowing parts become cyan/amber.
+       (update() hooks keep working: they only touch transforms / opacity.)
+       ==================================================================== */
+    (function holoify() {
+        scene.fog = null;
+        var ADD = THREE.AdditiveBlending;
+        var edgeMat = new THREE.LineBasicMaterial({ color: 0x9ff3ff, transparent: true, opacity: 0.32, blending: ADD, depthWrite: false });
+        var gridMat = new THREE.LineBasicMaterial({ color: 0x63e8ff, transparent: true, opacity: 0.09, blending: ADD, depthWrite: false });
+        var fillMat = new THREE.MeshBasicMaterial({ color: 0x63e8ff, transparent: true, opacity: 0.045, blending: ADD, depthWrite: false, side: THREE.DoubleSide });
+        var meshes = [];
+        root.traverse(function (o) { if (o.isMesh) meshes.push(o); });
+        meshes.forEach(function (m) {
+            var mat = m.material;
+            if (mat.isMeshBasicMaterial) {
+                if (mat.color.getHex() === 0x000000) return;                 // black-hole occluder stays
+                m.material = new THREE.MeshBasicMaterial({ color: 0xffb14d, transparent: true, opacity: 0.75, blending: ADD, depthWrite: false });
+                return;                                                        // flames -> amber
+            }
+            // beacons / windows / eyes (note: emissiveIntensity defaults to 1, so also require a lit emissive colour)
+            if (mat.emissive && mat.emissive.getHex() !== 0 && mat.emissiveIntensity >= 1) {
+                var warm = mat.emissive.r > mat.emissive.b;
+                m.material = new THREE.MeshBasicMaterial({ color: warm ? 0xffb14d : 0x9ff3ff, transparent: true, opacity: 0.95, blending: ADD, depthWrite: false });
+                return;
+            }
+            m.material = fillMat;
+            var isGround = m.geometry.type === 'PlaneGeometry';
+            var lines = new THREE.LineSegments(
+                isGround ? new THREE.WireframeGeometry(m.geometry) : new THREE.EdgesGeometry(m.geometry, 20),
+                isGround ? gridMat : edgeMat
+            );
+            m.add(lines);
+        });
+        scene.traverse(function (o) {                                          // point lights are irrelevant now
+            if (o.isPointLight) o.intensity = 0;
+        });
+    })();
 
     /* mouse parallax */
     var px = 0, py = 0;

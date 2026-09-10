@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
     <meta name="description" content="Portfolio of a Hardware and Robotics Engineer. Explore my projects, activities, and specific learnings.">
 </head>
 <body>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
 
-    <div class="side-label-left">SYS.RBT_PORTFOLIO // ORBITAL DOCK: ONLINE</div>
+    <div class="side-label-left">SYS.RBT_PORTFOLIO // HOLO BENCH: ONLINE</div>
     <div class="side-label-right">0x8F9B // OPERATOR: ENG</div>
 
     <nav class="navbar">
@@ -40,84 +40,32 @@
 
     <main class="home-main">
         <section class="hero" id="home">
-            <!-- 3D view: approaching the Moon -->
-            <div id="dock-canvas"></div>
-
-            <!-- Lock-on HUD labels (positioned by JS over the active panel) -->
-            <div id="target-tag" class="target-tag"><span class="tt-arrow">◀</span><span class="tt-name">--</span></div>
-            <div id="target-dist" class="target-dist">DISTANCE<br><span class="td-val">---.-- m</span></div>
-
-            <!-- Cockpit frame overlay -->
-            <div class="cockpit-overlay" aria-hidden="true">
-                <div class="cp-pillar cp-pillar-l"></div>
-                <div class="cp-pillar cp-pillar-r"></div>
-
-                <div class="cp-monitor cp-mon-tl">
-                    <div class="cp-mon-arm"></div>
-                    <div class="cp-mon-screen">
-                        <div class="cp-scope"></div>
-                    </div>
-                </div>
-                <div class="cp-monitor cp-mon-tr">
-                    <div class="cp-mon-arm"></div>
-                    <div class="cp-mon-screen">
-                        <div class="cp-pie"></div>
-                        <div class="cp-bars"><i></i><i></i><i></i></div>
-                    </div>
-                </div>
-
-                <div class="cp-caution">
-                    <div class="cpc-title">&lt;CAUTION&gt;</div>
-                    <div class="cpc-row">SYS&nbsp;&nbsp;No. 0x8F9B-*****</div>
-                    <div class="cpc-row">DEST&nbsp;: LUNA ORBIT</div>
-                    <div class="cpc-row">FUEL&nbsp;: 100.00 %</div>
-                    <div class="cpc-row">LOCK&nbsp;: <span class="cpc-lock">ENGAGED</span></div>
-                    <div class="cpc-btns"><span>LOG ON</span><span>CANCEL</span></div>
-                </div>
-
-                <div class="cp-console">
-                    <div class="cp-side cp-side-l">
-                        <div class="cp-keys">
-                            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                        </div>
-                        <div class="cp-slider"></div>
-                    </div>
-                    <div class="cp-center">
-                        <div class="cp-touch">
-                            <div class="cp-cross"></div>
-                        </div>
-                    </div>
-                    <div class="cp-side cp-side-r">
-                        <div class="cp-keys cp-keys-num">
-                            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                        </div>
-                        <div class="cp-lever"></div>
-                    </div>
-                </div>
-            </div>
+            <!-- 3D view: wireframe robot on the holo projector (holo-scene.js).
+                 Part labels (SVG leader lines) and the no-WebGL fallback are injected by JS. -->
+            <div id="dock-canvas" class="holo-stage"></div>
 
             <div class="hud-frame"></div>
 
             <div class="hud-readout hud-tl">
-                COCKPIT VIEW // LUNAR APPROACH<br>
-                <span class="hud-strong">ENGINE: STANDBY // COURSE: LUNA</span>
+                HOLO BENCH // PROJECTION 01<br>
+                <span class="hud-strong">MODEL: AUTO-TRASH NAVIGATOR</span>
             </div>
             <div class="hud-readout hud-tr">
                 <span class="hud-dyn hud-strong" data-hud="clock">--:--:-- JST</span><br>
                 <span class="hud-dyn" data-hud="sig">SIG --%</span>
             </div>
             <div class="hud-readout hud-bl">
-                <span class="hud-dyn" data-hud="alt">ALT --- km</span><br>
-                <span class="hud-dyn" data-hud="vel">VEL --- km/s</span>
+                <span data-holo="yaw">YAW&nbsp;&nbsp;---.- °</span><br>
+                <span data-holo="zoom">SCALE -.-- ×</span>
             </div>
             <div class="hud-readout hud-br">
-                TARGET SCAN: CYCLING<br>
-                <span class="hud-strong">LOCK-ON: READY</span>
+                CHASSIS <span class="hud-strong">400 × 400 mm</span><br>
+                ARM <span class="hud-strong">6-DOF</span> // WHEEL <span class="hud-strong">Ø80 ×4</span>
             </div>
 
             <div class="hero-ui">
                 <div class="system-status">
-                    <span class="status-dot"></span> システムオンライン — 月軌道進入シーケンス開始
+                    <span class="status-dot"></span> システムオンライン — ホログラム投影中
                 </div>
                 <h1 class="hero-title glitch" data-text="服部　将眞">服部　将眞</h1>
                 <p class="hero-subtitle">
@@ -132,7 +80,7 @@
 
             <!-- Destination selector: explicit navigation UI synced with the 3D panels -->
             <div class="dock-nav" id="dock-nav">
-                <div class="dock-nav-label">COCKPIT NAV // 行き先を選んで発進</div>
+                <div class="dock-nav-label">PROJECT INDEX // 開くモジュールを選択</div>
                 <div class="dock-nav-btns" id="dock-nav-btns"></div>
             </div>
             <div class="scroll-indicator"></div>
@@ -183,6 +131,6 @@
 
     <script src="assets/js/three.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/dock-scene.js"></script>
+    <script src="assets/js/holo-scene.js"></script>
 </body>
 </html>
