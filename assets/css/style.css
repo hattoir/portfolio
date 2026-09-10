@@ -1001,6 +1001,7 @@ img, video { max-width: 100%; }
         mask-image: linear-gradient(to bottom, #000 0%, #000 33%, rgba(0, 0, 0, 0.18) 47%, rgba(0, 0, 0, 0.1) 100%);
     }
     .vehicle-caption { display: none; }   /* collided with the last card on phones */
+    #vehicle-canvas { opacity: 0.36; }    /* on phones the projection sits behind the page header */
     .hud-tl { display: none; }            /* the model occupies that strip on phones */
 }
 

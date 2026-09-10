@@ -12,10 +12,12 @@
 | ページ | 内容 | 3D演出 |
 |---|---|---|
 | index.html | ホーム | ホログラム投影台の上で、実寸(mm)から組んだ自作ロボット(Auto-Trash Navigator)のワイヤーフレームが回転。部品ラベルが3D位置に追従。ドラッグ回転/ホイールズーム/マウス視差 |
-| works.html | 作品(ミーミルの手 / 自動運転ミニカー) | 背景にISS(ホログラム化)。スクロールで奥行きドリー |
-| profile.html | プロフィール・開発思想・技術スタック | 月着陸船(LEM)が月面へ降下ループ(ホログラム化) |
-| activities.html | 活動実績タイムライン+モーダル | ブラックホール(降着円盤)+周回リング船(ホログラム化) |
-| learning.html | 学習リソース | 火星ローバー走行シーン(ホログラム化) |
+| works.html | 作品(具臣 / ミーミルの手 / 自動運転ミニカー) | 背景にISS(トラス・太陽電池翼8枚・各国モジュール・ロボットアーム)。スクロールで奥行きドリー |
+| profile.html | プロフィール・開発思想・技術スタック | 種子島の射点から H3-22(SRB-3×2)が打ち上がるループ。落雷塔・アンビリカル・噴煙 |
+| activities.html | 活動実績タイムライン+モーダル | ブラックホール(光子リング・降着円盤・時空の井戸)+周回リング船 |
+| learning.html | 学習リソース | 火星衛星探査機 MMX がフォボスへ着陸→サンプル採取→離陸するループ(IDEFIX ローバー・火星) |
+
+背景3Dはすべて `vehicles.js` 内で線画として実寸(m)から組んでいる。`data-vehicle` の値は `iss` / `h3` / `blackhole` / `mmx`。
 
 デザインテーマ(2026-09 刷新): 「スターク工房のホログラム作業台」。シアン(#63e8ff)のホログラム + 琥珀(#ffb14d)の警告/強調、方眼(48px)+走査線の背景、パネルは四隅のL字ブラケット。
 刷新前の状態は git タグ `backup/pre-holo-redesign` に残してある(戻す: `git checkout backup/pre-holo-redesign -- .`)。
@@ -91,7 +93,7 @@ assets/
 | `id="dock-canvas"` (index) | holo-scene.js | ホームの3D全部(WebGL非対応時はここに静止画SVGが入る。`?nogl` で確認可) |
 | `id="dock-nav-btns"` (index) | holo-scene.js | 行き先ボタン生成 |
 | `data-holo="yaw"` / `data-holo="zoom"` (index) | holo-scene.js | 左下の回転角/倍率表示 |
-| `id="vehicle-canvas"` と `data-vehicle="iss|lem|blackhole|rover"` (サブ4ページ) | vehicles.js | 各ページの3D乗り物 |
+| `id="vehicle-canvas"` と `data-vehicle="iss|h3|blackhole|mmx"` (サブ4ページ) | vehicles.js | 各ページの3D背景 |
 | `class="fade-in"` / `class="hamburger"` / `id="year"` / `data-hud="…"` | main.js | フェードイン/メニュー/年号/HUD数値 |
 | `class="works-card"` と `data-modal` / `modal-overlay` の `id` | 各ページ内スクリプト | モーダル開閉 |
 | モーダルID `modal-mimir` `modal-minicar` | dock-scene.js の `href` | ホームからの直接遷移(`works.html#modal-mimir`) |

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=11">
+    <link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 
 <body>
@@ -48,14 +48,33 @@
             <p class="page-subtitle">今まで作ってきたハードウェアのプロジェクト集。カードを選択して詳細ログを展開できます。</p>
             <div class="title-line"></div>
             <div class="page-status" aria-label="ページステータス">
-                <span><i class="ps-dot"></i>PROJECTS: <b>02</b></span>
-                <span class="ps-warn"><i class="ps-dot"></i>IN DEV: <b>01</b></span>
+                <span><i class="ps-dot"></i>PROJECTS: <b>03</b></span>
+                <span class="ps-warn"><i class="ps-dot"></i>IN DEV: <b>02</b></span>
                 <span>STATUS: <b>ARCHIVED</b></span>
             </div>
         </section>
 
         <section class="works-grid">
             <!-- Works Items -->
+            <div class="card fade-in works-card" data-modal="modal-gushin" style="cursor: pointer;">
+                <!-- ★差し替え: 写真ができたら style を
+                     background: url('assets/images/gushin_main.jpg') center/cover no-repeat;
+                     に変更し、中の .media-pending を削除 -->
+                <div class="card-image-placeholder"
+                    style="border-bottom: 1px solid rgba(192, 196, 208, 0.2); display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, rgba(192,196,208,0.03) 0 10px, transparent 10px 20px);">
+                    <div class="media-pending"
+                        style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1rem 1.6rem;">
+                        IMAGE // PENDING
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">具臣</h3>
+                    <p class="card-desc">床のゴミを自律で見つけて拾う移動ロボット（ROS 2 / メカナム / 6軸アーム）</p>
+                    <span class="view-link" style="display: inline-block; margin-top: 1rem;">詳細を見る <span
+                            class="arrow">→</span></span>
+                </div>
+            </div>
+
             <div class="card fade-in works-card" data-modal="modal-mimir" style="cursor: pointer;">
                 <div class="card-image-placeholder"
                     style="background: url('assets/images/3_robot_arm%20_main.jpg') center/cover no-repeat; border-bottom: 1px solid rgba(192, 196, 208, 0.2);">
@@ -83,6 +102,230 @@
     </main>
 
     <!-- Modals -->
+    <!-- GUSHIN Modal -->
+    <div class="modal-overlay" id="modal-gushin">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">具臣</h2>
+                <div class="modal-date">床のゴミを見つけて拾う自律移動ロボット / 開発コード名: Auto-Trash Navigator</div>
+            </div>
+            <div class="modal-body">
+
+                <!-- ══ メディア（★写真・動画ができたらここを差し替え） ══ -->
+                <div class="project-media" style="margin-bottom: 3rem;">
+                    <!-- メイン: 実機全体写真 -->
+                    <div
+                        style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; margin-bottom: 2rem; background: #000; min-height: 320px; display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 2rem 3rem; text-align: center; line-height: 2;">
+                            MAIN IMAGE // PENDING<br>
+                            <span style="font-size: 10px; opacity: 0.7;">実機全体（アーム搭載状態）</span>
+                        </div>
+                        <!-- ★差し替え:
+                        <img src="assets/images/gushin_main.jpg" alt="具臣 実機全体"
+                            style="width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block;">
+                        -->
+                    </div>
+
+                    <!-- サブ: 動画 + 静止画 -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div
+                            style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; background: #000; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+                            <div
+                                style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1.4rem 2rem; text-align: center; line-height: 2;">
+                                VIDEO // PENDING<br>
+                                <span style="font-size: 10px; opacity: 0.7;">シミュレーション自律回収</span>
+                            </div>
+                            <!-- ★差し替え:
+                            <video controls style="width: 100%; max-height: 400px; display: block;"
+                                poster="assets/images/gushin_sim.jpg">
+                                <source src="assets/videos/gushin_sim.mp4" type="video/mp4">
+                            </video>
+                            -->
+                        </div>
+                        <div
+                            style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; background: #000; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+                            <div
+                                style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1.4rem 2rem; text-align: center; line-height: 2;">
+                                SUB IMAGE // PENDING<br>
+                                <span style="font-size: 10px; opacity: 0.7;">アーム / RViz 画面</span>
+                            </div>
+                            <!-- ★差し替え:
+                            <img src="assets/images/gushin_sub.jpg" alt="具臣 アーム"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══ リンク ══ -->
+                <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <a href="https://github.com/hattoir/auto-trash-navigator" target="_blank" rel="noopener noreferrer"
+                        class="view-link hover-glow"
+                        style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: rgba(192, 196, 208, 0.1); border: 1px solid var(--accent); border-radius: 0; font-weight: bold; text-decoration: none; color: var(--accent); font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                            style="margin-right: 0.5rem;">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        GitHub リポジトリ
+                    </a>
+                    <!-- ★差し替え: Notion の開発日誌 URL を入れる -->
+                    <a href="#" class="view-link"
+                        style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--steel-dark); border-radius: 0; text-decoration: none; color: var(--steel-dim); cursor: not-allowed; opacity: 0.5; font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;"
+                        title="準備中">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.5rem;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                        Notion 開発日誌（準備中）
+                    </a>
+                </div>
+
+                <div class="project-content">
+
+                    <!-- ══ システム概要 ══ -->
+                    <h3
+                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                        【システム概要】</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">
+                        室内を自律で巡回し、床に落ちた紙くずをカメラで検出して6軸アームで拾い上げ、車載のダストボックスへ投下してから巡回に戻る自律移動ロボットです。移動（ナビゲーション）・認識（画像/深度）・マニピュレーション（アーム制御）という、それぞれ独立した分野を1台の上で統合することを目的として開発しました。
+                    </p>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">
+                        開発方針として「実機を作る前にシミュレーション上で完成させる」ことを徹底しました。ROS 2 と Gazebo
+                        上で全機能を構築し、無介入20分の連続稼働試験で紙くず3個の完全回収と回収後20周の巡回継続を達成。そのうえで、シミュレーションで得られた実測値（アームの到達範囲・必要トルク・センサの死角）をハードウェア設計へフィードバックし、実機の製作へ進んでいます。
+                    </p>
+                    <p style="margin-bottom: 2.5rem; line-height: 1.9; color: var(--steel-dim);">
+                        シミュレーションで作ったソフトウェアが、実機の寸法に差し替えるだけでそのまま動くことを設計目標に置いており、現在は実機での再現に取り組んでいます。
+                    </p>
+
+                    <!-- ══ 主要諸元（数値カード） ══ -->
+                    <h3
+                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                        【主要諸元 / 検証結果】</h3>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 2.5rem;">
+                        <div style="background: rgba(0,0,0,0.35); padding: 1rem 1.2rem;">
+                            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--steel-dark);">CHASSIS</div>
+                            <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-top: 0.3rem;">400 × 400 mm</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.35); padding: 1rem 1.2rem;">
+                            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--steel-dark);">ARM REACH</div>
+                            <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-top: 0.3rem;">0.45 m</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.35); padding: 1rem 1.2rem;">
+                            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--steel-dark);">DETECTION</div>
+                            <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-top: 0.3rem;">2 – 4 cm</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.35); padding: 1rem 1.2rem;">
+                            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--steel-dark);">COLLECTED</div>
+                            <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-top: 0.3rem;">3 / 3</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.35); padding: 1rem 1.2rem;">
+                            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--steel-dark);">DROP ERROR</div>
+                            <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-top: 0.3rem;">0.000 m</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.35); padding: 1rem 1.2rem;">
+                            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--steel-dark);">UPTIME</div>
+                            <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-top: 0.3rem;">20 min / 0 err</div>
+                        </div>
+                    </div>
+
+                    <!-- ══ 使用技術 ══ -->
+                    <h3
+                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                        【使用技術・ツール】</h3>
+                    <ul class="tech-list" style="margin-bottom: 2.5rem; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;"><strong>ロボット制御ミドルウェア：</strong> ROS 2 (Jazzy Jalisco)</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>シミュレーション：</strong> Gazebo Sim (Harmonic)</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>自律移動：</strong> Nav2（AMCL / MPPI）、slam_toolbox、robot_localization（EKF）</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>マニピュレーション：</strong> MoveIt 2、TRAC-IK、ros2_control</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>認識：</strong> YOLOv8（OpenVINO 推論）、深度ベース自作検出ノード、OpenCV</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>機構設計（CAD）：</strong> Fusion 360（6軸アーム、グリッパー、車体）</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>製作：</strong> 3Dプリンタ（Bambu Lab A1 / PLA）、レーザーカッター</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>使用部品：</strong> ミニPC（Intel N95）、ESP32、OAK-D Lite、360°LiDAR、STS3215 サーボ ×7、FE-URT-1、メカナムホイール Ø80 ×4、MD10C ×2、LiPo 3S</li>
+                    </ul>
+
+                    <!-- ══ ハードウェア設計における課題と工夫 ══ -->
+                    <h3
+                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                        【ハードウェア設計における課題と工夫】</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">
+                        シミュレーションで先に検証したことにより、実機を製作する前の段階で複数の設計上の問題を発見し、対策を設計へ反映することができました。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">1. 肩関節のトルク余裕不足を、製作前に数値で発見</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>課題：</strong> CAD の実測質量と重心から重力トルクを計算したところ、腕を水平にした姿勢で肩関節（J2）に <strong>1.32 N·m</strong> が必要であることが判明しました。使用サーボ STS3215 のストールトルクは 1.9 N·m で、必要トルクはその <strong>70%</strong>。余裕率は 1.44 倍しかなく、しかも把持姿勢は運動学的に肩を水平付近へ追い込むため、拾うたびに最悪トルク点を通過する設計になっていました。<br>
+                        <strong>工夫：</strong> シミュレーションの物理モデルでこの値を再現し、制御側で「肘を先に畳んでから伸ばす」軌道に変更することで、動作中の最大負荷を 1.10 N·m → 0.93 N·m まで下げる見通しを立てました。あわせて、先端側の軽量化とカウンターバランスの追加を次期設計の検討項目としています。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">2. アームが「真正面」を苦手とする幾何を実測で把握し、接近戦略を変更</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>課題：</strong> 逆運動学の解が存在する範囲を格子状に走査したところ、ロボットの真正面（横方向のずれが 4cm 以内）では床面に手が届かないことが判明しました。肩と肘の可動域が ±98° しかないため、旋回軸を使わずに正面へ伸ばすと必要な姿勢が作れないことが原因です。<br>
+                        <strong>工夫：</strong> 「ゴミに正対して停止する」という当初の接近方法をやめ、ゴミが車体基準で斜め前に来るよう停止位置をオフセットする方式に変更しました。人間もゴミを拾うときは正面に構えず体を少しずらす、という動作と同じ理屈です。この変更により把持の成功率が大きく改善しました。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">3. センサ同士の干渉（カメラが LiDAR の視界を塞ぐ）を CAD 段階で解消</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>課題：</strong> シミュレーションで走行させたところ、ロボットが 1mm も前進しない現象が発生しました。原因を追跡すると、LiDAR のスキャン面（床上 210mm）を <strong>カメラ本体が横切っており</strong>、自分自身を至近距離の障害物として検出し続けて速度が制限されていました。<br>
+                        <strong>工夫：</strong> カメラマストを 25mm 下げて天端とスキャン面の間に 10.3mm のクリアランスを確保し、CAD の干渉解析でスキャン面を横切る構造物がゼロであることを確認しました。残るアームの映り込みについては、遮蔽角を幾何計算（幅 11.9°）してソフト側でその角度セクターのみを除去しています。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">4. メカナム輪の運動学 — 実効モーメントアームの取り違えを防止</h4>
+                    <p style="margin-bottom: 2.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>課題：</strong> モータードライバの都合で4輪独立駆動から左右ペア駆動（差動2輪）へ変更した際、旋回の角速度が指令値の 60% しか出ない問題が発生しました。<br>
+                        <strong>工夫：</strong> メカナムホイールはローラーが 45° に傾いているため、旋回に効く実効モーメントアームは物理トレッドの半分（0.180 m）ではなく <strong>lx + ly = 0.300 m</strong> になります。この幾何を計算で確かめ、制御パラメータを実効値へ修正することで指令と実挙動が完全に一致しました。あわせて、実機のマイコン側ファームウェアと最大角速度の見積もり（2.5 → 1.5 rad/s）も同じ根拠で修正しています。
+                    </p>
+
+                    <!-- ══ 反省点と今後の展望 ══ -->
+                    <h3
+                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                        【反省点と今後の展望（Next Action）】</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">
+                        本プロジェクトで最も多くの時間を費やしたのは、機能の実装そのものではなく「本当に動いているかを確かめる方法」の確立でした。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">1. ログを成果の証拠にしてしまった反省 — 物理照合による検証体制の確立</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>反省点：</strong> 開発中盤、ログに「回収完了」と表示されたことをもって完成と判断しました。しかし念のためシミュレータに物体の座標を直接問い合わせたところ、対象は初期位置から <strong>3.5mm</strong> しか動いていませんでした。ログは「そう表示するコードが実行された」ことしか証明しないという当たり前の事実を、身をもって理解した出来事でした。<br>
+                        <strong>Next Action：</strong> 以降は判定基準を「物が実際にどこへ移動したか（シミュレータの真値座標）」に統一しました。合格条件も、回収数・投下位置の誤差・接近距離・巡回継続数といった<strong>すべて計測可能な数値</strong>で定義し直しています。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">2. 物理量を計算せずに設定値を書いた反省 — 開ループ試験による診断</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>反省点：</strong> 長期間、原因不明のまま残っていた不具合が2件ありました。1つは肩関節が可動域の端で固着する問題で、原因はモデルに設定したトルク上限が必要値の 45% しかなかったこと。もう1つは、車輪の回転軸の符号がすべて逆になっており、指令とは逆方向に走りながらオドメトリは「正しく進んだ」と報告し続けていたことでした。<br>
+                        <strong>Next Action：</strong> どちらも「指令を与えて、実際にどう動いたかを真値で測る」開ループ試験で特定できました。以降、駆動系に変更を加えたら必ずこの試験を通すことをルール化しています。実機でも組み立て後に同じ試験（1m 直進・半回転を巻尺で実測）を行う計画です。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">3. 評価数値をそのまま信じた反省 — データリークの検査</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        <strong>反省点：</strong> ゴミ検出用に学習させた YOLO モデルが mAP50 = 0.99 という高い数値を出しました。しかし学習データは動画から切り出したフレームであり、それをランダムに分割していたため、評価用の画像が学習用とほぼ同じ場面になっていました。<br>
+                        <strong>Next Action：</strong> 動画1本を丸ごと評価用に取り分ける方式（Leave-One-Video-Out）で測り直したところ、実力は mAP50 = 0.84 でした。良すぎる数値が出たときは、まず評価方法そのものを疑うという習慣がつきました。
+                    </p>
+
+                    <h4 style="color: var(--ember); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">4. 実機完成に向けた残課題</h4>
+                    <p style="margin-bottom: 2rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                        現在、ミニPC上での ROS 2 環境構築、LiDAR・深度カメラ・マイコンの疎通と品質評価（LiDAR 9.1Hz・30分連続稼働・実環境での地図生成、カメラ最短測距 18cm、推論 13 FPS）までが完了しています。残る課題は、
+                        <span style="display: block; margin-top: 0.5rem; font-family: var(--font-mono); font-size: 14px; color: var(--accent);">
+                            ・車輪駆動の実機検証（開ループ試験）<br>
+                            ・6軸アームの実機制御（ros2_control ハードウェアインターフェース）<br>
+                            ・簡略化していた把持を、実際に指で掴む物理把持へ差し替え<br>
+                            ・主板・底板のレーザーカット製作と本組み立て
+                        </span>
+                        の4点です。シミュレーションで確立した検証手法をそのまま実機に適用し、同じ合格条件を実空間で満たすことを最終目標としています。
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal-overlay" id="modal-mimir">
         <div class="modal-container fade-in">
             <button class="modal-close">&times;</button>
