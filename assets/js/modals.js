@@ -36,7 +36,7 @@
             var a = document.createElement("a");
             a.href = "#" + h.id;
             a.className = "di-item";
-            a.textContent = h.textContent.replace(/[【】]/g, "").replace(/（[^）]*）s*$/, "").trim();
+            a.textContent = h.textContent.replace(/[【】]/g, "").trim().replace(/（[^）]*）$/, "").trim();
             a.addEventListener("click", function (e) {
                 e.preventDefault();
                 h.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });

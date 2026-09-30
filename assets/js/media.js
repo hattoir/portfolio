@@ -66,6 +66,65 @@
     }
 
     /* ------------------------------------------------------------------ */
+    /* 1b. videos: same plate language; YouTube loads only on click        */
+    /* ------------------------------------------------------------------ */
+    function enhanceVideos(scope) {
+        var modals = scope.querySelectorAll(".modal-overlay");
+        Array.prototype.forEach.call(modals, function (modal) {
+            var vids = modal.querySelectorAll(".modal-body video");
+            var n = 0;
+            Array.prototype.forEach.call(vids, function (v) {
+                if (v.parentNode && v.parentNode.className === "video-holder") return;
+                n++;
+                var id = "VIDEO " + (n < 10 ? "0" + n : String(n));
+                var caption = v.getAttribute("data-caption") || "";
+                var credit = v.getAttribute("data-credit") || "VIDEO: 服部 将眞";
+                var yt = v.getAttribute("data-yt");
+                var poster = v.getAttribute("poster") || "";
+
+                var fig = document.createElement("figure");
+                fig.className = "plate video-plate";
+                var holder = document.createElement("div");
+                holder.className = "video-holder";
+                v.parentNode.insertBefore(fig, v);
+                fig.appendChild(holder);
+
+                if (yt) {
+                    // facade: nothing from YouTube is requested until the visitor asks for it
+                    var btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "yt-facade";
+                    btn.setAttribute("aria-label", caption + " を再生");
+                    if (poster) btn.style.backgroundImage = "url(" + poster + ")";
+                    btn.innerHTML = "<span class=\"yt-play\"></span><span class=\"yt-note\">YouTube で再生</span>";
+                    btn.addEventListener("click", function () {
+                        var f = document.createElement("iframe");
+                        f.src = "https://www.youtube-nocookie.com/embed/" + yt + "?autoplay=1&rel=0";
+                        f.title = caption || "動画";
+                        f.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
+                        f.allowFullscreen = true;
+                        f.loading = "lazy";
+                        holder.innerHTML = "";
+                        holder.appendChild(f);
+                    });
+                    holder.appendChild(btn);
+                    if (v.parentNode) v.parentNode.removeChild(v);
+                } else {
+                    holder.appendChild(v);
+                }
+
+                var cap = document.createElement("figcaption");
+                cap.className = "plate-cap";
+                var a = document.createElement("span"); a.className = "plate-id"; a.textContent = id;
+                var b = document.createElement("span"); b.className = "plate-text"; b.textContent = caption;
+                var c = document.createElement("span"); c.className = "plate-credit"; c.textContent = credit;
+                cap.appendChild(a); cap.appendChild(b); cap.appendChild(c);
+                fig.appendChild(cap);
+            });
+        });
+    }
+
+    /* ------------------------------------------------------------------ */
     /* 2. the viewer                                                       */
     /* ------------------------------------------------------------------ */
     var view, viewImg, viewId, viewCap, viewCredit, viewCount, current = null, lastFocus = null;
@@ -173,8 +232,9 @@
     }, true);
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function () { enhance(document); });
+        document.addEventListener('DOMContentLoaded', function () { enhance(document); enhanceVideos(document); });
     } else {
         enhance(document);
+        enhanceVideos(document);
     }
 })();

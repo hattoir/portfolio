@@ -1570,3 +1570,40 @@ body.is-loaded .hero .dock-nav { animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0
 }
 .doc-h { scroll-margin-top: 96px; }
 @media (max-width: 700px) { .dossier-index { padding: 0.55rem var(--s3); } .di-item { font-size: 10px; padding: 0.3rem 0.55rem; } }
+
+/* video plates + YouTube facade (nothing is requested until the visitor clicks) */
+.video-plate .video-holder {
+    position: relative; background: #000; overflow: hidden;
+    border: 1px solid rgba(var(--accent-rgb), 0.10);
+    aspect-ratio: 16 / 9;
+}
+.video-plate video, .video-plate iframe { width: 100%; height: 100%; display: block; border: 0; }
+.yt-facade {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    background-size: cover; background-position: center; background-color: #000;
+    border: 0; cursor: pointer; display: grid; place-items: center; gap: 0.8rem;
+    align-content: center;
+}
+.yt-facade::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(2, 6, 10, 0.25), rgba(2, 6, 10, 0.7));
+    transition: background var(--transition-fast);
+}
+.yt-facade:hover::after { background: linear-gradient(180deg, rgba(2, 6, 10, 0.1), rgba(2, 6, 10, 0.55)); }
+.yt-play {
+    position: relative; z-index: 1;
+    width: 64px; height: 64px; border: 1px solid rgba(var(--accent-rgb), 0.6);
+    background: rgba(2, 8, 12, 0.6); display: grid; place-items: center;
+    box-shadow: 0 0 26px -6px rgba(var(--accent-rgb), 0.55);
+    transition: all var(--transition-fast);
+}
+.yt-play::before {
+    content: ""; border-style: solid; border-width: 9px 0 9px 15px;
+    border-color: transparent transparent transparent var(--accent-bright);
+    margin-left: 4px;
+}
+.yt-facade:hover .yt-play { border-color: var(--accent); transform: scale(1.06); }
+.yt-note {
+    position: relative; z-index: 1;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.24em; color: var(--accent);
+}

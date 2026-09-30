@@ -178,3 +178,26 @@ assets/
 - モーダルを開いて Esc で閉じられるか、Tab がモーダル内に留まるか
 - 画像をクリックしてビューアが開き、←→ で送れるか
 - スマホ幅で three.js が読まれていないこと（DevTools の Network で確認）
+
+### 6-5. 動画を YouTube に逃がす（推奨）
+
+大きい動画（特に `minicar.mp4` は 350MB）はリポジトリに置かず、**YouTube の限定公開**にして
+クリックで読み込む方式にできる。仕組みは `media.js` に入っているので、**HTML 側は1属性足すだけ**。
+
+```html
+<video controls preload="none" playsinline
+       poster="assets/images/opt/minicar-1600.webp"
+       data-caption="自動運転ミニカー — 学習済みモデルによる自律走行の記録"
+       data-yt="ここにYouTubeの動画ID">
+    <source src="assets/videos/minicar.mp4" type="video/mp4">
+</video>
+```
+
+`data-yt` があると、`<video>` は**ポスター画像＋再生ボタン**に置き換わり、
+クリックしたときに初めて `youtube-nocookie.com` の埋め込みを読み込む。
+（クリックするまで YouTube へは一切通信しない。）
+
+動画IDは `https://youtu.be/XXXXXXXXXXX` の `XXXXXXXXXXX` の部分。
+限定公開（Unlisted）にしておけば検索には出ないが、URLを知っていれば誰でも見られる。
+
+差し替えが済んだら `assets/videos/*.mp4` はリポジトリから削除してよい（Git LFS の容量も空く）。
