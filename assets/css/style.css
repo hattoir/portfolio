@@ -1471,3 +1471,102 @@ body.is-loaded .hero .dock-nav { animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0
 /* featured spec block: keep a clean 2x2 instead of an orphan cell */
 .featured-body .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 480px) { .featured-body .spec-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   SCALE — one type ramp and one spacing ramp for the whole instrument
+   (appended last so it settles the rhythm that grew ad hoc above)
+   ========================================================================== */
+:root {
+    --step--1: clamp(0.76rem, 0.74rem + 0.1vw, 0.82rem);
+    --step-0:  clamp(0.9rem, 0.88rem + 0.15vw, 0.98rem);
+    --step-1:  clamp(1.02rem, 0.98rem + 0.3vw, 1.2rem);
+    --step-2:  clamp(1.25rem, 1.12rem + 0.7vw, 1.65rem);
+    --step-3:  clamp(1.7rem, 1.42rem + 1.5vw, 2.5rem);
+    --step-4:  clamp(2.1rem, 1.5rem + 3vw, 3.4rem);
+
+    --s1: 0.4rem;  --s2: 0.8rem;  --s3: 1.2rem;  --s4: 1.8rem;
+    --s5: 2.6rem;  --s6: 3.6rem;  --s7: 5rem;    --s8: clamp(4.5rem, 9vw, 7.5rem);
+}
+
+/* page rhythm */
+.page-main { padding-top: clamp(7rem, 11vw, 9.5rem); padding-bottom: var(--s8); }
+.page-header { margin-bottom: var(--s7); }
+.page-title { font-size: var(--step-4); line-height: 1.18; }
+.page-subtitle { font-size: var(--step-0); line-height: 1.9; margin-top: var(--s3); max-width: 46em; }
+.page-eyebrow { margin-bottom: var(--s3); }
+.section-block { padding: var(--s8) 0; }
+.section-heading { font-size: var(--step-3); }
+.section-sub { margin-bottom: var(--s6); }
+
+/* cards */
+.card-content { padding: var(--s4); }
+.card-title { font-size: var(--step-1); margin-bottom: var(--s2); line-height: 1.45; }
+.card-desc { font-size: var(--step-0); line-height: 1.85; }
+.module-card { padding: var(--s5) var(--s4); }
+.module-title { font-size: var(--step-1); margin-bottom: var(--s2); }
+.module-desc { font-size: var(--step-0); line-height: 1.85; margin-bottom: var(--s3); }
+.works-grid, .learning-grid { gap: clamp(1.4rem, 3vw, 2.2rem); }
+
+/* timeline */
+.timeline-item { padding: var(--s4); margin-bottom: var(--s5); }
+.timeline-title { font-size: var(--step-1); margin-bottom: var(--s2); }
+.timeline-desc { font-size: var(--step-0); line-height: 1.85; }
+
+/* dossier document */
+.doc-h { font-size: var(--step-1); margin: var(--s6) 0 var(--s4); }
+.doc-sub { margin: var(--s5) 0 var(--s2); }
+.doc-p { font-size: var(--step-0); margin-bottom: var(--s4); }
+.doc-bullets li { font-size: var(--step-0); }
+.modal-body { padding: var(--s5) var(--s5) var(--s7); }
+.modal-title { font-size: var(--step-2); }
+
+/* profile */
+.catchphrase-text { font-size: var(--step-2); line-height: 2.05; }
+.desc-text { font-size: var(--step-0); line-height: 2.05; max-width: 72ch; }
+.profile-value { font-size: var(--step-1); }
+
+@media (max-width: 700px) {
+    .modal-body { padding: var(--s4) var(--s3) var(--s6); }
+    .card-content { padding: var(--s3); }
+}
+
+/* mission log chips on the timeline */
+.tl-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: var(--s3); }
+.tl-chip {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+    color: var(--steel-dim);
+    border: 1px solid rgba(var(--accent-rgb), 0.18);
+    padding: 3px 9px;
+}
+.tl-chip.is-award {
+    color: var(--amber); border-color: rgba(255, 177, 77, 0.4);
+    background: rgba(255, 177, 77, 0.06);
+}
+.tl-chip.is-dim { color: var(--steel-dark); }
+.timeline-item:hover .tl-chip { border-color: rgba(var(--accent-rgb), 0.3); }
+
+/* dossier section index (sticky inside the modal) */
+.modal-container { overflow: visible; }
+.dossier-index {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; gap: 0.25rem; overflow-x: auto;
+    padding: 0.7rem var(--s5);
+    background: rgba(3, 11, 15, 0.94);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
+    scrollbar-width: none;
+}
+.dossier-index::-webkit-scrollbar { display: none; }
+.di-item {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em;
+    color: var(--steel-dark); white-space: nowrap;
+    padding: 0.36rem 0.75rem; border: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+.di-item:hover { color: var(--accent-bright); }
+.di-item.is-on {
+    color: var(--accent); border-color: rgba(var(--accent-rgb), 0.35);
+    background: rgba(var(--accent-rgb), 0.07);
+}
+.doc-h { scroll-margin-top: 96px; }
+@media (max-width: 700px) { .dossier-index { padding: 0.55rem var(--s3); } .di-item { font-size: 10px; padding: 0.3rem 0.55rem; } }

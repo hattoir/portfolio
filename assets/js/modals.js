@@ -7,6 +7,7 @@
 (function () {
     'use strict';
 
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var FOCUSABLE = 'a[href], button:not([disabled]), video[controls], [tabindex]:not([tabindex="-1"])';
     var openModal = null, lastFocus = null;
 
@@ -19,10 +20,46 @@
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
 
+    // long dossiers get a sticky section index built from their headings
+    function buildIndex(modal) {
+        var body = modal.querySelector(".modal-body");
+        var box = modal.querySelector(".modal-container");
+        if (!body || !box || modal.querySelector(".dossier-index")) return;
+        var heads = body.querySelectorAll(".doc-h");
+        if (heads.length < 3) return;
+        var nav = document.createElement("nav");
+        nav.className = "dossier-index";
+        nav.setAttribute("aria-label", "セクション");
+        var list = [];
+        Array.prototype.forEach.call(heads, function (h, i) {
+            if (!h.id) h.id = modal.id + "-sec-" + i;
+            var a = document.createElement("a");
+            a.href = "#" + h.id;
+            a.className = "di-item";
+            a.textContent = h.textContent.replace(/[【】]/g, "").replace(/（[^）]*）s*$/, "").trim();
+            a.addEventListener("click", function (e) {
+                e.preventDefault();
+                h.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+            });
+            nav.appendChild(a);
+            list.push({ h: h, a: a });
+        });
+        box.insertBefore(nav, body);
+        var sync = function () {
+            var edge = nav.getBoundingClientRect().bottom + 12;
+            var cur = list[0];
+            list.forEach(function (it) { if (it.h.getBoundingClientRect().top <= edge) cur = it; });
+            list.forEach(function (it) { it.a.classList.toggle("is-on", it === cur); });
+        };
+        modal.addEventListener("scroll", sync, { passive: true });
+        sync();
+    }
+
     function open(modal, trigger) {
         if (!modal || openModal === modal) return;
         lastFocus = trigger || document.activeElement;
         openModal = modal;
+        buildIndex(modal);
         modal.classList.add('active');
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
