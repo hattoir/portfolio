@@ -1,0 +1,236 @@
+{
+  "3_robot_arm _main.jpg": {
+    "source": "3_robot_arm _main.jpg",
+    "sourceBytes": 3303969,
+    "variants": [
+      {
+        "name": "3-robot-arm-main-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 242366
+      },
+      {
+        "name": "3-robot-arm-main-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 74920
+      }
+    ]
+  },
+  "3_robot_arm _sub.jpg": {
+    "source": "3_robot_arm _sub.jpg",
+    "sourceBytes": 2785673,
+    "variants": [
+      {
+        "name": "3-robot-arm-sub-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 232794
+      },
+      {
+        "name": "3-robot-arm-sub-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 70182
+      }
+    ]
+  },
+  "assembly_process_2025_main.jpg": {
+    "source": "assembly_process_2025_main.jpg",
+    "sourceBytes": 3285571,
+    "variants": [
+      {
+        "name": "assembly-process-2025-main-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 376648
+      },
+      {
+        "name": "assembly-process-2025-main-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 126566
+      }
+    ]
+  },
+  "assembly_process_2025_sub.jpg": {
+    "source": "assembly_process_2025_sub.jpg",
+    "sourceBytes": 3090434,
+    "variants": [
+      {
+        "name": "assembly-process-2025-sub-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 323212
+      },
+      {
+        "name": "assembly-process-2025-sub-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 83598
+      }
+    ]
+  },
+  "internatinal_robot_2025_main.jpg": {
+    "source": "internatinal_robot_2025_main.jpg",
+    "sourceBytes": 3222750,
+    "variants": [
+      {
+        "name": "internatinal-robot-2025-main-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 474838
+      },
+      {
+        "name": "internatinal-robot-2025-main-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 159882
+      }
+    ]
+  },
+  "internatinal_robot_2025_sub1.jpg": {
+    "source": "internatinal_robot_2025_sub1.jpg",
+    "sourceBytes": 3069611,
+    "variants": [
+      {
+        "name": "internatinal-robot-2025-sub1-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 398428
+      },
+      {
+        "name": "internatinal-robot-2025-sub1-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 118614
+      }
+    ]
+  },
+  "internatinal_robot_2025_sub2.jpg": {
+    "source": "internatinal_robot_2025_sub2.jpg",
+    "sourceBytes": 3209338,
+    "variants": [
+      {
+        "name": "internatinal-robot-2025-sub2-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 484910
+      },
+      {
+        "name": "internatinal-robot-2025-sub2-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 164460
+      }
+    ]
+  },
+  "internatinal_robot_2025_sub3.jpg": {
+    "source": "internatinal_robot_2025_sub3.jpg",
+    "sourceBytes": 265676,
+    "variants": [
+      {
+        "name": "internatinal-robot-2025-sub3-1600.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 165850
+      },
+      {
+        "name": "internatinal-robot-2025-sub3-800.webp",
+        "width": 800,
+        "height": 450,
+        "bytes": 74202
+      }
+    ]
+  },
+  "internatinal_robot_2025_sub4.jpg": {
+    "source": "internatinal_robot_2025_sub4.jpg",
+    "sourceBytes": 191765,
+    "variants": [
+      {
+        "name": "internatinal-robot-2025-sub4-1600.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 112076
+      },
+      {
+        "name": "internatinal-robot-2025-sub4-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 75684
+      }
+    ]
+  },
+  "minicar.jpg": {
+    "source": "minicar.jpg",
+    "sourceBytes": 3869077,
+    "variants": [
+      {
+        "name": "minicar-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 415022
+      },
+      {
+        "name": "minicar-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 141982
+      }
+    ]
+  },
+  "plus_e_exhibition.png": {
+    "source": "plus_e_exhibition.png",
+    "sourceBytes": 556137,
+    "variants": [
+      {
+        "name": "plus-e-exhibition-1600.webp",
+        "width": 1024,
+        "height": 475,
+        "bytes": 40368
+      },
+      {
+        "name": "plus-e-exhibition-800.webp",
+        "width": 800,
+        "height": 371,
+        "bytes": 29270
+      }
+    ]
+  },
+  "techseeker_main.JPG": {
+    "source": "techseeker_main.JPG",
+    "sourceBytes": 449511,
+    "variants": [
+      {
+        "name": "techseeker-main-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 195422
+      },
+      {
+        "name": "techseeker-main-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 66196
+      }
+    ]
+  },
+  "techseeker_sub.PNG": {
+    "source": "techseeker_sub.PNG",
+    "sourceBytes": 7794871,
+    "variants": [
+      {
+        "name": "techseeker-sub-1600.webp",
+        "width": 1170,
+        "height": 2532,
+        "bytes": 332180
+      },
+      {
+        "name": "techseeker-sub-800.webp",
+        "width": 800,
+        "height": 1731,
+        "bytes": 170400
+      }
+    ]
+  }
+}

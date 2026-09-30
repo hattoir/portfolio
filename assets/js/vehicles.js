@@ -251,7 +251,7 @@
 
     var root = new THREE.Group();
     // composition: vehicle sits centre-right and deep, page text stays readable on the left
-    root.position.set(isMobile ? 0 : 4.6, isMobile ? 1.2 : -0.2, isMobile ? -6 : -3);
+    root.position.set(isMobile ? 0.4 : 4.6, isMobile ? 1.6 : -0.2, isMobile ? -9 : -3);
     if (!isMobile) root.scale.setScalar(0.8);   // smaller + further right: stays clear of the page header
     scene.add(root);
 

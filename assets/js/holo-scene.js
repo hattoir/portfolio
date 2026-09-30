@@ -57,20 +57,11 @@
     function showFallback() {
         mount.classList.add('holo-fallback');
         mount.innerHTML =
-            '<svg viewBox="0 0 600 440" role="img" aria-label="ロボットのワイヤーフレーム（静止画）">' +
-            '<g fill="none" stroke="#63e8ff" stroke-width="1.2" opacity="0.85">' +
-            '<ellipse cx="300" cy="360" rx="250" ry="58" opacity="0.35"/><ellipse cx="300" cy="360" rx="205" ry="47" opacity="0.5"/>' +
-            '<ellipse cx="300" cy="360" rx="160" ry="36" opacity="0.7"/>' +
-            '<path d="M150 300 L300 250 L450 300 L300 350 Z"/><path d="M150 300 v12 L300 362 L450 312 v-12"/><path d="M300 350 v12"/>' +
-            '<ellipse cx="190" cy="325" rx="16" ry="26"/><ellipse cx="410" cy="325" rx="16" ry="26"/>' +
-            '<ellipse cx="250" cy="275" rx="12" ry="20" opacity="0.6"/><ellipse cx="350" cy="275" rx="12" ry="20" opacity="0.6"/>' +
-            '<ellipse cx="285" cy="292" rx="62" ry="20"/><path d="M223 292 v-58 M347 292 v-58"/><ellipse cx="285" cy="234" rx="62" ry="20"/>' +
-            '<path d="M372 300 v-34 l18 -64 l58 -18 l20 30 l-8 40" stroke-width="1.6"/>' +
-            '<circle cx="390" cy="202" r="9"/><circle cx="448" cy="184" r="8"/><path d="M452 248 l-8 26 M468 244 l2 28"/>' +
-            '<path d="M200 285 v-86"/><ellipse cx="200" cy="192" rx="30" ry="9"/><ellipse cx="200" cy="182" rx="26" ry="8"/>' +
-            '<rect x="420" y="228" width="44" height="14" transform="rotate(25 442 235)"/>' +
-            '</g></svg>' +
-            '<div class="holo-fallback-note">STATIC VIEW // WebGL UNAVAILABLE</div>';
+            '<img src="assets/images/opt/gushin-model-1400.webp" ' +
+            'srcset="assets/images/opt/gushin-model-800.webp 800w, assets/images/opt/gushin-model-1400.webp 1400w" ' +
+            'sizes="(max-width: 700px) 92vw, 640px" width="1400" height="1185" decoding="async" ' +
+            'alt="具臣 実寸ワイヤーフレームモデル（静止画）">' +
+            '<div class="holo-fallback-note">STATIC PLATE // MODEL: AUTO-TRASH NAVIGATOR</div>';
     }
 
     if (typeof THREE === 'undefined' || /[?&]nogl\b/.test(window.location.search)) { showFallback(); return; }
