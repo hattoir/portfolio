@@ -1607,3 +1607,36 @@ body.is-loaded .hero .dock-nav { animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0
     position: relative; z-index: 1;
     font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.24em; color: var(--accent);
 }
+
+/* ==========================================================================
+   LEARNING — reference cards and the in-progress board
+   ========================================================================== */
+.container-flush { width: 100%; }
+.progress-block { padding-top: var(--s7); }
+
+.ref-head {
+    display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em;
+}
+.ref-id { color: var(--accent); text-shadow: 0 0 10px rgba(var(--accent-rgb), 0.45); }
+.ref-source { color: var(--steel-dark); letter-spacing: 0.1em; }
+.ref-status { margin-left: auto; display: inline-flex; align-items: center; gap: 0.45rem; color: var(--amber); }
+.ref-status i {
+    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    box-shadow: 0 0 8px currentColor; animation: pulse 2.4s ease-in-out infinite;
+}
+
+.ref-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: var(--s3); }
+.ref-chip {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    color: var(--steel-dark);
+    border: 1px solid rgba(var(--accent-rgb), 0.16);
+    padding: 3px 8px;
+    transition: all var(--transition-fast);
+}
+.card:hover .ref-chip { color: var(--steel-dim); border-color: rgba(var(--accent-rgb), 0.3); }
+
+.progress-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(1.4rem, 3vw, 2.2rem); }
+.progress-card .card-desc { margin-top: 0.2rem; }
+.progress-card::after { --sweep: 90px; }
