@@ -26,12 +26,15 @@
     /* ---------------------------------------------------------------- */
     /* 2. page transition                                                */
     /* ---------------------------------------------------------------- */
+    function reveal() {
+        requestAnimationFrame(function () { document.body.classList.add("is-loaded"); });
+    }
+
     function transitions() {
         if (reduced) return;
         var veil = document.createElement('div');
         veil.className = 'page-veil';
         document.body.appendChild(veil);
-        requestAnimationFrame(function () { document.body.classList.add('is-loaded'); });
 
         document.addEventListener('click', function (e) {
             var a = e.target.closest ? e.target.closest('a') : null;
@@ -101,11 +104,31 @@
         update();
     }
 
+    /* ---------------------------------------------------------------- */
+    /* 5. back to top                                                    */
+    /* ---------------------------------------------------------------- */
+    function toTop() {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "to-top";
+        b.setAttribute("aria-label", "ページ先頭へ戻る");
+        b.innerHTML = "&#9650;";
+        document.body.appendChild(b);
+        b.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+        });
+        var sync = function () { b.classList.toggle("is-on", window.pageYOffset > 380); };
+        window.addEventListener("scroll", sync, { passive: true });
+        sync();
+    }
+
     function init() {
         stagger();
+        reveal();
         transitions();
         cursor();
         progress();
+        toTop();
     }
 
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

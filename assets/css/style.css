@@ -1335,3 +1335,68 @@ body.is-leaving .page-veil { opacity: 1; transition: opacity 0.26s ease; }
     .holo-fallback { flex-direction: column; align-items: center; justify-content: flex-start; padding: 4.8rem 1rem 0; }
     .holo-fallback-note { position: static; margin-top: 0.6rem; text-align: center; }
 }
+
+/* ==========================================================================
+   SHELL — skip link, footer index, back to top, hero entry choreography
+   ========================================================================== */
+.skip-link {
+    position: fixed; top: -80px; left: 1rem; z-index: 10000;
+    padding: 0.7rem 1.2rem;
+    background: var(--bg-2); color: var(--accent-bright);
+    border: 1px solid var(--accent);
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em;
+    transition: top 0.2s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+.footer .container { flex-direction: column; align-items: stretch; gap: 0; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 1.8rem; padding-bottom: 1.2rem; }
+.footer-nav a {
+    font-family: var(--font-jp-sans); font-size: 0.85rem; letter-spacing: 0.1em;
+    color: var(--steel-dim); position: relative; padding-bottom: 2px;
+}
+.footer-nav a::after {
+    content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px;
+    background: var(--accent); box-shadow: 0 0 8px var(--accent);
+    transition: width var(--transition-fast);
+}
+.footer-nav a:hover { color: var(--accent-bright); }
+.footer-nav a:hover::after { width: 100%; }
+.footer-meta {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+    padding-top: 1.1rem; border-top: 1px solid rgba(var(--accent-rgb), 0.12);
+}
+.footer .system-id { display: inline-flex; align-items: center; gap: 0.55rem; opacity: 1; color: var(--steel-dark); }
+.footer .system-id .ps-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2.6s ease-in-out infinite; }
+
+.to-top {
+    position: fixed; right: 1.6rem; bottom: 1.6rem; z-index: 120;
+    width: 44px; height: 44px; display: grid; place-items: center;
+    background: rgba(2, 8, 12, 0.8); color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb), 0.28);
+    backdrop-filter: blur(6px); cursor: pointer;
+    opacity: 0; transform: translateY(10px); pointer-events: none;
+    transition: all var(--transition-fast);
+}
+.to-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { border-color: var(--accent); box-shadow: 0 0 22px -4px rgba(var(--accent-rgb), 0.6); }
+@media (max-width: 900px) { .to-top { right: 1rem; bottom: 1rem; width: 40px; height: 40px; } }
+
+/* hero entry: instrument powers up in sequence (only when JS can release it) */
+html.js .hero .system-status,
+html.js .hero .hero-title,
+html.js .hero .hero-subtitle,
+html.js .hero .hero-cta,
+html.js .hero .hud-readout,
+html.js .hero .dock-nav { opacity: 0; }
+body.is-loaded .hero .hud-readout { animation: heroIn 0.7s ease 0.15s both; }
+body.is-loaded .hero .system-status { animation: heroIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both; }
+body.is-loaded .hero .hero-title { animation: heroTitleIn 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s both; }
+body.is-loaded .hero .hero-subtitle { animation: heroIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.78s both; }
+body.is-loaded .hero .hero-cta { animation: heroIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.92s both; }
+body.is-loaded .hero .dock-nav { animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 1.1s both; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes heroTitleIn {
+    from { opacity: 0; transform: translateY(24px); clip-path: inset(0 0 100% 0); }
+    to { opacity: 1; transform: none; clip-path: inset(0 0 -12% 0); }
+}

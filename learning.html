@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学習 — ROS 2 / FAシステム | SYS.RBT</title>
@@ -10,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=14">
+    <link rel="stylesheet" href="assets/css/style.css?v=15">
     <meta name="description" content="ROS 2公式ドキュメントや三菱電機e-ラーニングなど、エンジニアリングの基礎を築いた学習リソースと、そこで学んだ内容。">
     <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/learning.html">
     <meta name="theme-color" content="#02060a">
@@ -29,6 +30,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
     <div id="vehicle-canvas" data-vehicle="mmx"></div>
@@ -58,7 +60,7 @@
         </div>
     </nav>
 
-    <main class="page-main container">
+    <main id="main" class="page-main container">
                         <section class="page-header fade-in">
             <p class="page-eyebrow">MOD-04 // DATA ARCHIVE — KNOWLEDGE BASE</p>
             <h1 class="page-title">04. 学習</h1>
@@ -130,8 +132,11 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year"></span> SYS.RBT. All rights reserved.</p>
-            <div class="system-id">SYS.ID: 0x8F9B</div>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="activities.html">活動実績</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
         </div>
     </footer>
     <script defer src="assets/js/main.js"></script>
