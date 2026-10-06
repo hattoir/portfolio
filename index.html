@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css?v=21">
-    <meta name="description" content="自律移動ロボット・6軸アーム・自動運転ミニカーを設計から制御まで作るハードウェアエンジニアのポートフォリオ。実寸から起こした3Dモデルを投影するホログラム作業台。">
+    <meta name="description" content="服部将眞のロボティクス開発記録。機構設計・組込み・ROS 2をつなぎ、課題の発見から試作・検証まで。自律移動ロボット、仕分けアーム、自動運転ミニカーを紹介。">
     <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/">
     <meta name="theme-color" content="#02060a">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="SYS.RBT">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:title" content="服部 将眞 — ハードウェア＆ロボティクス ポートフォリオ | SYS.RBT">
-    <meta property="og:description" content="自律移動ロボット・6軸アーム・自動運転ミニカーを設計から制御まで作るハードウェアエンジニアのポートフォリオ。実寸から起こした3Dモデルを投影するホログラム作業台。">
+    <meta property="og:description" content="服部将眞のロボティクス開発記録。機構設計・組込み・ROS 2をつなぎ、課題の発見から試作・検証まで。自律移動ロボット、仕分けアーム、自動運転ミニカーを紹介。">
     <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/">
     <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
     <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
     <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="服部 将眞 — ハードウェア＆ロボティクス ポートフォリオ | SYS.RBT">
-    <meta name="twitter:description" content="自律移動ロボット・6軸アーム・自動運転ミニカーを設計から制御まで作るハードウェアエンジニアのポートフォリオ。実寸から起こした3Dモデルを投影するホログラム作業台。">
+    <meta name="twitter:description" content="服部将眞のロボティクス開発記録。機構設計・組込み・ROS 2をつなぎ、課題の発見から試作・検証まで。自律移動ロボット、仕分けアーム、自動運転ミニカーを紹介。">
     <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
     <script type="application/ld+json">
 {
@@ -143,22 +143,22 @@
         <section class="section-block statement-block">
             <div class="container">
                 <h2 class="sr-only">エンジニアリングの進め方</h2>
-                <p class="statement-lead fade-in">「技術の先にある思想を見据え、<br>未来に希望を与えるロボットを根気強く形にする」</p>
+                <p class="statement-lead fade-in">機構と制御をつなぎ、<br>人の仕事を支えるロボットへ。</p>
                 <div class="statement-cols">
                     <div class="statement-col fade-in">
                         <span class="sc-key">01 / MECHANICAL</span>
                         <h3 class="sc-title">設計する</h3>
-                        <p class="sc-desc">Fusion 360 で6軸アーム・グリッパー・車体を起こし、3Dプリンタとレーザーカッターで製作する。公差と組み付けまで含めて形にする。</p>
+                        <p class="sc-desc">Fusion 360でアーム・グリッパー・車体を設計。加工方法、公差、組み付けを考え、試作で分かった課題を次の設計へ戻す。</p>
                     </div>
                     <div class="statement-col fade-in">
                         <span class="sc-key">02 / CONTROL</span>
                         <h3 class="sc-title">動かす</h3>
-                        <p class="sc-desc">ROS 2、ros2_control、MoveIt 2、Nav2。PID と軌道計画、深度・画像による認識を組み合わせて、1台の上で統合する。</p>
+                        <p class="sc-desc">ROS 2で移動・認識・アーム制御を接続。センサの配置と機構の制約まで見直し、一連の作業として成立させる。</p>
                     </div>
                     <div class="statement-col fade-in">
                         <span class="sc-key">03 / VERIFICATION</span>
                         <h3 class="sc-title">確かめる</h3>
-                        <p class="sc-desc">ログではなく真値で判定する。回収数・投下誤差・巡回継続数など、合格条件をすべて計測可能な数値で定義して測る。</p>
+                        <p class="sc-desc">完了ログだけで判断せず、物体の位置や移動量を照合する。シミュレーションと実機の結果を分け、未検証の条件も残す。</p>
                     </div>
                 </div>
                 <div class="tally fade-in">
