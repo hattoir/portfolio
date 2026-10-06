@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYS.RBT — ハードウェア＆ロボティクス ポートフォリオ</title>
+    <title>服部 将眞 — ハードウェア＆ロボティクス ポートフォリオ | SYS.RBT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
-    <meta name="description" content="Portfolio of a Hardware and Robotics Engineer. Explore my projects, activities, and specific learnings.">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=21">
+    <meta name="description" content="服部将眞のロボティクス開発記録。機構設計・組込み・ROS 2をつなぎ、課題の発見から試作・検証まで。自律移動ロボット、仕分けアーム、自動運転ミニカーを紹介。">
+    <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/">
+    <meta name="theme-color" content="#02060a">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SYS.RBT">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="服部 将眞 — ハードウェア＆ロボティクス ポートフォリオ | SYS.RBT">
+    <meta property="og:description" content="服部将眞のロボティクス開発記録。機構設計・組込み・ROS 2をつなぎ、課題の発見から試作・検証まで。自律移動ロボット、仕分けアーム、自動運転ミニカーを紹介。">
+    <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/">
+    <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="服部 将眞 — ハードウェア＆ロボティクス ポートフォリオ | SYS.RBT">
+    <meta name="twitter:description" content="服部将眞のロボティクス開発記録。機構設計・組込み・ROS 2をつなぎ、課題の発見から試作・検証まで。自律移動ロボット、仕分けアーム、自動運転ミニカーを紹介。">
+    <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "服部 将眞",
+      "jobTitle": "ハードウェア＆ロボティクス エンジニア",
+      "url": "https://portfolio-weld-three-44.vercel.app/",
+      "image": "https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "ECCコンピュータ専門学校"
+      },
+      "knowsAbout": [
+        "ROS 2",
+        "ロボットアーム",
+        "自律移動ロボット",
+        "組込み開発",
+        "機構設計 (CAD)",
+        "制御工学"
+      ],
+      "sameAs": [
+        "https://github.com/hattoir"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "SYS.RBT",
+      "url": "https://portfolio-weld-three-44.vercel.app/",
+      "inLanguage": "ja"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
 
-    <div class="side-label-left">SYS.RBT_PORTFOLIO // ORBITAL DOCK: ONLINE</div>
+    <div class="side-label-left">SYS.RBT_PORTFOLIO // HOLO BENCH: ONLINE</div>
     <div class="side-label-right">0x8F9B // OPERATOR: ENG</div>
 
     <nav class="navbar">
@@ -38,86 +92,34 @@
         </div>
     </nav>
 
-    <main class="home-main">
+    <main id="main" class="home-main">
         <section class="hero" id="home">
-            <!-- 3D view: approaching the Moon -->
-            <div id="dock-canvas"></div>
-
-            <!-- Lock-on HUD labels (positioned by JS over the active panel) -->
-            <div id="target-tag" class="target-tag"><span class="tt-arrow">◀</span><span class="tt-name">--</span></div>
-            <div id="target-dist" class="target-dist">DISTANCE<br><span class="td-val">---.-- m</span></div>
-
-            <!-- Cockpit frame overlay -->
-            <div class="cockpit-overlay" aria-hidden="true">
-                <div class="cp-pillar cp-pillar-l"></div>
-                <div class="cp-pillar cp-pillar-r"></div>
-
-                <div class="cp-monitor cp-mon-tl">
-                    <div class="cp-mon-arm"></div>
-                    <div class="cp-mon-screen">
-                        <div class="cp-scope"></div>
-                    </div>
-                </div>
-                <div class="cp-monitor cp-mon-tr">
-                    <div class="cp-mon-arm"></div>
-                    <div class="cp-mon-screen">
-                        <div class="cp-pie"></div>
-                        <div class="cp-bars"><i></i><i></i><i></i></div>
-                    </div>
-                </div>
-
-                <div class="cp-caution">
-                    <div class="cpc-title">&lt;CAUTION&gt;</div>
-                    <div class="cpc-row">SYS&nbsp;&nbsp;No. 0x8F9B-*****</div>
-                    <div class="cpc-row">DEST&nbsp;: LUNA ORBIT</div>
-                    <div class="cpc-row">FUEL&nbsp;: 100.00 %</div>
-                    <div class="cpc-row">LOCK&nbsp;: <span class="cpc-lock">ENGAGED</span></div>
-                    <div class="cpc-btns"><span>LOG ON</span><span>CANCEL</span></div>
-                </div>
-
-                <div class="cp-console">
-                    <div class="cp-side cp-side-l">
-                        <div class="cp-keys">
-                            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                        </div>
-                        <div class="cp-slider"></div>
-                    </div>
-                    <div class="cp-center">
-                        <div class="cp-touch">
-                            <div class="cp-cross"></div>
-                        </div>
-                    </div>
-                    <div class="cp-side cp-side-r">
-                        <div class="cp-keys cp-keys-num">
-                            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                        </div>
-                        <div class="cp-lever"></div>
-                    </div>
-                </div>
-            </div>
+            <!-- 3D view: wireframe robot on the holo projector (holo-scene.js).
+                 Part labels (SVG leader lines) and the no-WebGL fallback are injected by JS. -->
+            <div id="dock-canvas" class="holo-stage"></div>
 
             <div class="hud-frame"></div>
 
             <div class="hud-readout hud-tl">
-                COCKPIT VIEW // LUNAR APPROACH<br>
-                <span class="hud-strong">ENGINE: STANDBY // COURSE: LUNA</span>
+                HOLO BENCH // PROJECTION 01<br>
+                <span class="hud-strong">MODEL: AUTO-TRASH NAVIGATOR</span>
             </div>
             <div class="hud-readout hud-tr">
                 <span class="hud-dyn hud-strong" data-hud="clock">--:--:-- JST</span><br>
                 <span class="hud-dyn" data-hud="sig">SIG --%</span>
             </div>
             <div class="hud-readout hud-bl">
-                <span class="hud-dyn" data-hud="alt">ALT --- km</span><br>
-                <span class="hud-dyn" data-hud="vel">VEL --- km/s</span>
+                <span data-holo="yaw">YAW&nbsp;&nbsp;---.- °</span><br>
+                <span data-holo="zoom">SCALE -.-- ×</span>
             </div>
             <div class="hud-readout hud-br">
-                TARGET SCAN: CYCLING<br>
-                <span class="hud-strong">LOCK-ON: READY</span>
+                CHASSIS <span class="hud-strong">400 × 400 mm</span><br>
+                ARM <span class="hud-strong">6-DOF</span> // WHEEL <span class="hud-strong">Ø80 ×4</span>
             </div>
 
             <div class="hero-ui">
                 <div class="system-status">
-                    <span class="status-dot"></span> システムオンライン — 月軌道進入シーケンス開始
+                    <span class="status-dot"></span> システムオンライン — ホログラム投影中
                 </div>
                 <h1 class="hero-title glitch" data-text="服部　将眞">服部　将眞</h1>
                 <p class="hero-subtitle">
@@ -132,11 +134,71 @@
 
             <!-- Destination selector: explicit navigation UI synced with the 3D panels -->
             <div class="dock-nav" id="dock-nav">
-                <div class="dock-nav-label">COCKPIT NAV // 行き先を選んで発進</div>
+                <div class="dock-nav-label">PROJECT INDEX // 開くモジュールを選択</div>
                 <div class="dock-nav-btns" id="dock-nav-btns"></div>
             </div>
             <div class="scroll-indicator"></div>
         </section>
+        <!-- STATEMENT -->
+        <section class="section-block statement-block">
+            <div class="container">
+                <h2 class="sr-only">エンジニアリングの進め方</h2>
+                <p class="statement-lead fade-in">機構と制御をつなぎ、<br>人の仕事を支えるロボットへ。</p>
+                <div class="statement-cols">
+                    <div class="statement-col fade-in">
+                        <span class="sc-key">01 / MECHANICAL</span>
+                        <h3 class="sc-title">設計する</h3>
+                        <p class="sc-desc">Fusion 360でアーム・グリッパー・車体を設計。加工方法、公差、組み付けを考え、試作で分かった課題を次の設計へ戻す。</p>
+                    </div>
+                    <div class="statement-col fade-in">
+                        <span class="sc-key">02 / CONTROL</span>
+                        <h3 class="sc-title">動かす</h3>
+                        <p class="sc-desc">ROS 2で移動・認識・アーム制御を接続。センサの配置と機構の制約まで見直し、一連の作業として成立させる。</p>
+                    </div>
+                    <div class="statement-col fade-in">
+                        <span class="sc-key">03 / VERIFICATION</span>
+                        <h3 class="sc-title">確かめる</h3>
+                        <p class="sc-desc">完了ログだけで判断せず、物体の位置や移動量を照合する。シミュレーションと実機の結果を分け、未検証の条件も残す。</p>
+                    </div>
+                </div>
+                <div class="tally fade-in">
+                    <div class="tally-cell"><span class="tally-num">03</span><span class="tally-key">PROJECTS</span></div>
+                    <div class="tally-cell"><span class="tally-num">02</span><span class="tally-key">AWARDS</span></div>
+                    <div class="tally-cell"><span class="tally-num">04</span><span class="tally-key">MISSION LOGS</span></div>
+                    <div class="tally-cell"><span class="tally-num">6</span><span class="tally-key">AXIS ARM</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED BUILD -->
+        <section class="section-block featured-block">
+            <div class="container featured-grid">
+                <figure class="featured-plate fade-in">
+                    <img src="assets/images/opt/gushin-model-1400.webp"
+                        srcset="assets/images/opt/gushin-model-800.webp 800w, assets/images/opt/gushin-model-1400.webp 1400w"
+                        sizes="(max-width: 900px) 92vw, 620px" width="1400" height="1185"
+                        loading="lazy" decoding="async" alt="具臣 実寸ワイヤーフレームモデル">
+                    <figcaption class="plate-cap">
+                        <span class="plate-id">CG MODEL</span>
+                        <span class="plate-text">CADの実寸から起こしたワイヤーフレーム</span>
+                        <span class="plate-credit">CG: 服部 将眞</span>
+                    </figcaption>
+                </figure>
+                <div class="featured-body">
+                    <p class="section-sub fade-in">FEATURED BUILD // ATN-01</p>
+                    <h2 class="featured-title fade-in">具臣<span>床のゴミを自律で見つけて拾う移動ロボット</span></h2>
+                    <p class="featured-desc fade-in">移動（ナビゲーション）・認識（画像/深度）・マニピュレーション（アーム制御）という独立した分野を、1台の上で統合することを目的に開発。実機を作る前にシミュレーション上で完成させる方針で進めています。</p>
+                    <div class="spec-grid fade-in">
+                        <div class="spec-cell"><div class="spec-key">CHASSIS</div><div class="spec-val">400 × 400 mm</div></div>
+                        <div class="spec-cell"><div class="spec-key">ARM REACH</div><div class="spec-val">0.45 m</div></div>
+                        <div class="spec-cell"><div class="spec-key">COLLECTED</div><div class="spec-val">3 / 3</div></div>
+                        <div class="spec-cell"><div class="spec-key">UPTIME</div><div class="spec-val">20 min / 0 err</div></div>
+                    </div>
+                    <a href="works.html#modal-gushin" class="btn-holo fade-in">ドシエを開く ▸</a>
+                </div>
+            </div>
+        </section>
+
 
         <!-- MISSION MODULES -->
         <section class="section-block">
@@ -176,13 +238,15 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year"></span> SYS.RBT. All rights reserved.</p>
-            <div class="system-id">SYS.ID: 0x8F9B</div>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
         </div>
     </footer>
-
-    <script src="assets/js/three.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/dock-scene.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/scene-boot.js"></script>
+    <script defer src="assets/js/motion.js"></script>
 </body>
 </html>

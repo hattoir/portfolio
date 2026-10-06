@@ -2,22 +2,42 @@
 <html lang="ja">
 
 <head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学習 - SYS.RBT</title>
+    <title>学習 — ROS 2 / FAシステム | SYS.RBT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=21">
+    <meta name="description" content="ROS 2公式ドキュメントや三菱電機e-ラーニングなど、エンジニアリングの基礎を築いた学習リソースと、そこで学んだ内容。">
+    <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/learning.html">
+    <meta name="theme-color" content="#02060a">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SYS.RBT">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="学習 — ROS 2 / FAシステム | SYS.RBT">
+    <meta property="og:description" content="ROS 2公式ドキュメントや三菱電機e-ラーニングなど、エンジニアリングの基礎を築いた学習リソースと、そこで学んだ内容。">
+    <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/learning.html">
+    <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="学習 — ROS 2 / FAシステム | SYS.RBT">
+    <meta name="twitter:description" content="ROS 2公式ドキュメントや三菱電機e-ラーニングなど、エンジニアリングの基礎を築いた学習リソースと、そこで学んだ内容。">
+    <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
-    <div id="vehicle-canvas" data-vehicle="rover"></div>
-    <div class="vehicle-caption"><span>ROVER-01 // MARS SURFACE SURVEY</span><span class="vc-live">&#9679; LIVE</span></div>
+    <div id="vehicle-canvas" data-vehicle="mmx"></div>
+    <div class="vehicle-caption"><span>MMX // PHOBOS PROXIMITY OPERATIONS</span><span class="vc-live">&#9679; LIVE</span></div>
 
     <!-- Side labels for premium vibe -->
     <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
@@ -43,19 +63,26 @@
         </div>
     </nav>
 
-    <main class="page-main container">
+    <main id="main" class="page-main container">
                         <section class="page-header fade-in">
             <p class="page-eyebrow">MOD-04 // DATA ARCHIVE — KNOWLEDGE BASE</p>
             <h1 class="page-title">04. 学習</h1>
-            <p class="page-subtitle">私のエンジニアリングの基礎を築いた技術書、Webサイト、PDF資料。</p>
+            <p class="page-subtitle">開発で直面した課題を、基礎と公式資料に戻って学ぶ。学習内容と制作へのつながりをまとめています。</p>
             <div class="title-line"></div>
+            <div class="page-status" aria-label="ページステータス">
+                <span><i class="ps-dot"></i>RESOURCES: <b>02</b></span>
+                <span class="ps-warn"><i class="ps-dot"></i>IN PROGRESS: <b>02</b></span>
+                <span>STATUS: <b>INDEXED</b></span>
+            </div>
         </section>
 
         <section class="learning-grid">
+            <h2 class="sr-only">学習リソース</h2>
             <!-- Site Example 1 -->
             <div class="card learning-card fade-in">
                 <div class="learning-type type-site">サイト</div>
                 <div class="card-content">
+                    <div class="ref-head"><span class="ref-id">REF-01</span><span class="ref-source">docs.ros.org</span></div>
                     <h3 class="card-title">ROS 2 公式ドキュメント</h3>
                     <a href="https://docs.ros.org/" target="_blank" class="resource-link" rel="noopener noreferrer">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -69,10 +96,11 @@
 
                     <div class="learning-details">
                         <h4 class="detail-title">学んだ内容:</h4>
-                        <p class="content-text">ノード、トピック、サービス、およびROS 2エコシステム全体のアーキテクチャ。</p>
+                        <p class="content-text">ノード、トピック、サービスの役割と、複数の機能を通信でつなぐROS 2の構成。</p>
 
-                        <h4 class="detail-title">感想:</h4>
-                        <p class="impression-text">ハンズオンをやりながらドキュメントの内容を学べたのでROS2というものの形をつかめた気がします。</p>
+                        <h4 class="detail-title">制作へのつながり:</h4>
+                        <p class="impression-text">具臣の移動・認識・アーム制御を考える際の基礎です。ノード間で何を受け渡すかを整理し、不具合が出たときに通信と各機能を分けて確認するために参照しています。</p>
+                        <div class="ref-chips" data-chips-REF-01><span class="ref-chip">ノード</span><span class="ref-chip">トピック</span><span class="ref-chip">サービス</span><span class="ref-chip">アーキテクチャ</span></div>
                     </div>
                 </div>
             </div>
@@ -81,6 +109,7 @@
             <div class="card learning-card fade-in">
                 <div class="learning-type type-site">サイト</div>
                 <div class="card-content">
+                    <div class="ref-head"><span class="ref-id">REF-02</span><span class="ref-source">mitsubishielectric.co.jp</span></div>
                     <h3 class="card-title">三菱電機 e-ラーニング</h3>
                     <a href="https://www.mitsubishielectric.co.jp/fa/assist/e-learning/" target="_blank"
                         class="resource-link" rel="noopener noreferrer">
@@ -97,11 +126,37 @@
                         <h4 class="detail-title">学んだ内容:</h4>
                         <p class="content-text">FAの基本概念と全体像の理解 産業用ロボット、PLC、表示機、サーボ・インバータ等の役割と基本操作</p>
 
-                        <h4 class="detail-title">感想:</h4>
+                        <h4 class="detail-title">制作へのつながり:</h4>
                         <p class="impression-text">
-                            産業用ロボット、表示機、PLCなどがどのように通信・連携し、一つの生産ラインとして機能しているか、というシステム全体の構造を体系的に理解することができてよかったです。
+                            ロボット、PLC、表示機、駆動機器が連携して工程を動かすことを学びました。ミーミルの手の認識・搬送・仕分けも、各装置の役割と動作の順序から考えるようになりました。
                         </p>
+                        <div class="ref-chips" data-chips-REF-02><span class="ref-chip">PLC</span><span class="ref-chip">産業用ロボット</span><span class="ref-chip">表示機</span><span class="ref-chip">サーボ・インバータ</span></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block progress-block">
+            <div class="container-flush">
+                <h2 class="section-heading fade-in"><span class="sec-num">04-B</span>IN PROGRESS</h2>
+                <p class="section-sub fade-in">STUDYING NOW // 現在ふかぼり中のテーマ</p>
+                <div class="progress-grid">
+                    <article class="card progress-card fade-in">
+                        <div class="card-content">
+                            <div class="ref-head"><span class="ref-id">TOPIC-01</span><span class="ref-status"><i></i>継続中</span></div>
+                            <h3 class="card-title">制御工学の再開拓</h3>
+                            <p class="card-desc">力学・伝達関数・システム同定を学び、走行が不安定になる理由や、制御ゲインの前提を説明できるように取り組んでいます。</p>
+                            <div class="ref-chips"><span class="ref-chip">伝達関数</span><span class="ref-chip">PID</span><span class="ref-chip">システム同定</span></div>
+                        </div>
+                    </article>
+                    <article class="card progress-card fade-in">
+                        <div class="card-content">
+                            <div class="ref-head"><span class="ref-id">TOPIC-02</span><span class="ref-status"><i></i>継続中</span></div>
+                            <h3 class="card-title">情報処理の基礎を開発へ</h3>
+                            <p class="card-desc">基本情報技術者試験で学んだ知識を、機器間通信や状態管理に結び付けて復習中。生成AIの提案も、仕様・実装・試験結果を照合して採否を判断します。</p>
+                            <div class="ref-chips"><span class="ref-chip">アルゴリズム</span><span class="ref-chip">ネットワーク</span><span class="ref-chip">データベース</span></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -109,13 +164,16 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year"></span> SYS.RBT. All rights reserved.</p>
-            <div class="system-id">SYS.ID: 0x8F9B</div>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="activities.html">活動実績</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
         </div>
     </footer>
-    <script src="assets/js/three.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/vehicles.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/scene-boot.js"></script>
+    <script defer src="assets/js/motion.js"></script>
 </body>
 
 </html>

@@ -2,16 +2,87 @@
 <html lang="ja">
 
 <head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品 - SYS.RBT</title>
+    <title>作品 — 具臣 / ミーミルの手 / 自動運転ミニカー | SYS.RBT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=21">
+    <meta name="description" content="ROS 2とメカナムホイールの自律ゴミ回収ロボット「具臣」、バーコード仕分けアーム「ミーミルの手」、End-to-End学習の自動運転ミニカー。設計値と検証結果つきの開発記録。">
+    <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/works.html">
+    <meta name="theme-color" content="#02060a">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SYS.RBT">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="作品 — 具臣 / ミーミルの手 / 自動運転ミニカー | SYS.RBT">
+    <meta property="og:description" content="ROS 2とメカナムホイールの自律ゴミ回収ロボット「具臣」、バーコード仕分けアーム「ミーミルの手」、End-to-End学習の自動運転ミニカー。設計値と検証結果つきの開発記録。">
+    <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/works.html">
+    <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="作品 — 具臣 / ミーミルの手 / 自動運転ミニカー | SYS.RBT">
+    <meta name="twitter:description" content="ROS 2とメカナムホイールの自律ゴミ回収ロボット「具臣」、バーコード仕分けアーム「ミーミルの手」、End-to-End学習の自動運転ミニカー。設計値と検証結果つきの開発記録。">
+    <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "作品",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "具臣 (Auto-Trash Navigator)",
+        "description": "床のゴミを自律で見つけて拾う移動ロボット。ROS 2 / メカナムホイール / 6軸アーム / YOLO。",
+        "url": "https://portfolio-weld-three-44.vercel.app/works.html#modal-gushin",
+        "creator": {
+          "@type": "Person",
+          "name": "服部 将眞"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "ミーミルの手",
+        "description": "バーコード認識・自動仕分けの3軸ロボットアームとベルトコンベアシステム。＋E展メカニカル賞。",
+        "url": "https://portfolio-weld-three-44.vercel.app/works.html#modal-mimir",
+        "creator": {
+          "@type": "Person",
+          "name": "服部 将眞"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "自動運転ミニカー",
+        "description": "ROS 2 と Gazebo、PyTorch による End-to-End 学習の自動運転ミニカー。",
+        "url": "https://portfolio-weld-three-44.vercel.app/works.html#modal-minicar",
+        "creator": {
+          "@type": "Person",
+          "name": "服部 将眞"
+        }
+      }
+    }
+  ]
+}
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
     <div id="vehicle-canvas" data-vehicle="iss"></div>
@@ -41,23 +112,49 @@
         </div>
     </nav>
 
-    <main class="page-main container">
+    <main id="main" class="page-main container">
                         <section class="page-header fade-in">
             <p class="page-eyebrow">MOD-02 // CARGO BAY — PROJECT ARCHIVE</p>
             <h1 class="page-title">02. 作品</h1>
-            <p class="page-subtitle">今まで作ってきたハードウェアのプロジェクト集。カードを選択して詳細ログを展開できます。</p>
+            <p class="page-subtitle">機構・制御・認識をつなぐ3つの制作。取り組んだ課題、設計判断、検証の到達点を紹介します。</p>
             <div class="title-line"></div>
+            <div class="page-status" aria-label="ページステータス">
+                <span><i class="ps-dot"></i>PROJECTS: <b>03</b></span>
+                <span class="ps-warn"><i class="ps-dot"></i>IN DEV: <b>02</b></span>
+                <span>STATUS: <b>ARCHIVED</b></span>
+            </div>
         </section>
 
         <section class="works-grid">
+            <h2 class="sr-only">作品一覧</h2>
             <!-- Works Items -->
-            <div class="card fade-in works-card" data-modal="modal-mimir" style="cursor: pointer;">
+            <div class="card fade-in works-card" data-modal="modal-gushin" style="cursor: pointer;">
+                <!-- ★差し替え: 写真ができたら style を
+                     background: url('assets/images/gushin_main.jpg') center/cover no-repeat;
+                     に変更し、中の .media-pending を削除 -->
                 <div class="card-image-placeholder"
-                    style="background: url('assets/images/3_robot_arm%20_main.jpg') center/cover no-repeat; border-bottom: 1px solid rgba(192, 196, 208, 0.2);">
+                    style="background: url('assets/images/opt/gushin-model-800.webp') center/cover no-repeat;">
+                    <span class="plate-tag">CG MODEL</span>
                 </div>
                 <div class="card-content">
+                    <div class="card-meta"><span class="cm-id">ATN-01</span><span class="cm-year">2026</span><span class="cm-status is-dev"><i></i>IN DEV</span></div>
+                    <h3 class="card-title">具臣</h3>
+                    <p class="card-desc">清掃作業の自動化へ。移動・認識・6軸アームを統合し、実機化を進めるロボット</p>
+                    <div class="cm-tags"><span class="cm-tag">ROS 2</span><span class="cm-tag">メカナム</span><span class="cm-tag">6軸アーム</span><span class="cm-tag">YOLO</span></div>
+                    <span class="view-link" style="display: inline-block; margin-top: 1rem;">詳細を見る <span
+                            class="arrow">→</span></span>
+                </div>
+            </div>
+
+            <div class="card fade-in works-card" data-modal="modal-mimir" style="cursor: pointer;">
+                <div class="card-image-placeholder"
+                    style="background: url('assets/images/opt/3-robot-arm-main-800.webp') center/cover no-repeat; border-bottom: 1px solid rgba(192, 196, 208, 0.2);">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta"><span class="cm-id">MIMIR-01</span><span class="cm-year">2026.02</span><span class="cm-status is-award"><i></i>AWARDED</span></div>
                     <h3 class="card-title">ミーミルの手</h3>
-                    <p class="card-desc">バーコード認識・自動仕分け3軸ロボットアーム＆ベルトコンベアシステム</p>
+                    <p class="card-desc">認識・搬送・仕分けを連携させた3軸アーム。試作と展示で機構の課題を検証</p>
+                    <div class="cm-tags"><span class="cm-tag">ESP32</span><span class="cm-tag">Fusion 360</span><span class="cm-tag">サーボ制御</span></div>
                     <span class="view-link" style="display: inline-block; margin-top: 1rem;">詳細を見る <span
                             class="arrow">→</span></span>
                 </div>
@@ -65,11 +162,13 @@
 
             <div class="card fade-in works-card" data-modal="modal-minicar" style="cursor: pointer;">
                 <div class="card-image-placeholder"
-                    style="background: url('assets/images/minicar.jpg') center/cover no-repeat; border-bottom: 1px solid rgba(192, 196, 208, 0.2);">
+                    style="background: url('assets/images/opt/minicar-800.webp') center/cover no-repeat; border-bottom: 1px solid rgba(192, 196, 208, 0.2);">
                 </div>
                 <div class="card-content">
+                    <div class="card-meta"><span class="cm-id">MCAR-01</span><span class="cm-year">2026</span><span class="cm-status is-dev"><i></i>IN DEV</span></div>
                     <h3 class="card-title">自動運転ミニカー（製作途中）</h3>
                     <p class="card-desc">特定のコースを自走で運転するミニカー</p>
+                    <div class="cm-tags"><span class="cm-tag">ROS 2</span><span class="cm-tag">PyTorch</span><span class="cm-tag">Gazebo</span><span class="cm-tag">PID</span></div>
                     <span class="view-link" style="display: inline-block; margin-top: 1rem;">詳細を見る <span
                             class="arrow">→</span></span>
                 </div>
@@ -78,42 +177,248 @@
     </main>
 
     <!-- Modals -->
+    <!-- GUSHIN Modal -->
+    <div class="modal-overlay" id="modal-gushin">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">具臣</h2>
+                <div class="modal-date">床のゴミを見つけて拾う自律移動ロボット / 開発コード名: Auto-Trash Navigator</div>
+                <div class="dossier-meta"><span class="dm-item"><i>ID</i>ATN-01</span><span class="dm-item"><i>YEAR</i>2026</span><span class="dm-item"><i>ROLE</i>機構設計 / 制御 / 認識</span><span class="dm-item"><i>STATUS</i>実機製作中</span></div>
+            </div>
+            <div class="modal-body">
+
+                <!-- ══ メディア（★写真・動画ができたらここを差し替え） ══ -->
+                <div class="project-media">
+                    <!-- メイン: 実機全体写真 -->
+                    <div class="media-main">
+                        <img src="assets/images/opt/gushin-model-1400.webp"
+                            srcset="assets/images/opt/gushin-model-800.webp 800w, assets/images/opt/gushin-model-1400.webp 1400w"
+                            sizes="(max-width: 700px) 92vw, 760px" width="1400" height="1185"
+                            loading="lazy" decoding="async"
+                            alt="具臣 実寸ワイヤーフレームモデル" data-caption="CGモデル：CADの実寸（mm）から起こしたワイヤーフレーム。車体400×400mm、メカナムホイールØ80×4、6軸アーム、LiDAR（床上210mm）、RGB-Dカメラ、ダストボックスØ200の配置を示す。実機写真は準備中" data-credit="CG: 服部 将眞">
+                    </div>
+                    <!-- ★差し替え: 実機写真ができたら上の img を assets/images/gushin_main.jpg に差し替え -->
+
+                    <!-- サブ: 動画 + 静止画 -->
+                    <div class="media-grid">
+                        <div
+                            style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; background: #000; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+                            <div
+                                style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1.4rem 2rem; text-align: center; line-height: 2;">
+                                VIDEO // PENDING<br>
+                                <span style="font-size: 10px; opacity: 0.7;">シミュレーション自律回収</span>
+                            </div>
+                            <!-- ★差し替え:
+                            <video controls preload="none" playsinline style="width: 100%; max-height: 400px; display: block;"
+                                poster="assets/images/gushin_sim.jpg">
+                                <source src="assets/videos/gushin_sim.mp4" type="video/mp4">
+                            </video>
+                            -->
+                        </div>
+                        <div
+                            style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; background: #000; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+                            <div
+                                style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1.4rem 2rem; text-align: center; line-height: 2;">
+                                SUB IMAGE // PENDING<br>
+                                <span style="font-size: 10px; opacity: 0.7;">アーム / RViz 画面</span>
+                            </div>
+                            <!-- ★差し替え:
+                            <img src="assets/images/gushin_sub.jpg" alt="具臣 アーム"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══ リンク ══ -->
+                <div class="project-links">
+                    <a href="https://github.com/hattoir/auto-trash-navigator" target="_blank" rel="noopener noreferrer"
+                        class="btn-doc">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                            style="margin-right: 0.5rem;">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        GitHub リポジトリ
+                    </a>
+                    <!-- ★差し替え: Notion の開発日誌 URL を入れる -->
+                    <a href="#" class="btn-doc is-disabled" aria-disabled="true" title="準備中">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.5rem;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                        Notion 開発日誌（準備中）
+                    </a>
+                </div>
+
+                <div class="project-content">
+
+                    <!-- ══ システム概要 ══ -->
+                    <h3 class="doc-h">
+                        【システム概要】</h3>
+                    <p class="doc-p">
+                        床の紙くずを見つけ、接近・把持・投下・巡回復帰までを行う清掃ロボットを開発しています。私が取り組んでいるのは、車体とアームの機構設計、ROS 2による制御、画像・深度認識の接続です。各機能を個別に動かすだけでなく、届く位置へ停車することやセンサの死角まで含めて、一連の作業を成立させることを課題にしています。
+                    </p>
+                    <p class="doc-p">
+                        まずROS 2とGazeboで統合し、機構と制御の問題を実機製作前に洗い出す方針です。2026年7月の開発記録には、無介入20分のシミュレーション統合試験に合格した節目があります。その後は実機のアーム・車体・駆動方式に合わせた改修を進めています。これは当時のモデルと条件での結果であり、現在の実機の連続稼働実績とは分けて扱っています。
+                    </p>
+                    <p class="doc-p">
+                        実機化では寸法だけでなく、摩擦、駆動系、センサ誤差、通信遅延を確認する必要があります。移植しやすい構成を目指しつつ、単体試験から統合試験へ段階を踏み、モデルと実測の差を詰めています。
+                    </p>
+
+                    <!-- ══ 主要諸元（数値カード） ══ -->
+                    <h3 class="doc-h">
+                        【設計モデル / 検証段階】</h3>
+                    <div class="spec-grid">
+                        <div class="spec-cell">
+                            <div class="spec-key">CHASSIS / CAD</div>
+                            <div class="spec-val">400 × 400 mm</div>
+                        </div>
+                        <div class="spec-cell">
+                            <div class="spec-key">REACH / SIM</div>
+                            <div class="spec-val">0.45 m</div>
+                        </div>
+                        <div class="spec-cell">
+                            <div class="spec-key">DRIVE</div>
+                            <div class="spec-val">左右2系統</div>
+                        </div>
+                        <div class="spec-cell">
+                            <div class="spec-key">REAL / TASK</div>
+                            <div class="spec-val">統合検証前</div>
+                        </div>
+                        <div class="spec-cell">
+                            <div class="spec-key">REAL / GRASP</div>
+                            <div class="spec-val">把持試験前</div>
+                        </div>
+                        <div class="spec-cell">
+                            <div class="spec-key">SIM / 2026.07</div>
+                            <div class="spec-val">20 min</div>
+                        </div>
+                    </div>
+
+                    <!-- ══ 使用技術 ══ -->
+                    <h3 class="doc-h">
+                        【使用技術・ツール】</h3>
+                    <ul class="tech-list">
+                        <li><strong>ロボット制御ミドルウェア：</strong> ROS 2 (Jazzy Jalisco)</li>
+                        <li><strong>シミュレーション：</strong> Gazebo Sim (Harmonic)</li>
+                        <li><strong>自律移動：</strong> Nav2、slam_toolbox、robot_localization。現行駆動は左右2系統の差動制御</li>
+                        <li><strong>マニピュレーション：</strong> MoveIt 2、TRAC-IK、ros2_control</li>
+                        <li><strong>認識：</strong> YOLOv8（OpenVINO 推論）、深度ベース自作検出ノード、OpenCV</li>
+                        <li><strong>機構設計（CAD）：</strong> Fusion 360（6軸アーム、グリッパー、車体）</li>
+                        <li><strong>製作：</strong> 3Dプリンタ（Bambu Lab A1 / PLA）、レーザーカッター</li>
+                        <li><strong>使用部品：</strong> ミニPC（Intel N95）、ESP32、OAK-D Lite、360°LiDAR、STS3215 サーボ ×7、FE-URT-1、メカナムホイール Ø80 ×4、MD10C ×2、LiPo 3S</li>
+                    </ul>
+
+                    <!-- ══ ハードウェア設計における課題と工夫 ══ -->
+                    <h3 class="doc-h">
+                        【ハードウェア設計における課題と工夫】</h3>
+                    <p class="doc-p">
+                        設計モデルで先に確認することで、必要トルク、到達範囲、センサの干渉を検討できます。以下の数値は開発時のモデル・計算条件に依存し、実機の性能保証値ではありません。
+                    </p>
+
+                    <h4 class="doc-sub">1. トルク計算から機構と動作を見直す</h4>
+                    <p class="doc-p doc-note">
+                        <strong>課題：</strong> CADモデルの質量・重心に基づく重力トルク計算では、腕を水平にした姿勢で肩関節（J2）に <strong>1.32 N·m</strong> が必要という見積もりになりました。使用サーボのストールトルク1.9 N·mに対して約 <strong>70%</strong>です。ストールトルクは連続運転できるトルクではないため、この比率だけで成立とは判断できません。把持姿勢だけでなく、動作途中の負荷も検討対象にしました。<br>
+                        <strong>工夫：</strong> 肘を先に畳んでから伸ばす軌道、先端側の軽量化、カウンターバランスを比較する方針です。制御だけで解決しようとせず、機構と動作の両側から負荷を下げ、実機では電流・温度・保持性能を確認します。
+                    </p>
+
+                    <h4 class="doc-sub">2. 到達範囲から停止位置を設計する</h4>
+                    <p class="doc-p doc-note">
+                        <strong>課題：</strong> 逆運動学の解を格子状に調べ、正面の床面へ届きにくい領域を確認しました。開発モデルでは横方向のずれが4cm以内の領域に制約があり、関節可動域を考慮すると、対象に正対して止まる方法では把持姿勢を作れませんでした。<br>
+                        <strong>工夫：</strong> 対象が斜め前に来るよう停止位置をオフセットする接近方法へ変更しました。移動とアームを別々に最適化せず、把持できる姿勢から台車の停車位置を決める設計へ見直しました。
+                    </p>
+
+                    <h4 class="doc-sub">3. センサの死角を機構配置から解消する</h4>
+                    <p class="doc-p doc-note">
+                        <strong>課題：</strong> シミュレーションで走行させたところ、ロボットが 1mm も前進しない現象が発生しました。原因を追跡すると、LiDAR のスキャン面（床上 210mm）を <strong>カメラ本体が横切っており</strong>、自分自身を至近距離の障害物として検出し続けて速度が制限されていました。<br>
+                        <strong>工夫：</strong> カメラマストを 25mm 下げて天端とスキャン面の間に 10.3mm のクリアランスを確保し、CAD の干渉解析でスキャン面を横切る構造物がゼロであることを確認しました。残るアームの映り込みについては、遮蔽角を幾何計算（幅 11.9°）してソフト側でその角度セクターのみを除去しています。
+                    </p>
+
+                    <h4 class="doc-sub">4. メカナム輪の運動学 — 実効モーメントアームの取り違えを防止</h4>
+                    <p class="doc-p doc-note">
+                        <strong>課題：</strong> モータードライバの都合で4輪独立駆動から左右ペア駆動（差動2輪）へ変更した際、旋回の角速度が指令値の 60% しか出ない問題が発生しました。<br>
+                        <strong>工夫：</strong> メカナムホイールはローラーが 45° に傾いているため、旋回に効く実効モーメントアームは物理トレッドの半分（0.180 m）ではなく <strong>lx + ly = 0.300 m</strong> になります。この幾何を計算で確かめ、制御パラメータを実効値へ修正することでシミュレーションで指令と移動量の整合を確認しました。実機では滑りや負荷による差を別途測定します。あわせて、実機のマイコン側ファームウェアと最大角速度の見積もり（2.5 → 1.5 rad/s）も同じ根拠で修正しています。
+                    </p>
+
+                    <!-- ══ 反省点と今後の展望 ══ -->
+                    <h3 class="doc-h">
+                        【検証で得た学び / 次の課題】</h3>
+                    <p class="doc-p">
+                        本プロジェクトで最も多くの時間を費やしたのは、機能の実装そのものではなく「本当に動いているかを確かめる方法」の確立でした。
+                    </p>
+
+                    <h4 class="doc-sub">1. ログを成果の証拠にしてしまった反省 — 物理照合による検証体制の確立</h4>
+                    <p class="doc-p doc-note">
+                        <strong>反省点：</strong> 開発中盤、ログに「回収完了」と表示されたことをもって完成と判断しました。しかし念のためシミュレータに物体の座標を直接問い合わせたところ、対象は初期位置から <strong>3.5mm</strong> しか動いていませんでした。ログは「そう表示するコードが実行された」ことしか証明しないという当たり前の事実を、身をもって理解した出来事でした。<br>
+                        <strong>Next Action：</strong> 以降は判定基準を「物が実際にどこへ移動したか（シミュレータの真値座標）」に統一しました。合格条件も、回収数・投下位置の誤差・接近距離・巡回継続数といった<strong>すべて計測可能な数値</strong>で定義し直しています。
+                    </p>
+
+                    <h4 class="doc-sub">2. 物理量を計算せずに設定値を書いた反省 — 開ループ試験による診断</h4>
+                    <p class="doc-p doc-note">
+                        <strong>反省点：</strong> 長期間、原因不明のまま残っていた不具合が2件ありました。1つは肩関節が可動域の端で固着する問題で、原因はモデルに設定したトルク上限が必要値の 45% しかなかったこと。もう1つは、車輪の回転軸の符号がすべて逆になっており、指令とは逆方向に走りながらオドメトリは「正しく進んだ」と報告し続けていたことでした。<br>
+                        <strong>Next Action：</strong> どちらも「指令を与えて、実際にどう動いたかを真値で測る」開ループ試験で特定できました。以降、駆動系に変更を加えたら必ずこの試験を通すことをルール化しています。実機でも組み立て後に同じ試験（1m 直進・半回転を巻尺で実測）を行う計画です。
+                    </p>
+
+                    <h4 class="doc-sub">3. 評価数値をそのまま信じた反省 — データリークの検査</h4>
+                    <p class="doc-p doc-note">
+                        <strong>反省点：</strong> ゴミ検出用に学習させた YOLO モデルが mAP50 = 0.99 という高い数値を出しました。しかし学習データは動画から切り出したフレームであり、それをランダムに分割していたため、評価用の画像が学習用とほぼ同じ場面になっていました。<br>
+                        <strong>Next Action：</strong> 動画1本を丸ごと評価用に取り分ける方式（Leave-One-Video-Out）で測り直したところ、その評価条件では mAP50 = 0.84 でした。良すぎる数値が出たときは、まず評価方法そのものを疑うという習慣がつきました。
+                    </p>
+
+                    <h4 class="doc-sub">4. 実機完成に向けた残課題</h4>
+                    <p class="doc-p doc-note">
+                        実機化は進行中です。過去の開発記録にはミニPC、LiDAR、深度カメラの個別評価がありますが、2026年10月のUbuntu環境整理では製品の再ビルド・Gazebo統合試験・実機試験は再実行していません。今後、次の項目を段階的に確認します。
+                        <span class="doc-list">
+                            ・車輪駆動の実機検証（開ループ試験）<br>
+                            ・6軸アームの実機制御（ros2_control ハードウェアインターフェース）<br>
+                            ・簡略化していた把持を、実際に指で掴む物理把持へ差し替え<br>
+                            ・主板・底板のレーザーカット製作と本組み立て
+                        </span>
+                        各試験で、条件・実測値・失敗時の挙動を記録します。シミュレーションの成立と実機の成立を分け、再現できる根拠を揃えて次の段階へ進みます。
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal-overlay" id="modal-mimir">
         <div class="modal-container fade-in">
             <button class="modal-close">&times;</button>
             <div class="modal-header">
                 <h2 class="modal-title">ミーミルの手</h2>
                 <div class="modal-date">バーコード認識・自動仕分けシステム</div>
+                <div class="dossier-meta"><span class="dm-item"><i>ID</i>MIMIR-01</span><span class="dm-item"><i>YEAR</i>2026.02</span><span class="dm-item"><i>ROLE</i>機構設計 / 制御</span><span class="dm-item"><i>STATUS</i>展示・受賞</span></div>
             </div>
             <div class="modal-body">
-                <div class="project-media" style="margin-bottom: 3rem;">
+                <div class="project-media">
                     <!-- Main Image -->
-                    <div
-                        style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden; margin-bottom: 2rem; background: #000;">
-                        <img src="assets/images/3_robot_arm%20_main.jpg" alt="ミーミルの手 Main"
-                            style="width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block;">
+                    <div class="media-main">
+                        <img src="assets/images/opt/3-robot-arm-main-1600.webp" srcset="assets/images/opt/3-robot-arm-main-800.webp 800w, assets/images/opt/3-robot-arm-main-1600.webp 1600w" sizes="(max-width: 700px) 92vw, 760px" width="1600" height="1200" loading="lazy" decoding="async" alt="ミーミルの手 全景 — コンベアと3軸アーム" data-caption="ミーミルの手 全景。ベルトコンベアで荷物を搬送し、読取位置で停止させてバーコードを取得、3軸アームが仕分ける" style="width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block;">
                     </div>
 
                     <!-- Video and Sub Image -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                        <div
-                            style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden; background: #000; display: flex; align-items: center;">
-                            <video controls style="width: 100%; max-height: 400px; display: block;"
-                                poster="assets/images/3_robot_arm%20_sub.jpg">
+                    <div class="media-grid">
+                        <div class="media-cell">
+                            <video controls preload="none" playsinline style="width: 100%; max-height: 400px; display: block;"
+                                poster="assets/images/opt/3-robot-arm-sub-1600.webp" data-caption="ミーミルの手 — コンベア搬送からバーコード読取、3軸アームによる仕分けまでの一連の動作">
                                 <source src="assets/videos/3_robot_arm.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <div
-                            style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden; background: #000;">
-                            <img src="assets/images/3_robot_arm%20_sub.jpg" alt="ミーミルの手 Sub"
-                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <div class="media-cell">
+                            <img src="assets/images/opt/3-robot-arm-sub-1600.webp" srcset="assets/images/opt/3-robot-arm-sub-800.webp 800w, assets/images/opt/3-robot-arm-sub-1600.webp 1600w" sizes="(max-width: 700px) 92vw, 760px" width="1600" height="2133" loading="lazy" decoding="async" alt="ミーミルの手 アーム部とESP32の試作回路" data-caption="アーム部の拡大。ギアで駆動するグリッパー、関節のサーボ、ESP32 と試作段階のブレッドボード配線" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                     </div>
                 </div>
 
-                <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
-                    <a href="assets/pdf/3_robot_arm.pdf" target="_blank" class="view-link hover-glow"
-                        style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: rgba(192, 196, 208, 0.1); border: 1px solid var(--ember); border-radius: 0; font-weight: bold; text-decoration: none; color: var(--ember); font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;">
+                <div class="project-links">
+                    <a href="assets/pdf/3_robot_arm.pdf" target="_blank" class="btn-doc is-amber">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="margin-right: 0.5rem;">
@@ -125,9 +430,7 @@
                         </svg>
                         詳細資料 (PDF) を開く
                     </a>
-                    <a href="#" class="view-link"
-                        style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--steel-dark); border-radius: 0; text-decoration: none; color: var(--steel-dim); cursor: not-allowed; opacity: 0.5; font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;"
-                        title="後日公開予定">
+                    <a href="#" class="btn-doc is-disabled" aria-disabled="true" title="後日公開予定">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
                             style="margin-right: 0.5rem;">
                             <path
@@ -138,48 +441,44 @@
                 </div>
 
                 <div class="project-content">
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                    <h3 class="doc-h">
                         【システム概要】</h3>
-                    <p style="margin-bottom: 2.5rem; line-height: 1.9; color: var(--steel-dim);">
-                        荷物に貼付されたバーコードをカメラで読み取り、その情報に基づいて3軸ロボットアームが指定の場所へ荷物を自動仕分けするシステムです。ベルトコンベア上で荷物を搬送し、読み取り位置でコンベアを正確に停止させてバーコード情報を取得。そのデータをメインマイコンであるESP32へ一度だけ確実に送信し、サーボモーターを駆動させてアームで仕分けを行う一連のFAプロセスを構築しました。
+                    <p class="doc-p">
+                        バーコードを読み取り、搬送と3軸アームを連携させて荷物を仕分ける試作システムです。Fusion 360による機構設計、ESP32でのサーボ制御、認識結果を使った動作の連携に取り組みました。2026年2月の学内＋E展でメカニカル賞を受賞。一方、展示時には歯車の摩耗による把持不良が起き、繰り返し使える機構への改善課題も得ました。
                     </p>
 
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                    <h3 class="doc-h">
                         【使用技術・ツール】</h3>
-                    <ul class="tech-list" style="margin-bottom: 2.5rem; padding-left: 0;">
-                        <li style="margin-bottom: 0.5rem;"><strong>機構設計（CAD）：</strong> Fusion 360（ロボットアーム本体、ベルトコンベア）
+                    <ul class="tech-list">
+                        <li><strong>機構設計（CAD）：</strong> Fusion 360（ロボットアーム本体、ベルトコンベア）
                         </li>
-                        <li style="margin-bottom: 0.5rem;"><strong>制御マイコン・回路：</strong> ESP32、Arduino IDE</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>アクチュエータ：</strong> サーボモーター</li>
+                        <li><strong>制御マイコン・回路：</strong> ESP32、Arduino IDE</li>
+                        <li><strong>アクチュエータ：</strong> サーボモーター</li>
                     </ul>
 
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                    <h3 class="doc-h">
                         【ハードウェア設計における課題と工夫】</h3>
-                    <p style="margin-bottom: 2.5rem; line-height: 1.9; color: var(--steel-dim);">Fusion
+                    <p class="doc-p">Fusion
                         360を用いた実機設計において、画面上のモデリングと現実の物理的な組み上がりのギャップに最も苦心しました。特に、3Dプリンター等で出力した際の「公差の設定」や、各リンク機構が干渉しない適切な「サイズ感の決定」、および複数の部品をガタつきなく強固に結合するための「組み付け構造の設計」において、何度もプロトタイピングと修正を繰り返して完成度を高めました。
                     </p>
 
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
-                        【反省点と今後の展望（Next Action）】</h3>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">今回の開発を通して、以下の技術的な改善点を見出し、次期モデルへのアップデート目標としています。
+                    <h3 class="doc-h">
+                        【検証で得た学び / 次の課題】</h3>
+                    <p class="doc-p">今回の開発を通して、以下の技術的な改善点を見出し、次期モデルへのアップデート目標としています。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">1. 逆運動学（Inverse Kinematics）の実装による拡張性の確保</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
-                        現在は各関節の角度を直接指定する制御（順運動学的なアプローチ）となっているため、仕分け先のバーコード種類が増えるたびに、新しい座標への移動コードを手動で追加する必要があります。これを根本から解決するため、目標のXYZ座標を与えれば各関節の角度を自動計算する「逆運動学」を用いたアルゴリズムに改修し、拡張性と保守性の高いシステムを目指します。
+                    <h4 class="doc-sub">1. 逆運動学（Inverse Kinematics）の実装による拡張性の確保</h4>
+                    <p class="doc-p doc-note">
+                        現在は関節角度を直接指定する方式で、仕分け先が増えると動作パターンの追加が必要です。次は目標位置から関節角度を求める逆運動学を検討し、可動範囲や干渉を確認したうえで適用します。仕分け先の変更に対応しやすい構成を目指します。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">2. 逆起電力を考慮した安定した回路設計</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
-                        回路設計時、サーボモーターの駆動や停止に伴って発生する逆起電力（ノイズ）により、マイコンやモーターが予期せぬ誤動作を起こすというハードウェア特有のトラブルを経験しました。今後の基板設計では、ダイオードやバイパスコンデンサなどの保護部品を適切に配置し、電源系統の分離を行うなど、電気的に安定した堅牢な回路設計を徹底します。
+                    <h4 class="doc-sub">2. 電源とノイズを測定して切り分ける</h4>
+                    <p class="doc-p doc-note">
+                        サーボの駆動・停止時に予期しない動作が生じました。電源変動やノイズは原因候補ですが、波形測定なしに逆起電力と断定しないことが課題です。次の試作では電源・接地・配線を確認し、必要な保護と電源分離を検討して、負荷を変えた試験で効果を確かめます。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">3. エンドエフェクタ（ハンド部）の機構設計とギア精度の向上</h4>
-                    <p style="margin-bottom: 2rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">3. エンドエフェクタ（ハンド部）の機構設計とギア精度の向上</h4>
+                    <p class="doc-p doc-note">
                         アーム先端で荷物を掴むハンド部分の機構設計において、動力を伝達するギアの調整に反省点が残りました。CAD上での設計公差や、実際のギアの噛み合い（バックラッシュ）の調整が甘かったため、モーターのトルクが適切に伝達されず、対象物をうまく把持（グリップ）できないケースが発生しました。この物理的なハードウェア特有の課題を踏まえ、今後の設計ではギアのモジュールや軸間距離をより厳密に計算し、3Dプリンター等の出力精度も加味した上で、確実で安定した把持ができるエンドエフェクタ機構へとアップデートを図ります。
                     </p>
                 </div>
@@ -194,23 +493,22 @@
             <div class="modal-header">
                 <h2 class="modal-title">自動運転ミニカー（製作途中）</h2>
                 <div class="modal-date">特定のコースを自走で運転するミニカー</div>
+                <div class="dossier-meta"><span class="dm-item"><i>ID</i>MCAR-01</span><span class="dm-item"><i>YEAR</i>2026</span><span class="dm-item"><i>ROLE</i>制御 / AI / 回路</span><span class="dm-item"><i>STATUS</i>製作途中</span></div>
             </div>
             <div class="modal-body">
-                <div class="project-media" style="margin-bottom: 3rem;">
+                <div class="project-media">
                     <!-- Main Video Player -->
-                    <div
-                        style="border: 1px solid rgba(192, 196, 208, 0.2); border-radius: 0; overflow: hidden; margin-bottom: 2rem; background: #000; display: flex; align-items: center; justify-content: center;">
-                        <video controls style="width: 100%; max-height: 500px; display: block;"
-                            poster="assets/images/minicar.jpg">
+                    <div class="media-main">
+                        <video controls preload="none" playsinline style="width: 100%; max-height: 500px; display: block;"
+                            poster="assets/images/opt/minicar-1600.webp" data-caption="自動運転ミニカー — 開発時の走行記録。実機での連続走行検証とは区別">
                             <source src="assets/videos/minicar.mp4" type="video/mp4">
                             お使いのブラウザは動画の再生に対応していません。
                         </video>
                     </div>
                 </div>
 
-                <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
-                    <a href="https://intelligent-botany-7c1.notion.site/3511171f8885800e86fbfed95fb41d6c" target="_blank" class="view-link hover-glow"
-                        style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: rgba(192, 196, 208, 0.1); border: 1px solid var(--accent); border-radius: 0; font-weight: bold; text-decoration: none; color: var(--accent); font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;">
+                <div class="project-links">
+                    <a href="https://intelligent-botany-7c1.notion.site/3511171f8885800e86fbfed95fb41d6c" target="_blank" class="btn-doc">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="margin-right: 0.5rem;">
@@ -221,8 +519,7 @@
                         </svg>
                         Notion 開発日記・技術レポート
                     </a>
-                    <a href="https://github.com/" target="_blank" class="view-link hover-glow"
-                        style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: rgba(192, 196, 208, 0.1); border: 1px solid var(--accent); border-radius: 0; font-weight: bold; text-decoration: none; color: var(--accent); font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;">
+                    <a href="https://github.com/" target="_blank" class="btn-doc">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
                             style="margin-right: 0.5rem;">
                             <path
@@ -233,67 +530,63 @@
                 </div>
 
                 <div class="project-content">
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                    <h3 class="doc-h">
                         【システム概要】</h3>
-                    <p style="margin-bottom: 2.5rem; line-height: 1.9; color: var(--steel-dim);">
-                        本プロジェクトは、ROS 2、Gazebo、およびPyTorchを統合し、カメラ画像から車両の運動制御（cmd_vel）を直接ダイレクトに推論するEnd-to-Endのディープラーニング自動運転ミニカーシステムです。単眼カメラから得たリアルタイム映像を軽量なCNNモデル（DrivingCNN）に入力し、走行レーンを判断して自律走行を行います。シミュレーション環境での検証（Sim）を経て、実機（Real）への移植（Sim-to-Real）を見据えた回路設計・実装までを一貫して行うことを目的としています。
+                    <p class="doc-p">
+                        カメラ画像から走行指令を推定するCNNと、車両の追従制御を組み合わせる自動運転ミニカーの開発です。ROS 2・Gazebo・PyTorchを使い、学習データの偏り、物理モデルの誤差、急加速時の不安定さを調べています。ここで紹介する走行改善はシミュレーションでの開発記録です。実機への移植と繰り返し走行の検証は今後の課題です。
                     </p>
 
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                    <h3 class="doc-h">
                         【使用技術、ツール】</h3>
-                    <ul class="tech-list" style="margin-bottom: 2.5rem; padding-left: 0;">
-                        <li style="margin-bottom: 0.5rem;"><strong>ロボット制御ミドルウェア：</strong> ROS 2 (Jazzy Jalisco)</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>シミュレーション環境：</strong> Gazebo Sim (Version 8.x), Antigravity CLI</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>AI / ディープラーニング：</strong> PyTorch (with CUDA), OpenCV</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>ハードウェア開発：</strong> Arduino IDE, KiCAD（予定）</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>使用部品：</strong> Raspberry Pi 5, ODK-Dカメラ, サーボモーター, DCモーター, モータードライバー, XHコネクタ, ユニバーサル基板</li>
+                    <ul class="tech-list">
+                        <li><strong>ロボット制御ミドルウェア：</strong> ROS 2 (Jazzy Jalisco)</li>
+                        <li><strong>シミュレーション環境：</strong> Gazebo Sim (Version 8.x), Antigravity CLI</li>
+                        <li><strong>AI / ディープラーニング：</strong> PyTorch (with CUDA), OpenCV</li>
+                        <li><strong>ハードウェア開発：</strong> Arduino IDE, KiCAD（予定）</li>
+                        <li><strong>使用部品：</strong> Raspberry Pi 5, ODK-Dカメラ, サーボモーター, DCモーター, モータードライバー, XHコネクタ, ユニバーサル基板</li>
                     </ul>
 
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
+                    <h3 class="doc-h">
                         【ハードウェア設計における課題と工夫】</h3>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">
+                    <p class="doc-p">
                         実機試作に向けた初期ハードウェア開発において、以下の課題に直面し、それぞれ対策を講じました。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">電源系統の設計ミスと回路修正</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">電源系統の設計ミスと回路修正</h4>
+                    <p class="doc-p doc-note">
                         <strong>課題：</strong> ユニバーサル基板の初期設計段階で、モータードライバー用の電源ラインが不足している設計ミスを発見。<br>
                         <strong>工夫：</strong> 回路図・実装図の段階でミスを検知し、コネクタを1つ追加することで対応。今後はこの経験をもとに、より可視化・検証がしやすいKiCADを用いた回路設計へと移行します。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">確実な配線実装と接続信頼性の向上</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">確実な配線実装と接続信頼性の向上</h4>
+                    <p class="doc-p doc-note">
                         <strong>課題：</strong> 振動の多いミニカーにおいて、配線の接触不良は致命的なトラブルの原因となる。また、スズメッキ線を用いた手作業でのハンダ付けは熱伝導の制御が難しく、イモハンダのリスクがあった。<br>
                         <strong>工夫：</strong> すべての配線にXHコネクタを採用し、専用工具で端子を圧着することで物理的な接続信頼性を確保。ハンダ付けにおいては「予備ハンダの徹底」と「スズメッキ線をしっかり熱して熱効率を上げる」ことを意識し、堅牢な基板へと仕上げました。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">今後の機体レイアウト最適化</h4>
-                    <p style="margin-bottom: 2.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">今後の機体レイアウト最適化</h4>
+                    <p class="doc-p doc-note">
                         <strong>課題：</strong> 走行時の安定性やメンテナンス性を考慮する必要がある。<br>
                         <strong>工夫：</strong> ラズパイ5やカメラ、シャーシの配置をCAD上でモデル化（または既存モデルの選定）し、重量バランス（重心）を意識したパーツ配置と、整備しやすい配線レイアウトを設計中です。
                     </p>
 
-                    <h3
-                        style="color: var(--ember); font-size: 1.25rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;">
-                        【反省点と今後の展望（Next Action）】</h3>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.9; color: var(--steel-dim);">
-                        シミュレーション環境におけるEnd-to-End学習および制御アルゴリズムの構築において、以下の4つの技術的課題を見出し、それぞれ具体的なアプローチで対策・改善を行いました。
+                    <h3 class="doc-h">
+                        【検証で得た学び / 次の課題】</h3>
+                    <p class="doc-p">
+                        学習だけでは安定走行に届かなかった経験から、データ、物理モデル、制御を分けて見直しました。以下は過去のシミュレーションでの改善過程です。ゲインや速度上限は当時の条件に依存し、実機へそのまま適用する値ではありません。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">1. データ不均衡によるローカルミニマム（その場旋回ループ）の解消</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
-                        <strong>反省点：</strong> 初期学習後のテスト走行時、ミニカーが同じ場所を行ったり来たり旋回する挙動（ローカルミニマム）が発生しました。カメラ画像から目先の操作（右・左）だけを予測するEnd-to-End学習の特性上、「自分が今コースのどこにいるか」というマクロなルールを認識できず、さらにデータ収集時に含まれた「その場旋回データ」を過学習したことが原因でした。<br>
-                        <strong>Next Action：</strong> データクレンジングを自動化し、車両停止状態（$v_x = 0.0$）での旋回データ（$|\omega_z| > 0.5$）や完全停止データを100%除外して再学習を行いました。結果、バイアスが排除され、低速ながらも自力でコースを1周することに成功しました。
+                    <h4 class="doc-sub">1. データ不均衡によるローカルミニマム（その場旋回ループ）の解消</h4>
+                    <p class="doc-p doc-note">
+                        <strong>反省点：</strong> 初期モデルで、その場を旋回し続ける挙動が発生しました。収集データに含まれる停止・旋回場面の偏りを原因候補として調べ、データの構成と走行結果を対応付けて見直しました。<br>
+                        <strong>Next Action：</strong> 停止状態での旋回や完全停止のデータを除く処理を加えて再学習しました。開発記録では低速での1周を確認しています。次は別の初期位置・条件でも評価し、改善が特定の走行条件だけに依存しないかを確認します。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">2. システム同定（SysID）に基づくPID制御の導入とパラメータ適合</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">2. システム同定（SysID）に基づくPID制御の導入とパラメータ適合</h4>
+                    <p class="doc-p doc-note">
                         <strong>反省点：</strong> AIの出力のみ（End-to-End単体）では、速度を上げた際にカーブが不安定になり、完璧な学習データを用意し続けることの限界に直面しました。そこでAIには「目標値（目標速度・目標角度）」だけを出力させ、実際のタイヤ制御はPIDで行うハイブリッド方式を試みましたが、導入初期は車体がその場旋回するか壁に衝突する状態になりました。原因を追究したところ、機体の総質量（6.14kg）をはじめとするURDF（物理モデルパラメータ）に大きな誤差があり、ゲイン計算の前提が崩れていたことが判明しました。<br>
                         <strong>Next Action：</strong> 車体重量の誤差を修正し、システム同定から得られた物理特性（無駄時間 $L=0.1$秒、時定数 $T=0.33$秒）をベースに、ジグラー・ニコルス法等を用いて以下の通りゲインを再計算・適合させました。
-                        <span style="display: block; margin-top: 0.5rem; font-family: var(--font-mono); font-size: 14px; color: var(--accent);">
+                        <span class="doc-list">
                             ・比例ゲイン ($K_p$): 3.92<br>
                             ・積分ゲイン ($K_i$): 0.65 （制御周期 30Hz換算）<br>
                             ・微分ゲイン ($K_d$): 6.0 （制御周期 30Hz換算）
@@ -301,22 +594,22 @@
                         これにより、制御が破綻することなく高速化の土台を作ることができました。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">3. 急激な車速変化に伴う慣性への対処（ローパスフィルターと減速ロジック）</h4>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">3. 急激な車速変化に伴う慣性への対処（ローパスフィルターと減速ロジック）</h4>
+                    <p class="doc-p doc-note">
                         <strong>反省点：</strong> PID制御とURDFの加速度制限の上限を3倍に引き上げたことで、直線での最高速度は大幅に向上したものの、1つ目のカーブを抜けた直後にステアリングに大きな数値が残ったまま車速が 3.0 m/s へ急上昇し、慣性によって制御不能（オーバーステア）となり壁に衝突する問題が発生しました。<br>
                         <strong>Next Action：</strong> 急激なステアリング変化を滑らかにするため、操作量にローパスフィルターを導入しました。あわせて、カーブ進入時に自動で減速するシステムを組み込みました。さらに、従来のステアリング式「(0.4 × 前回の値) + (0.6 × AIの予測)」の配分を見直し、AIの予測の重みを 0.85 まで引き上げることで、ラインから外れそうになった際のリカバー力を高め、壁に激突せず1周できるよう改善しました。
                     </p>
 
-                    <h4 style="color: var(--ember); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em;">4. 高速周回時の膨らみ抑制と振動（ハンチング）の防止</h4>
-                    <p style="margin-bottom: 2rem; line-height: 1.8; color: var(--steel-dim); padding-left: 1rem; border-left: 1px solid var(--line);">
+                    <h4 class="doc-sub">4. 高速周回時の膨らみ抑制と振動（ハンチング）の防止</h4>
+                    <p class="doc-p doc-note">
                         <strong>反省点：</strong> さらなる高速化を目指し、「未来予測の先行入力（車速に応じて早めにハンドルを切る）」を導入したところ、逆にカーブ前の段階でイン側に膨らみすぎて挙動が不安定化し、外側の壁に張り付くような走行ラインになってしまいました。また、実機を見据えた際、サーボモーターの突っ張り（過剰な応答）によるメカの破損リスクが懸念されました。<br>
                         <strong>Next Action：</strong> 逆効果となっていた未来予測の先行入力を一度削除し、定常位置を真ん中に維持するため、固有角周波数 ω_n = 5.0、減衰比 ζ = 1.0 に再調整した以下のステップ応答ゲインへ上書きしました。
-                        <span style="display: block; margin-top: 0.5rem; font-family: var(--font-mono); font-size: 14px; color: var(--accent);">
+                        <span class="doc-list">
                             ・K_p_steer = 25.0 / K_d_steer = 10.0<br>
                             ・直線部最高速度上限: 3.5 m/s<br>
                             ・TCS（トラクションコントロール）作動時制限速度: 1.4 m/s
                         </span>
-                        このチューニングにより、サーボの突っ張りを防ぎながら、外壁に擦ることのない美しいラインでの「高速無限周回」の実現へとアップデートを継続しています。
+                        これらはシミュレーション上の調整値です。次は走行条件、周回数、逸脱回数を固定した比較を行い、実機では操舵限界と速度を低い範囲から確認します。連続周回の安定性と実機での耐久性は、まだ検証課題として残しています。
                     </p>
                 </div>
             </div>
@@ -325,73 +618,18 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year"></span> SYS.RBT. All rights reserved.</p>
-            <div class="system-id">SYS.ID: 0x8F9B</div>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
         </div>
     </footer>
-    <script src="assets/js/three.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/vehicles.js"></script>
-    <script>
-        // Modal Logic for Works Page
-        document.addEventListener('DOMContentLoaded', () => {
-            const worksCards = document.querySelectorAll('.works-card');
-            const modals = document.querySelectorAll('.modal-overlay');
-            const closeBtns = document.querySelectorAll('.modal-close');
-
-            const openModal = (modal) => {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                setTimeout(() => {
-                    modal.querySelector('.modal-container').classList.add('appear');
-                }, 50);
-            };
-
-            worksCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const modalId = card.getAttribute('data-modal');
-                    const modal = document.getElementById(modalId);
-                    if (modal) {
-                        openModal(modal);
-                    }
-                });
-            });
-
-            const closeModal = (modal) => {
-                modal.querySelector('.modal-container').classList.remove('appear');
-                setTimeout(() => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }, 300);
-            };
-
-            closeBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    closeModal(e.target.closest('.modal-overlay'));
-                });
-            });
-
-            modals.forEach(modal => {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        closeModal(modal);
-                    }
-                });
-            });
-
-            // Auto-open modal based on URL hash (e.g. works.html#modal-mimir)
-            const hash = window.location.hash;
-            if (hash) {
-                const targetModal = document.querySelector(hash);
-                if (targetModal && targetModal.classList.contains('modal-overlay')) {
-                    // Small delay to ensure styles and layouts are ready
-                    setTimeout(() => {
-                        openModal(targetModal);
-                    }, 200);
-                }
-            }
-        });
-    </script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/scene-boot.js"></script>
+    <script defer src="assets/js/motion.js"></script>
+    <script defer src="assets/js/modals.js"></script>
+    <script defer src="assets/js/media.js"></script>
 </body>
 
 </html>
