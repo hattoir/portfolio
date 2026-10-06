@@ -1640,3 +1640,26 @@ body.is-loaded .hero .dock-nav { animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0
 .progress-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(1.4rem, 3vw, 2.2rem); }
 .progress-card .card-desc { margin-top: 0.2rem; }
 .progress-card::after { --sweep: 90px; }
+
+/* ==========================================================================
+   PLATE CAPTIONS — stack by default, single line only when the plate is wide.
+   (In the tight photo grids the three-column caption squeezed the text column
+   to one character per line.)
+   ========================================================================== */
+.plate { container-type: inline-size; }
+.plate-cap {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: 0.3rem 0.9rem;
+}
+.plate-id { grid-column: 1; grid-row: 1; }
+.plate-credit { grid-column: 2; grid-row: 1; justify-self: end; }
+.plate-text { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+
+@container (min-width: 520px) {
+    .plate-cap { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .plate-id { grid-row: 1; }
+    .plate-text { grid-column: 2; grid-row: 1; }
+    .plate-credit { grid-column: 3; grid-row: 1; }
+}
