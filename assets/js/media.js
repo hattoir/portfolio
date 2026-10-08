@@ -124,6 +124,63 @@
         });
     }
 
+    
+    /* standalone YouTube facade: <div class="video-embed" data-yt="..."> ---- */
+    function enhanceEmbeds(scope) {
+        var nodes = scope.querySelectorAll(".video-embed[data-yt]");
+        Array.prototype.forEach.call(nodes, function (box) {
+            if (box.getAttribute("data-built")) return;
+            box.setAttribute("data-built", "1");
+
+            var yt = box.getAttribute("data-yt");
+            var poster = box.getAttribute("data-poster") || "";
+            var label = box.getAttribute("data-label") || "VIDEO 01";
+            var caption = box.getAttribute("data-caption") || "";
+            var credit = box.getAttribute("data-credit") || "VIDEO: 服部 将眞";
+            var cta = box.getAttribute("data-cta") || "YouTube で再生";
+
+            var fig = document.createElement("figure");
+            fig.className = "plate video-plate";
+            var holder = document.createElement("div");
+            holder.className = "video-holder";
+            fig.appendChild(holder);
+
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "yt-facade";
+            btn.setAttribute("aria-label", (caption || "動画") + " を再生");
+            if (poster) btn.style.backgroundImage = "url(" + poster + ")";
+            var play = document.createElement("span"); play.className = "yt-play";
+            var note = document.createElement("span"); note.className = "yt-note"; note.textContent = cta;
+            btn.appendChild(play); btn.appendChild(note);
+            btn.addEventListener("click", function () {
+                var f = document.createElement("iframe");
+                f.src = "https://www.youtube-nocookie.com/embed/" + yt + "?autoplay=1&rel=0";
+                f.title = caption || "動画";
+                f.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
+                f.allowFullscreen = true;
+                f.loading = "lazy";
+                holder.innerHTML = "";
+                holder.appendChild(f);
+            });
+            holder.appendChild(btn);
+
+            if (caption) {
+                var cap = document.createElement("figcaption");
+                cap.className = "plate-cap";
+                var a = document.createElement("span"); a.className = "plate-id"; a.textContent = label;
+                var b = document.createElement("span"); b.className = "plate-text"; b.textContent = caption;
+                var c = document.createElement("span"); c.className = "plate-credit"; c.textContent = credit;
+                cap.appendChild(a); cap.appendChild(b); cap.appendChild(c);
+                fig.appendChild(cap);
+            }
+
+            box.parentNode.insertBefore(fig, box);
+            box.parentNode.removeChild(box);
+        });
+    }
+
+
     /* ------------------------------------------------------------------ */
     /* 2. the viewer                                                       */
     /* ------------------------------------------------------------------ */
@@ -232,9 +289,10 @@
     }, true);
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function () { enhance(document); enhanceVideos(document); });
+        document.addEventListener('DOMContentLoaded', function () { enhance(document); enhanceVideos(document); enhanceEmbeds(document); });
     } else {
         enhance(document);
         enhanceVideos(document);
+        enhanceEmbeds(document);
     }
 })();

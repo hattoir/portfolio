@@ -1,0 +1,92 @@
+[
+  {
+    "src": "tech-seeker-2026/tech-seeker-main.jpg",
+    "srcKB": 379,
+    "variants": [
+      {
+        "name": "tech-seeker-main-1600.webp",
+        "w": 1477,
+        "h": 1108,
+        "kb": 245
+      },
+      {
+        "name": "tech-seeker-main-800.webp",
+        "w": 800,
+        "h": 600,
+        "kb": 79
+      }
+    ]
+  },
+  {
+    "src": "tech-seeker-2026/tech-seeker-wheel-rubber.jpg",
+    "srcKB": 333,
+    "variants": [
+      {
+        "name": "tech-seeker-wheel-1600.webp",
+        "w": 1477,
+        "h": 1108,
+        "kb": 217
+      },
+      {
+        "name": "tech-seeker-wheel-800.webp",
+        "w": 800,
+        "h": 600,
+        "kb": 67
+      }
+    ]
+  },
+  {
+    "src": "tech-seeker-2026/tech-seeker-cad.webp",
+    "srcKB": 176,
+    "variants": [
+      {
+        "name": "tech-seeker-cad-1600.webp",
+        "w": 935,
+        "h": 602,
+        "kb": 57
+      },
+      {
+        "name": "tech-seeker-cad-800.webp",
+        "w": 800,
+        "h": 515,
+        "kb": 42
+      }
+    ]
+  },
+  {
+    "src": "srod-hackathon/srod-main.jpg",
+    "srcKB": 149,
+    "variants": [
+      {
+        "name": "srod-grip-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "kb": 44
+      },
+      {
+        "name": "srod-grip-800.webp",
+        "w": 600,
+        "h": 800,
+        "kb": 16
+      }
+    ]
+  },
+  {
+    "src": "serpens/serpens-cad.webp",
+    "srcKB": 75,
+    "variants": [
+      {
+        "name": "serpens-cad-1600.webp",
+        "w": 594,
+        "h": 406,
+        "kb": 43
+      },
+      {
+        "name": "serpens-cad-800.webp",
+        "w": 594,
+        "h": 406,
+        "kb": 43
+      }
+    ]
+  }
+]

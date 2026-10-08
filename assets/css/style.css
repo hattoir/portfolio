@@ -1663,3 +1663,53 @@ body.is-loaded .hero .dock-nav { animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0
     .plate-text { grid-column: 2; grid-row: 1; }
     .plate-credit { grid-column: 3; grid-row: 1; }
 }
+
+/* ==========================================================================
+   GENERALISED DIAGRAM — used where company photographs must not be shown
+   ========================================================================== */
+.flow-fig { margin: 0 0 2.2rem; color: rgba(var(--accent-rgb), 0.75); }
+.flow-fig svg { width: 100%; height: auto; display: block; }
+.flow-fig text { font-family: var(--font-jp-sans); letter-spacing: 0.06em; }
+.flow-fig .plate-cap { color: var(--steel-dark); }
+
+/* quiet aside used for scope limits ("not done by me", "no company photos") */
+.doc-aside { color: var(--steel-dark); font-size: var(--step--1); line-height: 1.9; }
+p.doc-aside { margin-bottom: var(--s4); }
+.doc-p .doc-aside { display: inline; }
+
+/* ==========================================================================
+   BOOKS / RESEARCH cards
+   ========================================================================== */
+.books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(1.2rem, 2.6vw, 1.8rem); }
+.ref-card .card-desc { margin-top: 0.2rem; }
+.status-chip {
+    margin-left: auto;
+    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.16em;
+    padding: 3px 9px; border: 1px solid currentColor; white-space: nowrap;
+}
+.status-chip.is-done { color: var(--accent); }
+.status-chip.is-reading { color: var(--amber); }
+.status-chip.is-ref { color: var(--steel-dark); }
+.status-chip.is-sim,
+.status-chip.is-partial,
+.status-chip.is-trying { color: var(--amber); }
+.status-chip.is-paper { color: var(--steel-dark); }
+.loop-fig { margin-top: 1.4rem; }
+@media (max-width: 700px) {
+    .status-chip { margin-left: 0; }
+    .ref-head { gap: 0.6rem; }
+}
+
+/* lead line at the top of a dossier, and inline links inside body copy */
+.doc-lead {
+    font-size: var(--step-1); line-height: 1.95; color: var(--steel);
+    margin: 0 0 var(--s5); padding-left: 1.1rem;
+    border-left: 2px solid rgba(var(--accent-rgb), 0.5);
+}
+.inline-link { color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb), 0.4); }
+.inline-link:hover { color: var(--accent-bright); }
+
+/* small source images (CAD exports) must not be upscaled past their native size */
+.plate-frame img.is-native, .media-main img.is-native {
+    width: auto; max-width: 100%; margin: 0 auto; display: block;
+}

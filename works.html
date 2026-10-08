@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=22">
+    <link rel="stylesheet" href="assets/css/style.css?v=25">
     <meta name="description" content="ROS 2とメカナムホイールの自律ゴミ回収ロボット「具臣」、バーコード仕分けアーム「ミーミルの手」、End-to-End学習の自動運転ミニカー。設計値と検証結果つきの開発記録。">
     <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/works.html">
     <meta name="theme-color" content="#02060a">
@@ -116,11 +116,11 @@
                         <section class="page-header fade-in">
             <p class="page-eyebrow">MOD-02 // CARGO BAY — PROJECT ARCHIVE</p>
             <h1 class="page-title">02. 作品</h1>
-            <p class="page-subtitle">機構・制御・認識をつなぐ3つの制作。取り組んだ課題、設計判断、検証の到達点を紹介します。</p>
+            <p class="page-subtitle">機構・制御・認識をつなぐ4つの制作。取り組んだ課題、設計判断、検証の到達点を紹介します。</p>
             <div class="title-line"></div>
             <div class="page-status" aria-label="ページステータス">
-                <span><i class="ps-dot"></i>PROJECTS: <b>03</b></span>
-                <span class="ps-warn"><i class="ps-dot"></i>IN DEV: <b>02</b></span>
+                <span><i class="ps-dot"></i>PROJECTS: <b>04</b></span>
+                <span class="ps-warn"><i class="ps-dot"></i>IN DEV: <b>03</b></span>
                 <span>STATUS: <b>ARCHIVED</b></span>
             </div>
         </section>
@@ -128,13 +128,25 @@
         <section class="works-grid">
             <h2 class="sr-only">作品一覧</h2>
             <!-- Works Items -->
-            <div class="card fade-in works-card" data-modal="modal-gushin" style="cursor: pointer;">
-                <!-- ★差し替え: 写真ができたら style を
-                     background: url('assets/images/gushin_main.jpg') center/cover no-repeat;
-                     に変更し、中の .media-pending を削除 -->
+            <div class="card fade-in works-card" data-modal="modal-serpens" style="cursor: pointer;">
                 <div class="card-image-placeholder"
-                    style="background: url('assets/images/opt/gushin-model-800.webp') center/cover no-repeat;">
+                    style="background: url('assets/images/opt/serpens-main-cad.webp') center/cover no-repeat;">
                     <span class="plate-tag">CG MODEL</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta"><span class="cm-id">SRP-01</span><span class="cm-year">2026</span><span class="cm-status is-dev"><i></i>IN R&amp;D</span></div>
+                    <h3 class="card-title">Serpens</h3>
+                    <p class="card-desc">家庭内を巡回し、人や環境と関わることを目指す蛇型ペットロボット。機械設計・基板・ROS 2・シミュレーションを横断して開発中。</p>
+                    <div class="cm-tags"><span class="cm-tag">Fusion 360</span><span class="cm-tag">ROS 2</span><span class="cm-tag">KiCad</span><span class="cm-tag">ESP32</span><span class="cm-tag">Simulation</span></div>
+                    <span class="view-link" style="display: inline-block; margin-top: 1rem;">詳細を見る <span
+                            class="arrow">→</span></span>
+                </div>
+            </div>
+
+            <div class="card fade-in works-card" data-modal="modal-gushin" style="cursor: pointer;">
+                <div class="card-image-placeholder"
+                    style="background: url('assets/images/opt/gushin-exhibit-800.webp') center/cover no-repeat;">
+                    <span class="plate-tag">PHOTO</span>
                 </div>
                 <div class="card-content">
                     <div class="card-meta"><span class="cm-id">ATN-01</span><span class="cm-year">2026</span><span class="cm-status is-dev"><i></i>IN DEV</span></div>
@@ -177,6 +189,147 @@
     </main>
 
     <!-- Modals -->
+    <!-- Serpens -->
+    <div class="modal-overlay" id="modal-serpens">
+        <div class="modal-container fade-in">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Serpens — 家庭内で人と暮らす蛇型ペットロボット</h2>
+                <div class="modal-date">開発中のR&amp;Dプロジェクト / Home AI 連携を見据えた設計</div>
+                <div class="dossier-meta"><span class="dm-item"><i>ID</i>SRP-01</span><span class="dm-item"><i>YEAR</i>2026</span><span class="dm-item"><i>ROLE</i>機械設計 / 回路 / 制御</span><span class="dm-item"><i>STATUS</i>開発中</span></div>
+            </div>
+            <div class="modal-body">
+                <div class="project-media">
+                    <div class="media-main">
+                        <img class="is-native" src="assets/images/opt/serpens-main-cad.webp" width="594" height="406"
+                            loading="lazy" decoding="async"
+                            alt="Serpens の全体CAD"
+                            data-caption="現在検討している Serpens の全体CAD。蛇らしい多関節構造と、家庭内ペットロボットとしての親しみやすさの両立を探っている設計案"
+                            data-credit="CAD: 服部 将眞">
+                    </div>
+                </div>
+
+                <p class="doc-lead">「移動する機械」ではなく、家の中で人と関係を作るロボットを目指しています。</p>
+
+                <h3 class="doc-h">【コンセプト】</h3>
+                <p class="doc-p">Serpens は、蛇型の多関節構造を持つ家庭向けペットロボットです。単に指示された動作をするのではなく、家の中を巡回しながら周囲の状態を認識し、ユーザーに家の様子を伝えたり、自分から人に近づいたりできる存在を目指しています。</p>
+                <p class="doc-p doc-note">ここに書いている機能は<strong>目標と検討中の内容</strong>です。現時点で家庭内を自律巡回できているわけではありません。</p>
+
+                <h3 class="doc-h">【着想のきっかけ】</h3>
+                <p class="doc-p">大きなきっかけは <strong>Maker Faire Tokyo 2026</strong> で見た「あるロボットの感情や状態を、別のロボットが読み取って表現する」というアイデアでした。この考え方が面白く、Serpens の方向性を考えるきっかけになりました。</p>
+                <p class="doc-p">最初期の構想は「部屋の中を巡回して、家の中で起きていることをユーザーに教えてくれるペットロボット」です。そこから、ユーザーを認識する／自分から近づく／周囲の状態を理解する／動きで状態や感情を表現する／家庭内AIと連携する、という方向へ構想を広げています。</p>
+
+                <h3 class="doc-h">【いま取り組んでいること】</h3>
+                <ul class="doc-bullets">
+                    <li>蛇型多関節機構のCAD設計</li>
+                    <li>関節の可動域と干渉の検証</li>
+                    <li>センサ基板の設計</li>
+                    <li>メイン制御基板の設計</li>
+                    <li>ROS 2 を用いたロボットシステムの構築</li>
+                    <li>シミュレーションによる動作検証</li>
+                    <li>AIエージェントを活用した設計・実装支援</li>
+                    <li>周囲やユーザーへ反応する行動表現の検討</li>
+                </ul>
+
+
+                <h3 class="doc-h">【開発概要動画】</h3>
+                <p class="doc-p">Serpens の現状を一本にまとめた開発概要動画です。CAD、MuJoCo 上でのシミュレーション、頭部センサ基板の 3D レンダリングで構成しています。</p>
+                <p class="doc-p doc-note">現時点では実機ではなく、CAD・MuJoCoシミュレーション・基板設計の3Dレンダリングをまとめた開発概要です。実機ロボットも実物の基板も、まだ存在しません。</p>
+                <div class="video-embed" data-yt="guUCysoadRg"
+                    data-poster="assets/images/opt/serpens-video-poster.webp"
+                    data-label="VIDEO 01"
+                    data-cta="開発概要動画を見る"
+                    data-caption="Serpens 開発概要動画（CAD・シミュレーション・基板設計レンダリング / 約51秒）"
+                    data-credit="VIDEO: 服部 将眞"></div>
+                <p class="doc-p doc-aside">動画内のシミュレーションは簡略化したモデルによるもので、摩擦・サーボ特性・質量は仮定値です。実機での検証は行っていません。</p>
+                <p class="doc-p"><a class="inline-link" href="https://youtu.be/guUCysoadRg" target="_blank" rel="noopener">YouTube で開く →</a></p>
+
+                <h3 class="doc-h">【設計検証の進め方】</h3>
+                <p class="doc-p">シミュレーションだけで設計を確定せず、実機で確かめられる部分は小さく試す方針を取っています。全身をいきなり製作せず、次の流れを回しています。</p>
+                <figure class="flow-fig">
+                    <svg viewBox="0 0 760 120" role="img" aria-label="設計検証のループ">
+                        <defs>
+                            <marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                                <path d="M0 0 L10 5 L0 10" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+                            </marker>
+                        </defs>
+                        <g transform="translate(6 30)"><rect width="128" height="58" fill="none" stroke="currentColor"></rect><text x="64" y="34" text-anchor="middle" font-size="15" fill="currentColor">CAD</text></g>
+                        <g transform="translate(160 30)"><rect width="150" height="58" fill="none" stroke="currentColor"></rect><text x="75" y="34" text-anchor="middle" font-size="15" fill="currentColor">シミュレーション</text></g>
+                        <g transform="translate(336 30)"><rect width="150" height="58" fill="none" stroke="currentColor"></rect><text x="75" y="27" text-anchor="middle" font-size="13" fill="currentColor">小さな試験片</text><text x="75" y="45" text-anchor="middle" font-size="13" fill="currentColor">一部リンク</text></g>
+                        <g transform="translate(512 30)"><rect width="110" height="58" fill="none" stroke="currentColor"></rect><text x="55" y="34" text-anchor="middle" font-size="15" fill="currentColor">実機確認</text></g>
+                        <g transform="translate(648 30)"><rect width="106" height="58" fill="none" stroke="currentColor"></rect><text x="53" y="34" text-anchor="middle" font-size="15" fill="currentColor">設計修正</text></g>
+                        <line x1="134" y1="59" x2="156" y2="59" stroke="currentColor" stroke-width="1.4" marker-end="url(#sa)"></line>
+                        <line x1="310" y1="59" x2="332" y2="59" stroke="currentColor" stroke-width="1.4" marker-end="url(#sa)"></line>
+                        <line x1="486" y1="59" x2="508" y2="59" stroke="currentColor" stroke-width="1.4" marker-end="url(#sa)"></line>
+                        <line x1="622" y1="59" x2="644" y2="59" stroke="currentColor" stroke-width="1.4" marker-end="url(#sa)"></line>
+                        <path d="M701 88 L701 108 L70 108 L70 88" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 5" marker-end="url(#sa)"></path>
+                    </svg>
+                    <figcaption class="plate-cap">
+                        <span class="plate-id">PROCESS</span>
+                        <span class="plate-text">設計修正の結果をCADへ戻す</span>
+                        <span class="plate-credit">DIAGRAM</span>
+                    </figcaption>
+                </figure>
+
+                <h3 class="doc-h">【設計検証の一例】</h3>
+                <p class="doc-p">CAD上の干渉検証では、関節形状によって干渉が始まる境界を確認しています。</p>
+                <div class="spec-grid">
+                    <div class="spec-cell"><div class="spec-key">干渉なし</div><div class="spec-val">± 64°</div></div>
+                    <div class="spec-cell"><div class="spec-key">干渉あり</div><div class="spec-val">± 65°</div></div>
+                </div>
+                <p class="doc-p doc-aside">これは設計検証の一例であり、最終仕様として固定された数値ではありません。</p>
+
+
+                <h3 class="doc-h">【頭部センサ基板設計】</h3>
+                <p class="doc-p">Serpens の頭部に搭載するセンサ基板を設計しています。現在は回路・基板設計と 3D レンダリングまで進んでおり、<strong>実基板はまだ未製造</strong>です。センサの配置、基板サイズ、頭部内部への収まりなどを確認しながら設計を進めています。</p>
+                <div class="spec-grid">
+                    <div class="spec-cell"><div class="spec-key">基板サイズ</div><div class="spec-val">44 × 28 mm</div></div>
+                    <div class="spec-cell"><div class="spec-key">設計状態</div><div class="spec-val">未発注 / 未製造</div></div>
+                </div>
+                <div class="media-grid is-tight">
+                    <img src="assets/images/opt/serpens-board-top-800.webp"
+                        srcset="assets/images/opt/serpens-board-top-800.webp 800w, assets/images/opt/serpens-board-top-1600.webp 1600w"
+                        sizes="(max-width: 700px) 92vw, 260px" width="1600" height="1064" loading="lazy" decoding="async"
+                        alt="頭部センサ基板の3Dレンダリング（上面）"
+                        data-caption="頭部センサ基板 上面の3Dレンダリング（基板設計データから生成。実物の写真ではありません）"
+                        data-credit="RENDER: KiCad / 服部 将眞">
+                    <img src="assets/images/opt/serpens-board-angle-800.webp"
+                        srcset="assets/images/opt/serpens-board-angle-800.webp 800w, assets/images/opt/serpens-board-angle-1600.webp 1600w"
+                        sizes="(max-width: 700px) 92vw, 260px" width="1600" height="1064" loading="lazy" decoding="async"
+                        alt="頭部センサ基板の3Dレンダリング（斜め）"
+                        data-caption="斜めから見た3Dレンダリング。コネクタ位置と部品の高さを確認している段階（実物の写真ではありません）"
+                        data-credit="RENDER: KiCad / 服部 将眞">
+                    <img src="assets/images/opt/serpens-board-bottom-800.webp"
+                        srcset="assets/images/opt/serpens-board-bottom-800.webp 800w, assets/images/opt/serpens-board-bottom-1600.webp 1600w"
+                        sizes="(max-width: 700px) 92vw, 260px" width="1600" height="1064" loading="lazy" decoding="async"
+                        alt="頭部センサ基板の3Dレンダリング（裏面）"
+                        data-caption="裏面の3Dレンダリング。頭部内部への収まりを見ながら設計を進めている（実物の写真ではありません）"
+                        data-credit="RENDER: KiCad / 服部 将眞">
+                </div>
+                <p class="doc-p doc-note">上の3点はいずれも設計データから出力した3Dレンダリングです。基板は未発注・未製造で、実機への搭載も行っていません。</p>
+                <p class="doc-p doc-aside">メイン制御基板は現在設計初期段階です。回路構成はこれから詰めていきます。</p>
+
+                <h3 class="doc-h">【AIエージェントを使った開発】</h3>
+                <p class="doc-p">開発では AIエージェントも使っています。調査、実装支援、シミュレーション、検証、設計案の比較などに利用し、<strong>目的・設計方針・ハードウェア・判断・検証結果は自分で確認しながら</strong>進めています。AIがすべてを作ったわけでも、すべてを自分で書いたわけでもありません。</p>
+                <p class="doc-p doc-note">物理シミュレーションについては、AIエージェントを活用しながら<strong>より現実的な環境の導入を進めている段階</strong>です。MuJoCo を自分で使いこなせている段階ではありません。</p>
+
+                <h3 class="doc-h">【設計思想】</h3>
+                <p class="doc-p">性能だけでなく「人が一緒に暮らしたいと思えるか」を重視しています。蛇らしい細長い形状と多関節構造を残しながら、頭部や動きにはペットとしての愛嬌を持たせたいと考えています。機械としての機能性と、ペットロボットとしての親しみやすさの両立が目標です。</p>
+
+                <h3 class="doc-h">【これから目指すところ】</h3>
+                <p class="doc-p">Serpens を単体で完結させず、将来的には部屋側のセンサやPC上のAI、ほかの家庭用ロボットとも連携する <strong>Home AI / 家庭内Physical AI の一部</strong>へ発展させたいと考えています。</p>
+
+                <h3 class="doc-h">【使用技術】</h3>
+                <ul class="tech-list">
+                    <li><strong>機構設計：</strong> Fusion 360（多関節機構、可動域・干渉検証）</li>
+                    <li><strong>回路・基板：</strong> KiCad（センサ基板、メイン制御基板）、ESP32</li>
+                    <li><strong>ソフトウェア：</strong> ROS 2、Python、C++</li>
+                    <li><strong>検証：</strong> シミュレーションによる動作確認（より現実的な物理環境は導入中）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- GUSHIN Modal -->
     <div class="modal-overlay" id="modal-gushin">
         <div class="modal-container fade-in">
@@ -192,42 +345,24 @@
                 <div class="project-media">
                     <!-- メイン: 実機全体写真 -->
                     <div class="media-main">
-                        <img src="assets/images/opt/gushin-model-1400.webp"
-                            srcset="assets/images/opt/gushin-model-800.webp 800w, assets/images/opt/gushin-model-1400.webp 1400w"
-                            sizes="(max-width: 700px) 92vw, 760px" width="1400" height="1185"
+                        <img src="assets/images/opt/gushin-exhibit-1600.webp"
+                            srcset="assets/images/opt/gushin-exhibit-800.webp 800w, assets/images/opt/gushin-exhibit-1600.webp 1600w"
+                            sizes="(max-width: 700px) 92vw, 760px" width="1372" height="1600"
                             loading="lazy" decoding="async"
-                            alt="具臣 実寸ワイヤーフレームモデル" data-caption="CGモデル：CADの実寸（mm）から起こしたワイヤーフレーム。車体400×400mm、メカナムホイールØ80×4、6軸アーム、LiDAR（床上210mm）、RGB-Dカメラ、ダストボックスØ200の配置を示す。実機写真は準備中" data-credit="CG: 服部 将眞">
+                            alt="＋E展に展示した具臣の実機と説明パネル" data-caption="＋E展（2026年9月）での展示の様子。製作中の車体と6軸アーム、RViz 上のシミュレーション画面、説明スライドを並べて展示した" data-credit="PHOTO: 服部 将眞">
                     </div>
                     <!-- ★差し替え: 実機写真ができたら上の img を assets/images/gushin_main.jpg に差し替え -->
 
                     <!-- サブ: 動画 + 静止画 -->
                     <div class="media-grid">
-                        <div
-                            style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; background: #000; min-height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <div
-                                style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1.4rem 2rem; text-align: center; line-height: 2;">
-                                VIDEO // PENDING<br>
-                                <span style="font-size: 10px; opacity: 0.7;">シミュレーション自律回収</span>
-                            </div>
-                            <!-- ★差し替え:
-                            <video controls preload="none" playsinline style="width: 100%; max-height: 400px; display: block;"
-                                poster="assets/images/gushin_sim.jpg">
-                                <source src="assets/videos/gushin_sim.mp4" type="video/mp4">
-                            </video>
-                            -->
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(192, 196, 208, 0.2); overflow: hidden; background: #000; min-height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <div
-                                style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--steel-dark); border: 1px dashed rgba(192,196,208,0.25); padding: 1.4rem 2rem; text-align: center; line-height: 2;">
-                                SUB IMAGE // PENDING<br>
-                                <span style="font-size: 10px; opacity: 0.7;">アーム / RViz 画面</span>
-                            </div>
-                            <!-- ★差し替え:
-                            <img src="assets/images/gushin_sub.jpg" alt="具臣 アーム"
-                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            -->
-                        </div>
+                        <img class="is-native" src="assets/images/opt/gushin-arm.webp"
+                            width="258" height="491" loading="lazy" decoding="async"
+                            alt="具臣の6軸アーム CAD" data-caption="6軸アームのCAD。ベースから手先まで6つの回転軸を直列につないだ構成で、先端に直動ハンドを付けている" data-credit="CAD: 服部 将眞">
+                        <img src="assets/images/opt/gushin-model-1400.webp"
+                            srcset="assets/images/opt/gushin-model-800.webp 800w, assets/images/opt/gushin-model-1400.webp 1400w"
+                            sizes="(max-width: 700px) 92vw, 46vw" width="1400" height="1185"
+                            loading="lazy" decoding="async"
+                            alt="具臣 実寸ワイヤーフレームモデル" data-caption="CGモデル：CADの実寸（mm）から起こしたワイヤーフレーム。車体400×400mm、メカナムホイールØ80×4、6軸アーム、LiDAR（床上210mm）、RGB-Dカメラ、ダストボックスØ200の配置を示す" data-credit="CG: 服部 将眞">
                     </div>
                 </div>
 
@@ -242,8 +377,7 @@
                         </svg>
                         GitHub リポジトリ
                     </a>
-                    <!-- ★差し替え: Notion の開発日誌 URL を入れる -->
-                    <a href="#" class="btn-doc is-disabled" aria-disabled="true" title="準備中">
+                    <a href="https://intelligent-botany-7c1.notion.site/35a1171f88858073ab0ae2169616d08c" target="_blank" rel="noopener noreferrer" class="btn-doc">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             style="margin-right: 0.5rem;">
@@ -252,7 +386,7 @@
                             <line x1="16" y1="13" x2="8" y2="13"></line>
                             <line x1="16" y1="17" x2="8" y2="17"></line>
                         </svg>
-                        Notion 開発日誌（準備中）
+                        Notion 開発日誌
                     </a>
                 </div>
 
