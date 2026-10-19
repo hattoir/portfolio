@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const navLinks = nav.querySelectorAll('li');
         burger.addEventListener('click', () => {
             nav.classList.toggle('nav-active');
+            const expanded = nav.classList.contains('nav-active');
+            burger.setAttribute('aria-expanded', String(expanded));
+            burger.setAttribute('aria-label', expanded ? 'メニューを閉じる' : 'メニューを開く');
             navLinks.forEach((link, index) => {
                 if (link.style.animation) {
                     link.style.animation = '';
@@ -22,6 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             burger.classList.toggle('toggle');
         });
+        const closeNav = () => {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+            burger.setAttribute('aria-expanded', 'false');
+            burger.setAttribute('aria-label', 'メニューを開く');
+            navLinks.forEach(link => { link.style.animation = ''; });
+        };
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && nav.classList.contains('nav-active')) {
+                closeNav();
+                burger.focus();
+            }
+        });
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
     }
 
     // Navbar hide/show on scroll

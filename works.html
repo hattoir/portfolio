@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=25">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
     <meta name="description" content="ROS 2とメカナムホイールの自律ゴミ回収ロボット「具臣」、バーコード仕分けアーム「ミーミルの手」、End-to-End学習の自動運転ミニカー。設計値と検証結果つきの開発記録。">
     <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/works.html">
     <meta name="theme-color" content="#02060a">
@@ -79,6 +79,7 @@
   ]
 }
     </script>
+<link rel="stylesheet" href="assets/css/editorial.css?v=2">
 </head>
 
 <body>
@@ -86,7 +87,7 @@
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
     <div id="vehicle-canvas" data-vehicle="iss"></div>
-    <div class="vehicle-caption"><span>ISS // LOW EARTH ORBIT — CARGO BAY</span><span class="vc-live">&#9679; LIVE</span></div>
+    <div class="vehicle-caption"><span>ISS // LOW EARTH ORBIT — CARGO BAY</span><span class="vc-live">3D ILLUSTRATION</span></div>
 
     <!-- Side labels for premium vibe -->
     <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
@@ -97,18 +98,18 @@
             <a href="index.html" class="logo">
                 <span class="logo-text">SYS.RBT_</span><span class="cursor"></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="site-nav">
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="profile.html">プロフィール</a></li>
                 <li><a href="works.html" class="active">作品</a></li>
                 <li><a href="activities.html">活動実績</a></li>
-                <li><a href="learning.html">学習</a></li>
+                <li><a href="learning.html">学習</a></li><li><a href="ai-workflow.html">AI活用</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -119,14 +120,14 @@
             <p class="page-subtitle">機構・制御・認識をつなぐ4つの制作。取り組んだ課題、設計判断、検証の到達点を紹介します。</p>
             <div class="title-line"></div>
             <div class="page-status" aria-label="ページステータス">
-                <span><i class="ps-dot"></i>PROJECTS: <b>04</b></span>
+                <span><i class="ps-dot"></i>ROBOT PROJECTS: <b>04</b></span>
                 <span class="ps-warn"><i class="ps-dot"></i>IN DEV: <b>03</b></span>
                 <span>STATUS: <b>ARCHIVED</b></span>
             </div>
         </section>
 
         <section class="works-grid">
-            <h2 class="sr-only">作品一覧</h2>
+            <h2 class="sr-only">ロボット作品一覧</h2>
             <!-- Works Items -->
             <div class="card fade-in works-card" data-modal="modal-serpens" style="cursor: pointer;">
                 <div class="card-image-placeholder"
@@ -136,8 +137,8 @@
                 <div class="card-content">
                     <div class="card-meta"><span class="cm-id">SRP-01</span><span class="cm-year">2026</span><span class="cm-status is-dev"><i></i>IN R&amp;D</span></div>
                     <h3 class="card-title">Serpens</h3>
-                    <p class="card-desc">家庭内を巡回し、人や環境と関わることを目指す蛇型ペットロボット。機械設計・基板・ROS 2・シミュレーションを横断して開発中。</p>
-                    <div class="cm-tags"><span class="cm-tag">Fusion 360</span><span class="cm-tag">ROS 2</span><span class="cm-tag">KiCad</span><span class="cm-tag">ESP32</span><span class="cm-tag">Simulation</span></div>
+                    <p class="card-desc">家庭内を巡回し、人や環境と関わることを目指す蛇型ペットロボット。機械設計・基板・Python・シミュレーションを横断して開発中。</p>
+                    <div class="cm-tags"><span class="cm-tag">Fusion 360</span><span class="cm-tag">Python</span><span class="cm-tag">KiCad</span><span class="cm-tag">ESP32</span><span class="cm-tag">Simulation</span></div>
                     <span class="view-link" style="display: inline-block; margin-top: 1rem;">詳細を見る <span
                             class="arrow">→</span></span>
                 </div>
@@ -186,7 +187,7 @@
                 </div>
             </div>
         </section>
-    </main>
+<section class="story-section"><h2>AI・知識・設計支援のプロジェクト</h2><p>ロボットの開発に加え、知識を使う仕組みや、AIと協働する開発環境にも取り組んでいます。</p><div class="link-grid"><a href="jarvis.html"><strong>JARVIS / Home AI</strong><span>日常・研究開発を支援する統合AI。一部実装・隔離検証 →</span></a><a href="ai-lab.html"><strong>AI Lab Atlas / Observatory</strong><span>研究開発の構造と根拠をたどるローカル実装 →</span></a><a href="research-projects.html#world"><strong>World Structure / World Fabric</strong><span>もの・技術・社会のつながりを探索するWeb開発 →</span></a><a href="research-projects.html#codesign"><strong>robot-codesign</strong><span>機械・回路・ソフトウェアを横断する設計検証 →</span></a></div></section>    </main>
 
     <!-- Modals -->
     <!-- Serpens -->
@@ -225,7 +226,7 @@
                     <li>関節の可動域と干渉の検証</li>
                     <li>センサ基板の設計</li>
                     <li>メイン制御基板の設計</li>
-                    <li>ROS 2 を用いたロボットシステムの構築</li>
+                    <li>Pythonによる模擬動作とロボットシステムの検討</li>
                     <li>シミュレーションによる動作検証</li>
                     <li>AIエージェントを活用した設計・実装支援</li>
                     <li>周囲やユーザーへ反応する行動表現の検討</li>
@@ -244,7 +245,7 @@
                 <p class="doc-p doc-aside">動画内のシミュレーションは簡略化したモデルによるもので、摩擦・サーボ特性・質量は仮定値です。実機での検証は行っていません。</p>
                 <p class="doc-p"><a class="inline-link" href="https://youtu.be/guUCysoadRg" target="_blank" rel="noopener">YouTube で開く →</a></p>
 
-                <h3 class="doc-h">【設計検証の進め方】</h3>
+                <p class="doc-p doc-note">2026年10月19日に参照したDrive概要では、最初の機能候補を小物の発見・通知を行うFloor Watchとしています。これは開発目標であり、家庭内巡回や安全性の実機検証は未完了です。軸数などは設計版によって異なるため、過去のCADの値を現行仕様へ統合していません。</p><h3 class="doc-h">【設計検証の進め方】</h3>
                 <p class="doc-p">シミュレーションだけで設計を確定せず、実機で確かめられる部分は小さく試す方針を取っています。全身をいきなり製作せず、次の流れを回しています。</p>
                 <figure class="flow-fig">
                     <svg viewBox="0 0 760 120" role="img" aria-label="設計検証のループ">
@@ -323,7 +324,7 @@
                 <ul class="tech-list">
                     <li><strong>機構設計：</strong> Fusion 360（多関節機構、可動域・干渉検証）</li>
                     <li><strong>回路・基板：</strong> KiCad（センサ基板、メイン制御基板）、ESP32</li>
-                    <li><strong>ソフトウェア：</strong> ROS 2、Python、C++</li>
+                    <li><strong>ソフトウェア：</strong> 現在確認したEX1はPythonによる模擬動作中心。ROS 2・LLMはEX1では未使用で、他の構想・モデルと区別しています。</li>
                     <li><strong>検証：</strong> シミュレーションによる動作確認（より現実的な物理環境は導入中）</li>
                 </ul>
             </div>
@@ -653,14 +654,14 @@
                         </svg>
                         Notion 開発日記・技術レポート
                     </a>
-                    <a href="https://github.com/" target="_blank" class="btn-doc">
+                    <span class="btn-doc is-disabled" aria-disabled="true">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
                             style="margin-right: 0.5rem;">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
-                        GitHub リポジトリ
-                    </a>
+                        GitHub（公開先未確認）
+                    </span>
                 </div>
 
                 <div class="project-content">
@@ -752,7 +753,7 @@
 
     <footer class="footer">
         <div class="container">
-            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a></nav>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a><a href="jarvis.html">JARVIS</a><a href="ai-workflow.html">AI活用</a><a href="ai-lab.html">AI Lab</a></nav>
             <div class="footer-meta">
                 <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
                 <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>

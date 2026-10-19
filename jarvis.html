@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS / Home AI — 服部 将眞 | SYS.RBT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
+    <meta name="description" content="日常生活と研究開発を支援する統合AIシステム。実装・隔離検証・構想を分けた開発記録。">
+    <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/jarvis.html">
+    <meta name="theme-color" content="#02060a">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SYS.RBT">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="JARVIS / Home AI — 服部 将眞">
+    <meta property="og:description" content="日常生活と研究開発を支援する統合AIシステム。実装・隔離検証・構想を分けた開発記録。">
+    <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/jarvis.html">
+    <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JARVIS / Home AI — 服部 将眞">
+    <meta name="twitter:description" content="日常生活と研究開発を支援する統合AIシステム。実装・隔離検証・構想を分けた開発記録。">
+    <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+
+<link rel="stylesheet" href="assets/css/editorial.css?v=2">
+</head>
+<body class="editorial"><a class="skip-link" href="#main">本文へスキップ</a><div class="grid-background" aria-hidden="true"></div><nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SYS.RBT_</span>
+                <span class="cursor"></span>
+            </a>
+            <ul class="nav-links" id="site-nav">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="works.html">作品</a></li>
+                <li><a href="activities.html">活動実績</a></li>
+                <li><a href="learning.html">学習</a></li><li><a href="ai-workflow.html">AI活用</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
+    </nav><main id="main" class="editorial-main container"><header class="story-header"><p class="eyebrow">PROJECT / JARVIS</p><h1>日常と研究開発を、<br>AIとつなぐ。</h1><p class="intro-copy">JARVISは、音声での情報取得や操作を入口に、知識・作業・AIエージェントをつなぐ統合AIシステムを目指す個人開発です。現在は、限られた操作と資料参照を確かめながら、少しずつ接続しています。</p><span class="state-label">開発中 / 限定操作と資料参照を実装・検証</span></header><section class="story-section"><h2>話しかけた先で、作業と知識につながる。</h2><div class="split-copy"><div><h3>日常の操作を、短いやり取りで</h3><p>音声で要求を伝え、許可されたPC操作や資料参照につなげることを目指しています。現在は集中モードの開始・終了と、固定資料の参照が中心です。</p></div><div><h3>開発の続きを、AIと進める</h3><p>調査をエージェントへ分担し、タスク・結果・判断を残す構想です。複数エージェントの模擬実行による経路確認と、実モデルによる調査完了は分けて検証しています。</p></div></div></section><section class="story-section"><h2>何をつなぐシステムなのか。</h2><figure class="architecture"><ol class="flow-steps"><li><b>Agent</b><span>要求を整理<br>作業を提案</span></li><li><b>Tool</b><span>許可された操作<br>範囲を限定</span></li><li><b>Knowledge</b><span>固定資料を参照<br>出典を保持</span></li><li><b>Verification</b><span>結果を読み戻す<br>履歴と照合</span></li></ol><div class="gate-strip">Human Gate / 対象・操作・条件を人が確認する</div><figcaption>設計と検証報告から整理した概念図。すべての処理がこの順で自動連携することを示す実行画面ではありません。現在のPC操作は限定した意図と決定論的な計画で処理します。</figcaption></figure></section><section class="story-section"><h2>いま、どこまでできているか。</h2><div class="status-grid"><article><h3>実装・適用の報告あり</h3><ul><li>PCでの集中モードの開始・終了と、実状態の照合</li><li>許可した固定3資料の参照と、出典・更新日時の表示</li><li>行動計画、ローカル作業履歴、承認待ち・未接続の表示</li></ul></article><article><h3>隔離環境・条件付きの検証</h3><ul><li>音声認識・音声合成の処理（合成入力）</li><li>模擬モデルによるResearch経路の結線</li><li>計画の改変検出と状態遷移の監査</li><li>Avatarの制御契約（シミュレータ専用）</li></ul></article><article><h3>構想・未達・未検証</h3><ul><li>実Researchの30秒以内の完了は未達</li><li>本人のマイク・可聴確認は受入待ち</li><li>ロボット・IoT機器の実操作は未接続</li><li>AR/MR表示、常時音声待受、24時間完全自律運用は完成扱いにしていません</li></ul></article></div></section><section class="story-section"><h2>検証では、数字の条件も残す。</h2><p class="evidence-note">2026年10月19日時点の開発報告に基づく紹介。Phase 12は適用済みとの報告、Phase 14は隔離候補です。本ページの調査で本番稼働や音声試験を再実行したものではありません。</p><div class="table-wrap" tabindex="0" role="region" aria-label="JARVISの検証結果"><table><caption>開発報告の記録値 / 今回の再試験ではありません</caption><thead><tr><th scope="col">対象</th><th scope="col">報告された結果</th><th scope="col">読み取れる範囲</th></tr></thead><tbody><tr><th scope="row">Phase 12</th><td data-label="報告された結果">259項目 PASS</td><td data-label="読み取れる範囲">既存回帰・行動計画・HTTP・クライアント検証。実機動作の証明ではありません。</td></tr><tr><th scope="row">Phase 14 隔離候補</th><td data-label="報告された結果">323固有ケース PASS</td><td data-label="読み取れる範囲">既存290＋追加33。重複8ケースと再試行を加算しない集計。本番未適用。</td></tr><tr><th scope="row">Phase 14 音声比較</th><td data-label="報告された結果">意図一致 6/6<br>厳密文字一致 2/6</td><td data-label="読み取れる範囲">合成WAV・CPU音声認識、新ヒント＋新Intentの条件。実マイクの精度には一般化できません。</td></tr><tr><th scope="row">誤操作の負例</th><td data-label="報告された結果">12条件で状態変更0</td><td data-label="読み取れる範囲">否定・無関係・無音の限定条件。あらゆる発話の安全性を保証する値ではありません。</td></tr></tbody></table></div><p class="evidence-note">出典：JARVIS_HOME_PHASE12 / PHASE14（2026-10-19）、JARVIS_INTEGRATED_RECOVERY（2026-10-19）。異なる版・条件のテスト数は合算していません。</p></section><section class="story-section"><h2>自分の担当と、AIの担当。</h2><div class="split-copy"><div><h3>自分が決めること</h3><p>日常と開発をどう支援してほしいか、接続する範囲、操作の許可、結果を採用する条件。AIの出力を読み、次に試すことを判断します。</p></div><div><h3>AIに分担すること</h3><p>調査、実装案とコードの作成、テストの追加、ログの整理、差分のレビュー。AIが作成したコードを含む開発であり、本人がすべて手書きしたものではありません。</p></div></div></section><section class="story-section"><h2>うまくいかなかったことから、設計を変える。</h2><p>音声処理では、統合回復報告の合成入力5ターン中2ターンで誤認識がありました。HTTP応答や音声ファイルの生成だけで成功にせず、意図・状態・返答を別に確認しています。Phase 14では音声認識のヒントと意図判定を分けて比較しました。</p><p>応答の「検証済み」というラベルだけで操作完了にしないことも課題でした。実際の状態・版・セッションを読み戻して照合する修正を隔離環境で検証しています。</p></section><section class="story-section"><h2>技術の役割と、これから。</h2><dl class="role-list"><div><dt>OpenDots / MCP</dt><dd>エージェントとツールを接続する境界。専用経路を検証中で、汎用エージェントに無制限の操作権限を渡しません。</dd></div><div><dt>Ollama / ローカルLLM</dt><dd>ローカル推論基盤。実Researchの完了は未達で、模擬モデルの成功と区別しています。</dd></div><div><dt>音声認識・音声合成</dt><dd>操作の入口と返答。合成入力での処理を確認し、本人の実環境での受入を残しています。</dd></div><div><dt>Task Graph / Atlas / Vault</dt><dd>依存関係、実行状況、判断の根拠をつなぐ設計。全機能の本番統合を終えたわけではありません。</dd></div></dl><p>次は、本人の音声での受入、隔離候補の適用判断、条件を限定した実Researchの検証へ。ロボットやIoT、AR/MRとの接続は、その先の構想です。</p><a class="text-link" href="ai-workflow.html">AIとの開発の進め方 →</a></section></main><footer class="footer">
+        <div class="container">
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a><a href="jarvis.html">JARVIS</a><a href="ai-workflow.html">AI活用</a><a href="ai-lab.html">AI Lab</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
+        </div>
+    </footer><script defer src="assets/js/main.js"></script></body></html>

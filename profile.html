@@ -11,8 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=25">
-    <meta name="description" content="ECCコンピュータ専門学校／IoT部 副部長。制御工学と機構設計、組込みからWebまで。開発思想・技術スタック・技術の源泉。">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
+    <meta name="description" content="ECCコンピュータ専門学校の学生。機械・電子・制御・ソフトウェア・AIを横断する関心と、試作・検証・チーム開発の経験。">
     <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/profile.html">
     <meta name="theme-color" content="#02060a">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -20,7 +20,7 @@
     <meta property="og:site_name" content="SYS.RBT">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:title" content="プロフィール — 服部 将眞 | SYS.RBT">
-    <meta property="og:description" content="ECCコンピュータ専門学校／IoT部 副部長。制御工学と機構設計、組込みからWebまで。開発思想・技術スタック・技術の源泉。">
+    <meta property="og:description" content="ECCコンピュータ専門学校の学生。機械・電子・制御・ソフトウェア・AIを横断する関心と、試作・検証・チーム開発の経験。">
     <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/profile.html">
     <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
     <meta property="og:image:width" content="1200">
@@ -28,16 +28,17 @@
     <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="プロフィール — 服部 将眞 | SYS.RBT">
-    <meta name="twitter:description" content="ECCコンピュータ専門学校／IoT部 副部長。制御工学と機構設計、組込みからWebまで。開発思想・技術スタック・技術の源泉。">
+    <meta name="twitter:description" content="ECCコンピュータ専門学校の学生。機械・電子・制御・ソフトウェア・AIを横断する関心と、試作・検証・チーム開発の経験。">
     <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+<link rel="stylesheet" href="assets/css/editorial.css?v=2">
 </head>
 
-<body>
+<body class="profile-page">
     <a class="skip-link" href="#main">本文へスキップ</a>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
     <div id="vehicle-canvas" data-vehicle="h3"></div>
-    <div class="vehicle-caption"><span>H3-22 // TANEGASHIMA LAUNCH COMPLEX</span><span class="vc-live">&#9679; LIVE</span></div>
+    <div class="vehicle-caption"><span>H3-22 // TANEGASHIMA LAUNCH COMPLEX</span><span class="vc-live">3D ILLUSTRATION</span></div>
 
     <!-- Side labels for premium vibe -->
     <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
@@ -48,18 +49,18 @@
             <a href="index.html" class="logo">
                 <span class="logo-text">SYS.RBT_</span><span class="cursor"></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="site-nav">
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="profile.html" class="active">プロフィール</a></li>
                 <li><a href="works.html">作品</a></li>
                 <li><a href="activities.html">活動実績</a></li>
-                <li><a href="learning.html">学習</a></li>
+                <li><a href="learning.html">学習</a></li><li><a href="ai-workflow.html">AI活用</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -70,7 +71,7 @@
             <div class="title-line"></div>
             <div class="page-status" aria-label="ページステータス">
                 <span><i class="ps-dot"></i>OPERATOR: <b>ENG-0x8F9B</b></span>
-                <span>TECH TAGS: <b>14</b></span>
+                <span>FIELD: <b>ROBOTICS / AI</b></span>
                 <span class="ps-warn"><i class="ps-dot"></i>CERT: <b>01</b></span>
             </div>
         </section>
@@ -90,7 +91,7 @@
                     <div class="profile-divider"></div>
                     <div class="profile-field">
                         <span class="profile-label">ROLE //</span>
-                        <span class="profile-value">ハードウェア＆ロボティクスエンジニア</span>
+                        <span class="profile-value">学生 / ロボティクス・機械・電子・AI</span>
                     </div>
                 </div>
             </div>
@@ -98,76 +99,31 @@
 
         <!-- Catchphrase Section -->
         <div class="profile-catchphrase fade-in">
-            <p class="catchphrase-text">「機構と制御をつなぎ、人の仕事を支えるロボットへ。」</p>
+            <p class="catchphrase-text">「想像した未来を、技術で現実に。」</p>
         </div>
 
         <div class="profile-details-grid">
             <h2 class="sr-only">プロフィール詳細</h2>
-            <!-- Vision / Philosophy -->
-            <div class="card detail-card vision-card fade-in" style="grid-column: 1 / -1;">
-                <h3 class="card-header-tech">02. 目指すのは、現場で役に立つロボット</h3>
-                <div class="card-content">
-                    <p class="desc-text">
-                        人が担う作業の負担を減らし、安心して任せられるロボットをつくりたい。清掃・仕分け・移動を題材に、機構設計と制御、認識をつなぐ開発に取り組んでいます。川崎重工が掲げる、人とロボットが共生する社会に惹かれています。多様な技術を一つのシステムとして成立させ、安全性と使いやすさを確かめながら実用化に近づける技術者を目指しています。
-                    </p>
-                </div>
-            </div>
-
-            <!-- Core Stance 1 -->
-            <div class="card detail-card fade-in" style="grid-column: 1 / -1;">
-                <h3 class="card-header-tech">03. 課題から学び、設計に戻す</h3>
-                <div class="card-content">
-                    <p class="desc-text">
-                        アームのトルク不足や車両の走行不安定に向き合うなかで、制御工学を力学の基礎から学び直しています。公式資料や論文を読み、モデル・実装・試験結果を照合することを重視しています。知識を集めるだけでなく、次の設計判断に使える形で整理しています。
-                    </p>
-                </div>
-            </div>
-
-            <!-- Core Stance 2 -->
-            <div class="card detail-card fade-in" style="grid-column: 1 / -1;">
-                <h3 class="card-header-tech">04. 不具合を切り分け、確かめる</h3>
-                <div class="card-content">
-                    <p class="desc-text">
-                        具臣では、移動・認識・アーム制御を統合する過程で、指令や完了ログと実際の動きが一致しない問題に向き合いました。シミュレータ内の物体位置や移動量を別に測り、機構・設定・制御のどこに原因があるかを切り分けます。生成AIも調査・実装・レビューに活用し、採否は自分で根拠と試験結果を確認して判断することを原則にしています。</p>
-                </div>
-            </div>
-
-            <!-- Team Dev 1 -->
-            <div class="card detail-card fade-in" style="grid-column: 1 / -1;">
-                <h3 class="card-header-tech">05. チームで目的と接点をそろえる</h3>
-                <div class="card-content">
-                    <p class="desc-text">
-                        ハッカソンでは、設計方針の共有不足によって統合時に手戻りが生じました。この経験から、着手前に目的、役割、機器間の接続方法、完成の判断基準をそろえることを大切にしています。専門が違う相手にも意図を説明し、問題を早く共有できる進め方を心がけています。
-                    </p>
-                </div>
-            </div>
-
-            <!-- Team Dev 2 -->
-            <div class="card detail-card fade-in" style="grid-column: 1 / -1;">
-                <h3 class="card-header-tech">06. 一緒につくる人を増やす</h3>
-                <div class="card-content">
-                    <p class="desc-text">
-                        IoT部の副部長として、1年生への技術指導やハッカソンへの共同出場に取り組んでいます。自分でも試作を続け、うまくいかなかった点も共有することを意識しています。相手の理解や関心を確かめながら、一緒に手を動かせる関係をつくっています。
-                    </p>
-                </div>
-            </div>
-
+<section class="card detail-card fade-in" style="grid-column:1/-1"><h3 class="card-header-tech">02. まだない仕組みを、自分で試してみたい</h3><div class="card-content"><p class="desc-text">蛇型ロボットのSerpensや、日常と開発を支えるJARVISに取り組んでいます。機械・電子・制御・ソフトウェア・AIを横断し、「こんな仕組みがあったら」という構想を形にしたいと考えています。</p></div></section>
+<section class="card detail-card fade-in" style="grid-column:1/-1"><h3 class="card-header-tech">03. 試して、原因を探り、設計に戻す</h3><div class="card-content"><p class="desc-text">アームのトルク不足や車両の走行不安定をきっかけに、制御を力学の基礎から学び直しています。具臣では、完了ログと実際の動きが一致しない問題に向き合いました。物体の位置や移動量を照合し、機構・設定・制御のどこに原因があるかを切り分けることを大切にしています。</p></div></section>
+<section class="card detail-card fade-in" style="grid-column:1/-1"><h3 class="card-header-tech">04. AIと分担し、採用する結果を判断する</h3><div class="card-content"><p class="desc-text">目的・制約・設計方針は自分で整理し、AIには調査、実装、テスト作成、設計案の比較を分担してもらいます。差分や検証記録を確認し、採用するか、追加で試すかを判断します。<a class="text-link" href="ai-workflow.html">具体的な作業分担を見る →</a></p></div></section>
+<section class="card detail-card fade-in" style="grid-column:1/-1"><h3 class="card-header-tech">05. チームでつくり、経験を共有する</h3><div class="card-content"><p class="desc-text">ハッカソンでは、設計方針の共有不足による手戻りを経験しました。着手前に目的・役割・機器間の接続方法・完成の判断基準をそろえることを意識しています。IoT部の副部長として、1年生への技術指導や共同出場にも取り組み、失敗した点も共有しています。</p></div></section>
             <!-- Tech Stack Card -->
             <div class="card detail-card tech-stack-card fade-in" style="grid-column: 1 / -1;">
-                <h3 class="card-header-tech">07. 開発で扱う技術</h3>
-                <div class="card-content tech-grid">
+                <h3 class="card-header-tech">06. 開発で扱う技術</h3>
+                <p class="desc-text">制作で触れた技術と、現在学んでいる内容です。習熟度や、実機での検証済み機能を示す一覧ではありません。</p><div class="card-content tech-grid">
                     <div class="tech-category">
-                        <h4 class="tech-cat-title">制御・ロボティクス</h4>
+                        <h4 class="tech-cat-title">制作・検証で使用：制御・ロボティクス</h4>
                         <div class="tech-tags">
-                            <span class="tech-tag">制御工学（基礎）</span>
+                            <span class="tech-tag">制御工学（基礎を学習中）</span>
                             <span class="tech-tag">ROS 2</span>
                             <span class="tech-tag">3軸・6軸ロボットアーム制御</span>
                             <span class="tech-tag">URDFモデル</span>
-                            <span class="tech-tag">シミュレータ環境</span>
+                            <span class="tech-tag">シミュレータ環境</span><span class="tech-tag">MuJoCo（AI支援で導入・学習中）</span>
                         </div>
                     </div>
                     <div class="tech-category">
-                        <h4 class="tech-cat-title">組込み・ハードウェア</h4>
+                        <h4 class="tech-cat-title">制作・設計で使用：組込み・ハードウェア</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">ESP32</span>
                             <span class="tech-tag">Raspberry Pi</span>
@@ -177,9 +133,9 @@
                         </div>
                     </div>
                     <div class="tech-category">
-                        <h4 class="tech-cat-title">ソフトウェア・Web</h4>
+                        <h4 class="tech-cat-title">AIと分担して開発：ソフトウェア・Web</h4>
                         <div class="tech-tags">
-                            <span class="tech-tag">C/C++</span>
+                            <span class="tech-tag">C/C++</span><span class="tech-tag">AIエージェントによる実装・検証支援</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Webアプリケーション開発（フロントエンド/バックエンドAPI連携）</span>
                         </div>
@@ -195,7 +151,7 @@
 
             <!-- Sources of Tech Card -->
             <div class="card detail-card fade-in" style="grid-column: 1 / -1; margin-top: 1rem;">
-                <h3 class="card-header-tech">08. 趣味と休日の楽しみ</h3>
+                <h3 class="card-header-tech">07. 趣味と休日の楽しみ</h3>
                 <div class="card-content">
                     <p class="desc-text" style="margin-bottom: 2.5rem; line-height: 1.8;">
                         自然の中で過ごすこと、本を読むこと、技術を見に行くこと。休日に楽しんでいることを紹介します。
@@ -203,7 +159,7 @@
                     <hr class="doc-rule">
 
                     <div class="source-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 2.5rem;">
                         <div class="source-category">
                             <h4 class="tech-cat-title"
                                 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--accent-bright); margin-bottom: 1.2rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; letter-spacing: 0.05em;">
@@ -247,7 +203,7 @@
 
     <footer class="footer">
         <div class="container">
-            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="works.html">作品</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a></nav>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="works.html">作品</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a><a href="jarvis.html">JARVIS</a><a href="ai-workflow.html">AI活用</a><a href="ai-lab.html">AI Lab</a></nav>
             <div class="footer-meta">
                 <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
                 <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>

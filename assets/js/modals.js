@@ -133,11 +133,17 @@
         });
 
         // deep link: works.html#modal-gushin
-        var hash = window.location.hash;
-        if (hash) {
-            var target = document.querySelector(hash);
-            if (target && target.classList.contains('modal-overlay')) setTimeout(function () { open(target, null); }, 200);
+        function openFromHash() {
+            var hash = window.location.hash.slice(1);
+            if (!hash) return;
+            var target = document.getElementById(hash);
+            if (target && target.classList.contains('modal-overlay')) {
+                if (openModal && openModal !== target) return;
+                setTimeout(function () { open(target, null); }, 200);
+            }
         }
+        openFromHash();
+        window.addEventListener('hashchange', openFromHash);
     }
 
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索・設計支援プロジェクト — 服部 将眞 | SYS.RBT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
+    <meta name="description" content="World Structureとrobot-codesignの目的、担当範囲、実装と検証の限界。">
+    <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/research-projects.html">
+    <meta name="theme-color" content="#02060a">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SYS.RBT">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="探索・設計支援プロジェクト — 服部 将眞">
+    <meta property="og:description" content="World Structureとrobot-codesignの目的、担当範囲、実装と検証の限界。">
+    <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/research-projects.html">
+    <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="探索・設計支援プロジェクト — 服部 将眞">
+    <meta name="twitter:description" content="World Structureとrobot-codesignの目的、担当範囲、実装と検証の限界。">
+    <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+
+<link rel="stylesheet" href="assets/css/editorial.css?v=1">
+</head>
+<body class="editorial"><a class="skip-link" href="#main">本文へスキップ</a><div class="grid-background" aria-hidden="true"></div><nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SYS.RBT_</span>
+                <span class="cursor"></span>
+            </a>
+            <ul class="nav-links" id="site-nav">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="works.html">作品</a></li>
+                <li><a href="activities.html">活動実績</a></li>
+                <li><a href="learning.html">学習</a></li><li><a href="ai-workflow.html">AI活用</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
+    </nav><main id="main" class="editorial-main container"><header class="story-header"><p class="eyebrow">EXPLORATORY PROJECTS</p><h1>理解するための道具。<br>設計するための道具。</h1><p class="intro-copy">ロボット以外にも、構造を理解し、設計の根拠を確かめるためのソフトウェアを開発しています。</p></header><section id="world" class="story-section"><h2>World Structure / World Fabric</h2><span class="state-label">ローカル実装 / データ・本番連携は検証中</span><p>ものを部品や技術に分解し、社会や歴史とのつながりをたどるWebサイト。知ったことを、新しいものづくりの着想へつなげたいという関心から開発しています。</p><dl class="role-list"><div><dt>実装の範囲</dt><dd>3Dによる構造探索、関係グラフ、情報の検査・修正提案。READMEとローカル成果物を確認しています。</dd></div><div><dt>自分とAIの担当</dt><dd>本人が探索体験と情報のつなぎ方を構想し、AIがコードやデータ案の作成を支援。AI生成の内容を確定情報としてそのまま採用しない設計です。</dd></div><div><dt>課題と学び</dt><dd>情報量が増えるほど、関係の意味と出典の確認が必要になります。公開データの正確性と、本番バックエンドの統合完了は今回未確認です。</dd></div></dl></section><section id="codesign" class="story-section"><h2>robot-codesign</h2><span class="state-label">設計検証コードあり / 実測不足は未検証</span><p>機械、電子回路、ファームウェア、シミュレーションの変更が互いにどう影響するかを、AIと人が確認するための開発環境です。</p><dl class="role-list"><div><dt>実装の範囲</dt><dd>設計・制約を扱うPython基盤と、進化計算・強化学習を扱う研究コード。必要な値がない場合はUNKNOWNを返す制約検査をコードで確認しました。</dd></div><div><dt>自分とAIの担当</dt><dd>本人が設計の目的や評価条件を決め、AIに実装・比較・検証の支援を依頼。実測や製作の判断は別の確認段階として残しています。</dd></div><div><dt>課題と学び</dt><dd>仮定の質量・電源・旧版の軸数で得た結果は、現在の機体の性能を証明しません。仕様の版と入力の出所を残し、実測のない項目は合格にしない方針です。</dd></div></dl><p class="evidence-note">両プロジェクトとも、このポートフォリオ改修で製品のテストを再実行したものではありません。公開デモや性能値は検証できた範囲で追加します。</p></section><a class="text-link" href="works.html">作品一覧へ戻る →</a></main><footer class="footer">
+        <div class="container">
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a><a href="jarvis.html">JARVIS</a><a href="ai-workflow.html">AI活用</a><a href="ai-lab.html">AI Lab</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
+        </div>
+    </footer><script defer src="assets/js/main.js"></script></body></html>

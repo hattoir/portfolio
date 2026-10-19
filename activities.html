@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=25">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
     <meta name="description" content="＋E展メカニカル賞、国際ロボット展2025、実装・組立プロセス技術展、テックシーカー（エックスサーバー賞）。現場で得た知見の記録。">
     <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/activities.html">
     <meta name="theme-color" content="#02060a">
@@ -27,35 +27,36 @@
     <meta name="twitter:title" content="活動実績 — 展示会・ハッカソン | SYS.RBT">
     <meta name="twitter:description" content="＋E展メカニカル賞、国際ロボット展2025、実装・組立プロセス技術展、テックシーカー（エックスサーバー賞）。現場で得た知見の記録。">
     <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+<link rel="stylesheet" href="assets/css/editorial.css?v=1">
 </head>
 <body>
     <a class="skip-link" href="#main">本文へスキップ</a>
     <div class="grid-background"></div>
     <div class="bg-vignette"></div>
     <div id="vehicle-canvas" data-vehicle="blackhole"></div>
-    <div class="vehicle-caption"><span>GARGANTUA // TELEMETRY LINK</span><span class="vc-live">&#9679; LIVE</span></div>
-    
+    <div class="vehicle-caption"><span>GARGANTUA // TELEMETRY LINK</span><span class="vc-live">3D ILLUSTRATION</span></div>
+
     <!-- Side labels for premium vibe -->
     <div class="side-label-left">SYS.RBT_PORTFOLIO // STATUS: ONLINE</div>
     <div class="side-label-right">0x8F9B // OPERATOR: ENG</div>
-    
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <span class="logo-text">SYS.RBT_</span><span class="cursor"></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="site-nav">
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="profile.html">プロフィール</a></li>
                 <li><a href="works.html">作品</a></li>
                 <li><a href="activities.html" class="active">活動実績</a></li>
-                <li><a href="learning.html">学習</a></li>
+                <li><a href="learning.html">学習</a></li><li><a href="ai-workflow.html">AI活用</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -136,7 +137,7 @@
                 </div>
             </div>
 
-            
+
             <div class="timeline-item" data-modal="modal-1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2026.02</div>
@@ -242,7 +243,7 @@
                 <div class="dossier-meta"><span class="dm-item"><i>LOG</i>02</span><span class="dm-item"><i>DATE</i>2026.09</span><span class="dm-item"><i>TYPE</i>インターン（5Days）</span><span class="dm-item"><i>FOCUS</i>機械設計 / 制御 / 回路</span></div>
             </div>
             <div class="modal-body">
-                
+
                 <figure class="flow-fig">
                     <svg viewBox="0 0 680 120" role="img" aria-label="空気圧で動く直交型ロボットの構成">
                         <defs>
@@ -407,11 +408,11 @@
                 <div class="dossier-meta"><span class="dm-item"><i>LOG</i>05</span><span class="dm-item"><i>DATE</i>2026.08</span><span class="dm-item"><i>TYPE</i>インターン（4Days）</span><span class="dm-item"><i>FOCUS</i>PLC / 制御盤 / FA安全</span></div>
             </div>
             <div class="modal-body">
-                
+
                 <figure class="flow-fig">
                     <svg viewBox="0 0 680 120" role="img" aria-label="FAの基本的な流れ">
                         <defs>
-                            <marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                            <marker id="fa4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
                                 <path d="M0 0 L10 5 L0 10" fill="none" stroke="currentColor" stroke-width="1.6"></path>
                             </marker>
                         </defs>
@@ -420,13 +421,13 @@
                             <path d="M0 14 L0 0 L14 0" fill="none" stroke="currentColor" stroke-width="2"></path>
                             <path d="M200 46 L200 60 L186 60" fill="none" stroke="currentColor" stroke-width="2"></path>
                             <text x="100" y="36" text-anchor="middle" font-size="16" fill="currentColor">PLC</text>
-                        </g><line x1="212" y1="60" x2="232" y2="60" stroke="currentColor" stroke-width="1.4" marker-end="url(#fa)"></line>
+                        </g><line x1="212" y1="60" x2="232" y2="60" stroke="currentColor" stroke-width="1.4" marker-end="url(#fa4)"></line>
                         <g transform="translate(236 30)">
                             <rect width="200" height="60" fill="none" stroke="currentColor" stroke-width="1"></rect>
                             <path d="M0 14 L0 0 L14 0" fill="none" stroke="currentColor" stroke-width="2"></path>
                             <path d="M200 46 L200 60 L186 60" fill="none" stroke="currentColor" stroke-width="2"></path>
                             <text x="100" y="36" text-anchor="middle" font-size="16" fill="currentColor">ラダー</text>
-                        </g><line x1="436" y1="60" x2="456" y2="60" stroke="currentColor" stroke-width="1.4" marker-end="url(#fa)"></line>
+                        </g><line x1="436" y1="60" x2="456" y2="60" stroke="currentColor" stroke-width="1.4" marker-end="url(#fa4)"></line>
                         <g transform="translate(460 30)">
                             <rect width="200" height="60" fill="none" stroke="currentColor" stroke-width="1"></rect>
                             <path d="M0 14 L0 0 L14 0" fill="none" stroke="currentColor" stroke-width="2"></path>
@@ -567,13 +568,13 @@
 
                 <div class="modal-section">
                     <h3 class="modal-subtitle">学んだこと</h3>
-                    
+
                     <h4 class="doc-sub">【技術発信と外部フィードバックによる成長】</h4>
                     <p class="doc-p">来場者や企業エンジニアに自作アームを説明し、構造や伝え方へのフィードバックをいただきました。相手が知りたい用途・仕組み・制約を先に伝える大切さを学びました。受賞に加え、実機の課題を人に見てもらい、改善点を具体化できたことが収穫です。</p>
-                    
+
                     <h4 class="doc-sub">【実機トラブルから学んだ「機械設計・制御」の本質】</h4>
                     <p class="doc-p">展示当日、歯車の摩耗によるスリップで対象物を把持できなくなりました。動作する試作品と、繰り返し使える機械の違いを実感した経験です。以降の設計で確認すべき項目として、次の二点を整理しました。</p>
-                    
+
                     <ul class="doc-bullets">
                         <li>
                             <strong>適切な素材・機構選定:</strong> ロボットの用途や稼働頻度、負荷に応じた強度計算と、それに見合う材質（樹脂、金属等）や機構を選択すること。
@@ -628,13 +629,13 @@
 
                 <div class="modal-section">
                     <h3 class="modal-subtitle">学んだこと</h3>
-                    
+
                     <h4 class="doc-sub">1. ハードウェアの極致と、オープン化による「フィジカルAI」の幕開け</h4>
                     <p class="doc-p">会場全体を通して、ヒューマノイドを筆頭とした新しい形状のロボットの台頭と、既存の産業用ロボットの劇的な進化の対比が印象に残りました。特に日本のメーカーは、目には見えにくい「極限のサイクルタイム短縮」や「精密制御」という非常に難易度の高いハードウェア技術を追求しており、深く感銘を受けました。<br>川崎重工の展示からは、ロボット単体の性能に加え、AIや周辺機器、シミュレーションをどう接続するかに関心を持ちました。これは見学を通じた私の学びです。自分の開発でも、認識・制御・機構の接点を明確にし、一つの作業として成立させることを意識しています。</p>
-                    
+
                     <h4 class="doc-sub">2. センサフュージョンによる協働作業の実現と、開発へのインスピレーション</h4>
                     <p class="doc-p">安全技術の進化も大きな学びでした。NACHIのブースでは、トルク、レーザー、距離という3種類の異なるセンサーを組み合わせることで、安全柵を持たないアームロボットを実現していました。この「センサフュージョンによる人間との協働」というアプローチを目の当たりにしたことが、現在の自身のロボットアーム開発プロジェクトを立ち上げる最大のきっかけとなりました。</p>
- 
+
                     <h4 class="doc-sub">3. 高速ビジョンピッキングと総合的な自動化ソリューション</h4>
                     <p class="doc-p">また、ヤマハのブースで展示されていた、SCARAロボットを用いてバラバラに置かれた部品を瞬時に表裏・向きを判定して運搬するデモンストレーションは、画像認識と高速な軌道計算の融合として非常に興味深いものでした。基板実装装置など、周辺領域も含めた包括的なシステム構築の重要性を学びました。</p>
 
@@ -673,21 +674,21 @@
 
                 <div class="modal-section">
                     <h3 class="modal-subtitle">現場の様子（サブ写真）</h3>
-                    
+
                     <!-- サブ画像 -->
                     <div class="media-cell">
                         <img src="assets/images/opt/assembly-process-2025-sub-1600.webp" srcset="assets/images/opt/assembly-process-2025-sub-800.webp 800w, assets/images/opt/assembly-process-2025-sub-1600.webp 1600w" sizes="(max-width: 700px) 92vw, 760px" width="1600" height="2133" loading="lazy" decoding="async" alt="実装・組立プロセス技術展：メタルマスクと脱着式フレーム" data-caption="はんだ印刷に使うメタルマスクと脱着式フレーム（IP-600）。開口パターンが基板へのはんだ供給位置を決める" style="width: 100%; height: auto; display: block;">
                     </div>
 
-                    
+
                 </div>
 
                 <div class="modal-section">
                     <h3 class="modal-subtitle">学んだこと</h3>
-                    
+
                     <h4 class="doc-sub">1. プリント基板の実装プロセスと最新鋭のマウンター設備</h4>
                     <p class="doc-p">単なる「基板」というデータ上の概念から一歩踏み込み、実際の製造現場で基板がどのように物理的プロセスを経て実装されているかを具体的に学ぶことができました。特に、微小な電子部品を正確かつ高速に配置していくマウンター（表面実装機）の動的なメカニズムや、はんだ印刷から実装不良を防ぐ自動検査までの連携について知見を深めました。この経験から、ESP32などを用いた自分自身のカスタム基板設計においても、単に動くだけでなく「製造のしやすさ（DFM: Design for Manufacturing）」を意識した設計思想を持つことの重要性を痛感しています。</p>
-                    
+
                     <h4 class="doc-sub">2. 特殊センサーの実装技術と高精度化へのアプローチ</h4>
                     <p class="doc-p">ロボット開発においても要となる、ひずみゲージやトルクセンサーといった各種センサーの具体的な実装手法について学べたことは大きな収穫でした。単にセンサーを配置して結線するだけでなく、測定誤差を極限まで減らし、より高精度なデータを取得するための配線引き回しのノウハウやノイズ対策、実装時にかかる応力への配慮など、現場ならではの緻密な工夫やハードウェア的なアプローチを知ることができました。</p>
 
@@ -712,7 +713,7 @@
             <div class="modal-body">
                 <div class="modal-image-placeholder is-cover" style="background-image: url('assets/images/opt/techseeker-main-1600.webp');">
                 </div>
-                
+
                 <div class="modal-section">
                     <h3 class="modal-subtitle">受賞</h3>
                     <p class="award">🏆 エックスサーバー賞</p>
@@ -734,10 +735,10 @@
 
                 <div class="modal-section">
                     <h3 class="modal-subtitle">学んだこと</h3>
-                    
+
                     <h4 class="doc-sub">【直面した課題と今後の課題】</h4>
                     <p class="doc-p">初期に設計方針を十分共有しないまま分担したため、統合時に認識のずれが生じ、予定が遅れました。この反省から、着手前に目的、各担当の入出力、接続方法、完成条件を確認することを重視しています。技術力だけでなく、違いを早く言葉にして合わせることも開発の一部だと学びました。</p>
-                    
+
                     <h4 class="doc-sub">【チーム開発の醍醐味】</h4>
                     <p class="doc-p">メンバーと協力して制作・発表まで進め、エックスサーバー賞を受賞しました。追い込みで補う進め方には改善の余地がありましたが、得意分野の違う仲間と一つの作品を形にする面白さを実感しました。次は早い段階で結合確認を行い、余裕を持って完成度を上げたいと考えています。</p>
                 </div>
@@ -747,7 +748,7 @@
 
     <footer class="footer">
         <div class="container">
-            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="learning.html">学習</a></nav>
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="index.html">ホーム</a><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="learning.html">学習</a><a href="jarvis.html">JARVIS</a><a href="ai-workflow.html">AI活用</a><a href="ai-lab.html">AI Lab</a></nav>
             <div class="footer-meta">
                 <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
                 <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>

@@ -1,0 +1,12 @@
+# Local agent work and private review artifacts
+/.ai/
+/ai-inbox/
+/ai-outbox/
+/ai-shared/
+/review-*/
+/.vercel/
+.env
+.env.*
+*.zip
+*.log
+node_modules/

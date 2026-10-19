@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.body&&document.body.classList.add('is-loaded')},2500)</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIを活用した開発手法 — 服部 将眞 | SYS.RBT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@400&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
+    <meta name="description" content="本人の構想・設計・判断と、AIによる実装・テストを分けた開発プロセス。">
+    <link rel="canonical" href="https://portfolio-weld-three-44.vercel.app/ai-workflow.html">
+    <meta name="theme-color" content="#02060a">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SYS.RBT">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="AIを活用した開発手法 — 服部 将眞">
+    <meta property="og:description" content="本人の構想・設計・判断と、AIによる実装・テストを分けた開発プロセス。">
+    <meta property="og:url" content="https://portfolio-weld-three-44.vercel.app/ai-workflow.html">
+    <meta property="og:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="服部 将眞 — ハードウェア＆ロボティクス エンジニア。自作ロボットのワイヤーフレームモデル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AIを活用した開発手法 — 服部 将眞">
+    <meta name="twitter:description" content="本人の構想・設計・判断と、AIによる実装・テストを分けた開発プロセス。">
+    <meta name="twitter:image" content="https://portfolio-weld-three-44.vercel.app/assets/images/og.jpg">
+
+<link rel="stylesheet" href="assets/css/editorial.css?v=2">
+</head>
+<body class="editorial"><a class="skip-link" href="#main">本文へスキップ</a><div class="grid-background" aria-hidden="true"></div><nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SYS.RBT_</span>
+                <span class="cursor"></span>
+            </a>
+            <ul class="nav-links" id="site-nav">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="works.html">作品</a></li>
+                <li><a href="activities.html">活動実績</a></li>
+                <li><a href="learning.html">学習</a></li><li><a href="ai-workflow.html" class="active" aria-current="page">AI活用</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
+    </nav><main id="main" class="editorial-main container"><header class="story-header"><p class="eyebrow">DEVELOPMENT PROCESS</p><h1>AIとつくる。<br>根拠で確かめる。</h1><p class="intro-copy">AIを、調べる・実装する・試す作業の相手として使っています。目的と完了条件を先に決め、結果を確認してから次へ進むことを大切にしています。</p></header><section class="story-section"><h2>開発の一周を、記録に残す。</h2><ol class="process-list"><li><b>構想・要求整理</b><span>何を実現したいか、制約と完了条件を自分で整理する。</span></li><li><b>調査・設計</b><span>資料と既存コードを確認し、選択肢と未確認事項を残す。</span></li><li><b>作業分担・実装</b><span>AIへ対象・許可範囲・成果物・試験条件を渡す。</span></li><li><b>テスト・シミュレーション</b><span>正常系だけでなく、誤入力、取消、未接続も試す。</span></li><li><b>結果の検証・人の判断</b><span>差分と証拠を照合。公開・課金・実機操作はHuman Gateへ。</span></li><li><b>Knowledge Vaultへ記録</b><span>採用した判断、理由、結果を残し、次の調査・設計で再利用する。</span></li></ol><p class="evidence-note">開発上の進め方を整理した図です。全工程が自動化・本番統合済みという意味ではありません。</p></section><section class="story-section"><h2>ツール名より、何を任せたか。</h2><dl class="role-list"><div><dt>ChatGPT</dt><dd>構想・要求の言語化、資料をもとにした計画とレビュー。AI Labの設計文書では計画側の役割として整理しています。</dd></div><div><dt>Codex / Claude Code</dt><dd>コード調査、実装、テスト、変更内容のレビューを分担する開発支援。今回のポートフォリオ改修もCodexによる調査・実装を含みます。</dd></div><div><dt>OpenDots / Ollama</dt><dd>常駐ハブ側のエージェント実行・ローカル推論を担う基盤として開発・検証。模擬実行と実モデルの実行を分けて記録します。</dd></div><div><dt>Gemini</dt><dd>AI Labの設計上のWorker・クラウド処理候補。今回確認した資料だけでは個別の担当成果を特定できないため、本番統合済みとは記載していません。</dd></div></dl></section><section class="story-section"><h2>長い作業を、曖昧な「完了」にしない。</h2><div class="split-copy"><div><h3>途中の状態を残す</h3><p>作業を依存関係ごとに分け、実行ID、対象版、成果物、失敗理由、次の作業を記録する設計です。タスクの記録とエージェントの現在の稼働は分けて表示します。</p></div><div><h3>判断までの道筋を残す</h3><p>Atlasでは、知識・タスク・実験・結果・判断をたどる画面を実装しています。ライブ接続を確認できないものを、動いているように表示しません。</p></div></div></section><section class="story-section"><h2>開発の中で、どう使っているか。</h2><article class="case-note"><h3>JARVIS：音声の「成功」を分けて確かめる</h3><dl class="role-list"><div><dt>目的・人の判断</dt><dd>声で伝えた意図と実際の操作が一致することを目指し、適用範囲や採用条件を人が決めます。本人の声での受入と、本番への適用判断は残っています。</dd></div><div><dt>AIに分担する作業</dt><dd>実装・テスト追加・ログ整理を支援。開発報告では、音声認識のヒントと意図判定を別々に比較しました。各試験を本人が手動実施したという意味ではありません。</dd></div><div><dt>問題と検証</dt><dd>合成音声を使った回復試験では5ターン中2ターンで誤認識。後の隔離比較では、同一の合成音声6件に対して新設定の意図一致は6/6、厳密な文字一致は2/6でした。文字起こし・意図・状態を別々に確かめています。</dd></div></dl><a class="text-link" href="jarvis.html">条件と未検証事項を見る →</a></article><article class="case-note"><h3>Serpens：設計とシミュレーションを行き来する</h3><dl class="role-list"><div><dt>自分が考えること</dt><dd>蛇らしい動き、機構、可動域、ハードウェアの条件。CAD上の形状と干渉を確認し、比較する設計案を考えます。</dd></div><div><dt>AIと分担すること</dt><dd>調査、コード作成、シミュレーション、案の比較。MuJoCoはAI支援で導入を進めている段階で、自分だけで使いこなせる技術とは区別しています。</dd></div><div><dt>判断に残すこと</dt><dd>モデルの版と条件を添えて結果を確認します。CADの可動域や模擬動作だけで、実機のトルク・耐久性・安全性を確かめたことにはしません。実機と基板の製作・検証はこれからです。</dd></div></dl><a class="text-link" href="works.html#modal-serpens">CAD・動画と開発記録を見る →</a></article></section><section class="story-section"><h2>AIの提案と、操作の許可を分ける。</h2><p>実行前に対象、権限、期限、計画の内容を照合し、変更された計画や範囲外の操作を拒否する仕組みを検証しています。未知の操作は実行へ昇格させず、履歴を残します。</p><p>外部公開・課金・危険な実機動作は、人が内容と影響を確認して承認します。承認待ちを成功と扱わず、AIによる実装も安全性が確認済みとは限らない前提で進めます。</p><a class="text-link" href="ai-lab.html">知識と根拠をつなぐAI Lab →</a></section></main><footer class="footer">
+        <div class="container">
+            <nav class="footer-nav" aria-label="サイト内リンク"><a href="profile.html">プロフィール</a><a href="works.html">作品</a><a href="activities.html">活動実績</a><a href="learning.html">学習</a><a href="jarvis.html">JARVIS</a><a href="ai-workflow.html">AI活用</a><a href="ai-lab.html">AI Lab</a></nav>
+            <div class="footer-meta">
+                <p>&copy; <span id="year"></span> SYS.RBT — 服部 将眞</p>
+                <div class="system-id"><i class="ps-dot"></i>SYS.ID: 0x8F9B // STATUS: ONLINE</div>
+            </div>
+        </div>
+    </footer><script defer src="assets/js/main.js"></script></body></html>

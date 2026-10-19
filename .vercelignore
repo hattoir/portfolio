@@ -1,0 +1,10 @@
+# Only reviewed pages and public assets may be served.
+/*
+!/*.html
+!/assets
+/assets/**/*.json
+/assets/**/*.md
+/assets/**/*.zip
+/assets/**/*.log
+**/.env*
+**/.DS_Store
